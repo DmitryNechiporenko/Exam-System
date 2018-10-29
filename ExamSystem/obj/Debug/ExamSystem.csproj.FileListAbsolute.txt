@@ -1,0 +1,98 @@
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe.config
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\bin\Debug\ExamSystem.pdb
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csprojAssemblyReference.cache
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.exe
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.pdb
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddQuestion.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.StartForm.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelQuestion.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddCourse.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelCourse.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddBlock.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelBlock.resources
+C:\Users\marak\source\repos\ExamSystem\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe.config
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\bin\Debug\ExamSystem.pdb
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csprojAssemblyReference.cache
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddBlock.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddCourse.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddQuestion.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelBlock.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelCourse.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelQuestion.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.LearnChooseBlocksForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.StartForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.exe
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.pdb
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.loginForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.regForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\09_10_18\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ExamsForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe.config
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\bin\Debug\ExamSystem.pdb
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csprojAssemblyReference.cache
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddBlock.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddCourse.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.AddQuestion.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelBlock.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelCourse.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.DelQuestion.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ExamQuiz.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ExamsForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.LearnChooseBlocksForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.loginForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.regForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.StartForm.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.exe
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.pdb
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ViewExam.resources
+D:\marak\Google диск\Работа\Система для тестирования\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ViewUsers.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.csprojAssemblyReference.cache
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.AddBlock.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.AddCourse.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.AddQuestion.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.DelBlock.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.DelCourse.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.DelQuestion.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.ExamQuiz.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.ExamsForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnChooseBlocksForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.loginForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.regForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.StartForm.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.ViewExam.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.ViewUsers.resources
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.exe
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.pdb
+C:\Users\marak\source\repos\Exam-System\ExamSystem\bin\Debug\ExamSystem.exe.config
+C:\Users\marak\source\repos\Exam-System\ExamSystem\bin\Debug\ExamSystem.exe
+C:\Users\marak\source\repos\Exam-System\ExamSystem\bin\Debug\ExamSystem.pdb
+C:\Users\marak\source\repos\Exam-System\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\marak\source\repos\Exam-System\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+C:\Users\marak\source\repos\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
