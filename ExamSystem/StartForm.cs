@@ -61,7 +61,7 @@ namespace ExamSystem
         private void LearnButton_Click(object sender, EventArgs e)
         {
             this.Hide();       
-            LearnForm lf = new LearnForm();
+            LearnChooseBlocksForm lf = new LearnChooseBlocksForm();
             lf.Closed += (s, args) => this.Show();
             lf.Show();
         }
