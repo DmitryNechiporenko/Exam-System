@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class LearnChooseBlocksForm : Form
+    public partial class LearnForm : Form
     {
         FbConnection fb = new FbConnection(connection.conString());
 
 
-        public LearnChooseBlocksForm()
+        public LearnForm()
         {
             InitializeComponent();
         }

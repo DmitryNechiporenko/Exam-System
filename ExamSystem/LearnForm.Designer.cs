@@ -1,6 +1,6 @@
 ﻿namespace ExamSystem
 {
-    partial class LearnChooseBlocksForm
+    partial class LearnForm
     {
         /// <summary>
         /// Required designer variable.
