@@ -313,6 +313,11 @@ namespace ExamSystem
             goToExam(4);
         }
 
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void part5Button_Click(object sender, EventArgs e)
         {
             goToExam(5);

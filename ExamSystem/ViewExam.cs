@@ -154,25 +154,15 @@ namespace ExamSystem
         {
             string part = PartComboBox.SelectedItem.ToString();
             if (part == "Часть 1")
-            {
                 return 3;
-            }
             else if (part == "Часть 2")
-            {
                 return 5;
-            }
             else if (part == "Часть 3")
-            {
                 return 7;
-            }
             else if (part == "Часть 4")
-            {
                 return 9;
-            }
             else
-            {
                 return 11;
-            }
         }
     }
 }

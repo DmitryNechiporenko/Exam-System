@@ -40,6 +40,7 @@
             this.part3Button = new System.Windows.Forms.Button();
             this.part4Button = new System.Windows.Forms.Button();
             this.part5Button = new System.Windows.Forms.Button();
+            this.ReportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BlockComboBox
@@ -164,11 +165,23 @@
             this.part5Button.Visible = false;
             this.part5Button.Click += new System.EventHandler(this.part5Button_Click);
             // 
+            // ReportButton
+            // 
+            this.ReportButton.Location = new System.Drawing.Point(619, 141);
+            this.ReportButton.Name = "ReportButton";
+            this.ReportButton.Size = new System.Drawing.Size(51, 45);
+            this.ReportButton.TabIndex = 10015;
+            this.ReportButton.Text = "Отчет";
+            this.ReportButton.UseVisualStyleBackColor = true;
+            this.ReportButton.Visible = false;
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
+            // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 281);
+            this.Controls.Add(this.ReportButton);
             this.Controls.Add(this.part5Button);
             this.Controls.Add(this.part4Button);
             this.Controls.Add(this.part3Button);
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Button part3Button;
         private System.Windows.Forms.Button part4Button;
         private System.Windows.Forms.Button part5Button;
+        private System.Windows.Forms.Button ReportButton;
     }
 }
