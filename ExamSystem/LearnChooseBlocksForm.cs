@@ -66,7 +66,7 @@ namespace ExamSystem
             {
                 foo[i] = ChoosedBlocksListBox.Items[i].ToString();
             }
-            LearnForm f = new LearnForm(foo);
+            LearnQuiz f = new LearnQuiz(foo);
             f.ShowDialog();
         }
     }
