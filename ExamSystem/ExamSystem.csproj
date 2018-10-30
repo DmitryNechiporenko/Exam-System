@@ -98,11 +98,11 @@
     <Compile Include="ExamsForm.Designer.cs">
       <DependentUpon>ExamsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LearnChooseBlocksForm.cs">
+    <Compile Include="LearnForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LearnChooseBlocksForm.Designer.cs">
-      <DependentUpon>LearnChooseBlocksForm.cs</DependentUpon>
+    <Compile Include="LearnForm.Designer.cs">
+      <DependentUpon>LearnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LearnQuiz.cs">
       <SubType>Form</SubType>
@@ -167,8 +167,8 @@
     <EmbeddedResource Include="ExamsForm.resx">
       <DependentUpon>ExamsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LearnChooseBlocksForm.resx">
-      <DependentUpon>LearnChooseBlocksForm.cs</DependentUpon>
+    <EmbeddedResource Include="LearnForm.resx">
+      <DependentUpon>LearnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LearnQuiz.resx">
       <DependentUpon>LearnQuiz.cs</DependentUpon>

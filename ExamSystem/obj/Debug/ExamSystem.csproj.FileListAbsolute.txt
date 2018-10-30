@@ -105,7 +105,6 @@ D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.DelCourse.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.DelQuestion.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.ExamQuiz.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.ExamsForm.resources
-D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnChooseBlocksForm.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.loginForm.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.regForm.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.StartForm.resources
@@ -123,3 +122,4 @@ D:\git\Exam-System\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 D:\git\Exam-System\ExamSystem\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnQuiz.resources
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
