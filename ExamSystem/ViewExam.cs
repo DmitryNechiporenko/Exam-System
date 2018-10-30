@@ -16,22 +16,22 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
 
         string[] examinfo = new string[18];
+        string[][] questionlist;
         int examid;
         DataTable questions = new DataTable();
 
         public ViewExam(int examid)
         {
             InitializeComponent();
-
-            fb.Open();
-
             this.examid = examid;
+            string[] foo;
+            string bar = "";
 
+            if (fb.State == ConnectionState.Closed) //SELECT CURRENT EXAM
+                fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-
             FbCommand SelectSQL = new FbCommand("SELECT * FROM exams WHERE id = " + examid, fb);
             SelectSQL.Transaction = fbt;
-
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
             for (int i = 0; i < 18; i++)
@@ -41,10 +41,37 @@ namespace ExamSystem
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
+
+            string questionlist = examinfo[3] + "," + examinfo[5] + "," + examinfo[7] + "," + examinfo[9] + "," + examinfo[11];
+            FbTransaction fbt1 = fb.BeginTransaction(); //SELECT CURRENT QUESTIONS
+            FbCommand SelectSQL1 = new FbCommand("SELECT * FROM question WHERE id IN (" + questionlist + ")", fb);
+            SelectSQL1.Transaction = fbt1;
+            FbDataReader reader1 = SelectSQL1.ExecuteReader();
+
+            while (reader1.Read())
+            {
+                bar = bar + reader1[0].ToString() + "|" + reader1[1].ToString() + "|" + reader1[2].ToString() + "|" + reader1[3].ToString() + "|" + reader1[4].ToString() + "|" + reader1[5].ToString() + "|" + reader1[6].ToString() + "|" + reader1[7].ToString() + "|" + reader1[8].ToString() + "\n";
+            }
+            reader1.Close();
+            SelectSQL1.Dispose();
+            fbt1.Commit();
             fb.Close();
 
+
+            bar = bar.Substring(0, bar.Length - 1);
+            foo = bar.Split('\n');
+            string[][] qList = new string[foo.Length][];
+
+            for(int i = 0; i < foo.Length; i++)
+            {
+                qList[i] = foo[i].Split('|');
+            }
+
+            this.questionlist = qList;
+
+
             int min = 0;
-            int sec = 0; 
+            int sec = 0;
             for (int i = 13; i < 18; i++)
             {
                 string[] time = examinfo[i].Split(':');
@@ -56,17 +83,6 @@ namespace ExamSystem
             }
             ExamTimeLabel.Text = ExamTimeLabel.Text + min.ToString() + ":" + sec.ToString();
 
-            CompleteLabel.Text = "Экзамен завершен";
-
-            for (int i = 13; i < 18; i++)
-            {
-                if (examinfo[i].Length == 0)
-                {
-                    CompleteLabel.Text = "Экзамен не заверешен";
-                    break;
-                }
-            }
-
             PartComboBox.SelectedIndex = 0;
         }
 
@@ -76,9 +92,20 @@ namespace ExamSystem
             {
                 QuestionsListBox.Items.Clear();
 
-                foreach (string s in get_questions_id())
+                string[] qIds = examinfo[get_part_id_in_exams()].Split(',');
+
+                foreach (string qId in qIds)
                 {
-                    QuestionsListBox.Items.Add(get_question("SELECT ques FROM question WHERE id = " + s));
+                    string temp = "";
+                    foreach (string[] question in questionlist)
+                    {
+                        if (question[0] == qId)
+                        {
+                            temp = question[2];
+                            break;
+                        }
+                    }
+                    QuestionsListBox.Items.Add(temp);
                 }
 
                 if (QuestionsListBox.Items.Count > 0)
@@ -87,127 +114,38 @@ namespace ExamSystem
                     QuestionsListBox_SelectedValueChanged(sender, e);
                 }
             }
-            catch { fb.Close(); }
+            catch { }
         }
-
-        private string get_question(string query)
-        {
-            string q = "";
-            if (fb.State == ConnectionState.Closed)
-            {
-                fb.Open();
-            }
-            FbTransaction fbt = fb.BeginTransaction();
-
-            FbCommand SelectSQL = new FbCommand(query, fb);
-            SelectSQL.Transaction = fbt;
-
-            FbDataReader reader = SelectSQL.ExecuteReader();
-            while (reader.Read())
-            {
-                q = reader[0].ToString();
-            }
-            reader.Close();
-            SelectSQL.Dispose();
-            fbt.Commit();
-            fb.Close();
-
-            return q;
-        }
-
-        private string[] get_questions_id()
-        {
-            string part = PartComboBox.SelectedItem.ToString();
-            if (part == "Часть 1")
-            {
-                part = "PART1";
-            }
-            else if(part == "Часть 2")
-            {
-                part = "PART2";
-            }
-            else if(part == "Часть 3")
-            {
-                part = "PART3";
-            }
-            else if (part == "Часть 4")
-            {
-                part = "PART4";
-            }
-            else if (part == "Часть 5")
-            {
-                part = "PART5";
-            }
-            if (fb.State == ConnectionState.Closed)
-            {
-                fb.Open();
-            }
-            
-            FbTransaction fbt = fb.BeginTransaction();
-
-            FbCommand SelectSQL = new FbCommand("SELECT " + part + " FROM exams WHERE exams.id = " + examid, fb);
-            SelectSQL.Transaction = fbt;
-
-            FbDataReader reader = SelectSQL.ExecuteReader();
-            string foo = "";
-            while (reader.Read())
-            {
-                foo = reader[0].ToString();
-            }
-            reader.Close();
-            SelectSQL.Dispose();
-            fbt.Commit();
-            fb.Close();
-
-            string[] questionsid = new string[foo.Split(',').Count()];
-            int bar = 0;
-            foreach (string s in foo.Split(','))
-            {
-                questionsid[bar] = s;
-                bar++;
-            }
-            return questionsid;
-        }
-
 
         private void QuestionsListBox_SelectedValueChanged(object sender, EventArgs e)
         {
             try
             {
-                QuestionTextBox.Text = QuestionsListBox.SelectedItem.ToString();
-                string q = "";
-                if (fb.State == ConnectionState.Closed)
+
+                string[] question = new string[9];
+
+                foreach (string[] q in questionlist)
                 {
-                    fb.Open();
+                    if (q[2] == QuestionsListBox.SelectedItem.ToString())
+                    {
+                        question = q;
+                        break;
+                    }
                 }
-                FbTransaction fbt = fb.BeginTransaction();
-
-                FbCommand SelectSQL = new FbCommand("SELECT a1, a2, a3, a4, a_curr FROM question WHERE ques = '" + QuestionsListBox.SelectedItem.ToString() + "'", fb);
-                SelectSQL.Transaction = fbt;
-
-                FbDataReader reader = SelectSQL.ExecuteReader();
-                reader.Read();
-
-                CurrentAnswerTextBox.Text = reader[int.Parse(reader[4].ToString()) - 1].ToString();
+                QuestionTextBox.Text = question[2];
+                CurrentAnswerTextBox.Text = question[int.Parse(question[7]) + 2];
 
                 int answerid;
-
-
-                string foo = examinfo[get_part_id_in_exams()].Split(',')[QuestionsListBox.SelectedIndex];
+                string foo = examinfo[get_part_id_in_exams() + 1].Split(',')[QuestionsListBox.SelectedIndex];
                 if (foo.Length > 0)
-                    answerid = int.Parse(foo) - 1;
+                    answerid = int.Parse(foo);
                 else
                     answerid = -1;
 
                 if (answerid != -1)
-                    UserAnswerTextBox.Text = reader[answerid].ToString();
+                    UserAnswerTextBox.Text = question[answerid+2].ToString();
                 else
                     UserAnswerTextBox.Text = "Нет ответа";
-
-                reader.Close();
-                SelectSQL.Dispose();
-                fbt.Commit();
-                fb.Close();
             }
             catch { }
         }
@@ -217,23 +155,23 @@ namespace ExamSystem
             string part = PartComboBox.SelectedItem.ToString();
             if (part == "Часть 1")
             {
-                return 4;
+                return 3;
             }
             else if (part == "Часть 2")
             {
-                return 6;
+                return 5;
             }
             else if (part == "Часть 3")
             {
-                return 8;
+                return 7;
             }
             else if (part == "Часть 4")
             {
-                return 10;
+                return 9;
             }
             else
             {
-                return 12;
+                return 11;
             }
         }
     }

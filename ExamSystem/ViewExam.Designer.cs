@@ -36,7 +36,6 @@
             this.CurrentAnswerLabel = new System.Windows.Forms.Label();
             this.CurrentAnswerTextBox = new System.Windows.Forms.RichTextBox();
             this.ExamTimeLabel = new System.Windows.Forms.Label();
-            this.CompleteLabel = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.QuestionLabel1 = new System.Windows.Forms.Label();
             this.QuestionTextBox = new System.Windows.Forms.RichTextBox();
@@ -122,16 +121,6 @@
             this.ExamTimeLabel.TabIndex = 7;
             this.ExamTimeLabel.Text = "Общее время экзамена: ";
             // 
-            // CompleteLabel
-            // 
-            this.CompleteLabel.AutoSize = true;
-            this.CompleteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.CompleteLabel.Location = new System.Drawing.Point(572, 12);
-            this.CompleteLabel.Name = "CompleteLabel";
-            this.CompleteLabel.Size = new System.Drawing.Size(103, 22);
-            this.CompleteLabel.TabIndex = 8;
-            this.CompleteLabel.Text = "завершен?";
-            // 
             // ResultLabel
             // 
             this.ResultLabel.AutoSize = true;
@@ -169,7 +158,6 @@
             this.Controls.Add(this.QuestionLabel1);
             this.Controls.Add(this.QuestionTextBox);
             this.Controls.Add(this.ResultLabel);
-            this.Controls.Add(this.CompleteLabel);
             this.Controls.Add(this.ExamTimeLabel);
             this.Controls.Add(this.CurrentAnswerLabel);
             this.Controls.Add(this.CurrentAnswerTextBox);
@@ -195,7 +183,6 @@
         private System.Windows.Forms.Label CurrentAnswerLabel;
         private System.Windows.Forms.RichTextBox CurrentAnswerTextBox;
         private System.Windows.Forms.Label ExamTimeLabel;
-        private System.Windows.Forms.Label CompleteLabel;
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Label QuestionLabel1;
         private System.Windows.Forms.RichTextBox QuestionTextBox;
