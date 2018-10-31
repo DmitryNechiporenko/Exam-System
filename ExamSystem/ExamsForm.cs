@@ -1,13 +1,10 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
+using System.Reflection;
 
 namespace ExamSystem
 {
@@ -313,14 +310,40 @@ namespace ExamSystem
             goToExam(4);
         }
 
-        private void ReportButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void part5Button_Click(object sender, EventArgs e)
         {
             goToExam(5);
+        }
+
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+            Word.Application application = new Word.Application();
+            Object filename = @"D:\exam.dot";
+            Object missing = Type.Missing;
+            application.Documents.Open(ref filename);
+            Word.Find find = application.Selection.Find;
+            find.Text = "@@username";
+            find.Replacement.Text = UserNameLabel.Text;
+            Object wrap = Word.WdFindWrap.wdFindContinue;
+            Object replace = Word.WdReplace.wdReplaceAll;
+            find.Execute(FindText: Type.Missing,
+                MatchCase: false,
+                MatchWholeWord: false,
+                MatchWildcards: false,
+                MatchSoundsLike: missing,
+                MatchAllWordForms: false,
+                Forward: true,
+                Wrap: wrap,
+                Format: false,
+                ReplaceWith: missing, Replace: replace);
+
+
+            application.Dialogs[Word.WdWordDialog.wdDialogFilePrint].Show();
+
+            application.Quit();
+
+            
         }
     }
 }

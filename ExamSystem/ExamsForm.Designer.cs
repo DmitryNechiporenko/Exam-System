@@ -173,7 +173,6 @@
             this.ReportButton.TabIndex = 10015;
             this.ReportButton.Text = "Отчет";
             this.ReportButton.UseVisualStyleBackColor = true;
-            this.ReportButton.Visible = false;
             this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // ExamsForm
