@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace ExamSystem
 {
@@ -323,25 +324,36 @@ namespace ExamSystem
             Object missing = Type.Missing;
             application.Documents.Open(ref filename);
             Word.Find find = application.Selection.Find;
-            find.Text = "@@username";
-            find.Replacement.Text = UserNameLabel.Text;
-            Object wrap = Word.WdFindWrap.wdFindContinue;
-            Object replace = Word.WdReplace.wdReplaceAll;
-            find.Execute(FindText: Type.Missing,
-                MatchCase: false,
-                MatchWholeWord: false,
-                MatchWildcards: false,
-                MatchSoundsLike: missing,
-                MatchAllWordForms: false,
-                Forward: true,
-                Wrap: wrap,
-                Format: false,
-                ReplaceWith: missing, Replace: replace);
+
+            Dictionary<string, string> replacements = new Dictionary<string, string>(3);
+            replacements.Add("@@username", UserNameLabel.Text);
+            replacements.Add("@@nowdate", DateTime.Now.ToString("dd.MM.yyy"));
+            replacements.Add("@@dolg", CourseComboBox.Text + "/" + BlockComboBox.Text);
 
 
-            application.Dialogs[Word.WdWordDialog.wdDialogFilePrint].Show();
+            foreach(KeyValuePair<string, string> keyValue in replacements)
+            {
+                find.Text = keyValue.Key;
+                find.Replacement.Text = keyValue.Value;
+                Object wrap = Word.WdFindWrap.wdFindContinue;
+                Object replace = Word.WdReplace.wdReplaceAll;
+                find.Execute(FindText: Type.Missing,
+                    MatchCase: false,
+                    MatchWholeWord: false,
+                    MatchWildcards: false,
+                    MatchSoundsLike: missing,
+                    MatchAllWordForms: false,
+                    Forward: true,
+                    Wrap: wrap,
+                    Format: false,
+                    ReplaceWith: missing, Replace: replace);
+            }
 
-            application.Quit();
+
+
+
+            application.Visible = true;
+
 
             
         }
