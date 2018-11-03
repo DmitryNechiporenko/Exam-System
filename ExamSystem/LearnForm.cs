@@ -66,8 +66,11 @@ namespace ExamSystem
             {
                 foo[i] = ChoosedBlocksListBox.Items[i].ToString();
             }
-            LearnQuiz f = new LearnQuiz(foo);
-            f.ShowDialog();
+
+            this.Hide();
+            LearnQuiz lq = new LearnQuiz(foo);
+            lq.Closed += (s, args) => this.Close();
+            lq.Show();
         }
     }
 }
