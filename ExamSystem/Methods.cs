@@ -1,6 +1,7 @@
 ﻿using FirebirdSql.Data.FirebirdClient;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ExamSystem
 {
@@ -10,11 +11,19 @@ namespace ExamSystem
         public static string conString()
         {
             FbConnectionStringBuilder fb_con = new FbConnectionStringBuilder();
-            fb_con.Charset = "UTF8"; //используемая кодировка
-            fb_con.UserID = "SYSDBA"; //логин
-            fb_con.Password = "civssm"; //пароль
-            fb_con.Database = "C:\\DB.FDB"; //путь к файлу базы данных
-            fb_con.ServerType = 0; //указываем тип сервера (0 - "полноценный Firebird" (classic или super server), 1 - встроенный (embedded))
+            string[] config = File.ReadAllLines(Path.Combine(Application.StartupPath, "config.txt"));
+            foreach (string line in config)
+            {
+                string[] cfg = line.Split(' ');
+                if (cfg[0] == "Charset")
+                    fb_con.Charset = cfg[1];
+                else if (cfg[0] == "UserID")
+                    fb_con.UserID = cfg[1];
+                else if (cfg[0] == "Password")
+                    fb_con.Password = cfg[1];
+            }
+            fb_con.Database = Path.Combine(Application.StartupPath, "DB.FDB");
+            fb_con.ServerType = 0; //тип сервера (0 - "полноценный Firebird" (classic или super server), 1 - встроенный (embedded))
 
             return fb_con.ToString();
         }
