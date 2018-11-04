@@ -41,6 +41,8 @@
             this.part4Button = new System.Windows.Forms.Button();
             this.part5Button = new System.Windows.Forms.Button();
             this.ReportButton = new System.Windows.Forms.Button();
+            this.RefreshExamButton = new System.Windows.Forms.Button();
+            this.ResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BlockComboBox
@@ -55,7 +57,7 @@
             // ExamLabel
             // 
             this.ExamLabel.AutoSize = true;
-            this.ExamLabel.Location = new System.Drawing.Point(414, 86);
+            this.ExamLabel.Location = new System.Drawing.Point(420, 91);
             this.ExamLabel.Name = "ExamLabel";
             this.ExamLabel.Size = new System.Drawing.Size(118, 13);
             this.ExamLabel.TabIndex = 10007;
@@ -101,7 +103,7 @@
             // 
             // CreateExamButton
             // 
-            this.CreateExamButton.Location = new System.Drawing.Point(417, 102);
+            this.CreateExamButton.Location = new System.Drawing.Point(423, 107);
             this.CreateExamButton.Name = "CreateExamButton";
             this.CreateExamButton.Size = new System.Drawing.Size(115, 24);
             this.CreateExamButton.TabIndex = 10009;
@@ -112,7 +114,7 @@
             // 
             // part1Button
             // 
-            this.part1Button.Location = new System.Drawing.Point(334, 141);
+            this.part1Button.Location = new System.Drawing.Point(334, 86);
             this.part1Button.Name = "part1Button";
             this.part1Button.Size = new System.Drawing.Size(51, 45);
             this.part1Button.TabIndex = 10010;
@@ -123,7 +125,7 @@
             // 
             // part2Button
             // 
-            this.part2Button.Location = new System.Drawing.Point(391, 141);
+            this.part2Button.Location = new System.Drawing.Point(391, 86);
             this.part2Button.Name = "part2Button";
             this.part2Button.Size = new System.Drawing.Size(51, 45);
             this.part2Button.TabIndex = 10011;
@@ -134,7 +136,7 @@
             // 
             // part3Button
             // 
-            this.part3Button.Location = new System.Drawing.Point(448, 141);
+            this.part3Button.Location = new System.Drawing.Point(448, 86);
             this.part3Button.Name = "part3Button";
             this.part3Button.Size = new System.Drawing.Size(51, 45);
             this.part3Button.TabIndex = 10012;
@@ -145,7 +147,7 @@
             // 
             // part4Button
             // 
-            this.part4Button.Location = new System.Drawing.Point(505, 141);
+            this.part4Button.Location = new System.Drawing.Point(505, 86);
             this.part4Button.Name = "part4Button";
             this.part4Button.Size = new System.Drawing.Size(51, 45);
             this.part4Button.TabIndex = 10013;
@@ -156,7 +158,7 @@
             // 
             // part5Button
             // 
-            this.part5Button.Location = new System.Drawing.Point(562, 141);
+            this.part5Button.Location = new System.Drawing.Point(562, 86);
             this.part5Button.Name = "part5Button";
             this.part5Button.Size = new System.Drawing.Size(51, 45);
             this.part5Button.TabIndex = 10014;
@@ -167,19 +169,43 @@
             // 
             // ReportButton
             // 
-            this.ReportButton.Location = new System.Drawing.Point(619, 141);
+            this.ReportButton.Location = new System.Drawing.Point(484, 229);
             this.ReportButton.Name = "ReportButton";
-            this.ReportButton.Size = new System.Drawing.Size(51, 45);
+            this.ReportButton.Size = new System.Drawing.Size(129, 40);
             this.ReportButton.TabIndex = 10015;
             this.ReportButton.Text = "Отчет";
             this.ReportButton.UseVisualStyleBackColor = true;
+            this.ReportButton.Visible = false;
             this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
+            // 
+            // RefreshExamButton
+            // 
+            this.RefreshExamButton.Location = new System.Drawing.Point(334, 229);
+            this.RefreshExamButton.Name = "RefreshExamButton";
+            this.RefreshExamButton.Size = new System.Drawing.Size(129, 40);
+            this.RefreshExamButton.TabIndex = 10016;
+            this.RefreshExamButton.Text = "Начать заново";
+            this.RefreshExamButton.UseVisualStyleBackColor = true;
+            this.RefreshExamButton.Visible = false;
+            this.RefreshExamButton.Click += new System.EventHandler(this.RefreshExamButton_Click);
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResultLabel.Location = new System.Drawing.Point(330, 168);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(97, 20);
+            this.ResultLabel.TabIndex = 10017;
+            this.ResultLabel.Text = "Результат: ";
             // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 281);
+            this.ClientSize = new System.Drawing.Size(636, 281);
+            this.Controls.Add(this.ResultLabel);
+            this.Controls.Add(this.RefreshExamButton);
             this.Controls.Add(this.ReportButton);
             this.Controls.Add(this.part5Button);
             this.Controls.Add(this.part4Button);
@@ -216,5 +242,7 @@
         private System.Windows.Forms.Button part4Button;
         private System.Windows.Forms.Button part5Button;
         private System.Windows.Forms.Button ReportButton;
+        private System.Windows.Forms.Button RefreshExamButton;
+        private System.Windows.Forms.Label ResultLabel;
     }
 }

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ExamSystem
 {
@@ -14,6 +15,7 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
 
         int userid, examid;
+        double examresult = 0;
         public ExamsForm(int userid)
         {
             InitializeComponent();
@@ -62,6 +64,7 @@ namespace ExamSystem
         {
             try
             {
+                int partsCount = 0;
                 int BlockID = int.Parse(BlockComboBox.SelectedValue.ToString());
                 if (fb.State == ConnectionState.Closed)
                 {
@@ -95,6 +98,7 @@ namespace ExamSystem
                     {
                         part1Button.BackColor = Color.LightGray;
                         part1Button.Enabled = true;
+                        partsCount++;
                     }
                     if (reader[14].ToString().Length > 0)
                     {
@@ -105,6 +109,7 @@ namespace ExamSystem
                     {
                         part2Button.BackColor = Color.LightGray;
                         part2Button.Enabled = true;
+                        partsCount++;
                     }
                     if (reader[15].ToString().Length > 0)
                     {
@@ -115,6 +120,7 @@ namespace ExamSystem
                     {
                         part3Button.BackColor = Color.LightGray;
                         part3Button.Enabled = true;
+                        partsCount++;
                     }
                     if (reader[16].ToString().Length > 0)
                     {
@@ -125,6 +131,7 @@ namespace ExamSystem
                     {
                         part4Button.BackColor = Color.LightGray;
                         part4Button.Enabled = true;
+                        partsCount++;
                     }
                     if (reader[17].ToString().Length > 0)
                     {
@@ -135,6 +142,7 @@ namespace ExamSystem
                     {
                         part5Button.BackColor = Color.LightGray;
                         part5Button.Enabled = true;
+                        partsCount++;
                     }
                 }
                 else
@@ -152,6 +160,34 @@ namespace ExamSystem
                 fbt.Commit();
                 fb.Close();
 
+
+                ResultLabel.Visible = !CreateExamButton.Visible;
+                RefreshExamButton.Visible = false;
+                ReportButton.Visible = false;
+
+                if (partsCount == 0)
+                {
+                    examresult = calculate.percentage(this.examid);
+                    ResultLabel.Text = "Результат: " + examresult + "%";
+
+                    if(examresult >= 75)
+                    {
+                        ReportButton.Visible = true;
+                        RefreshExamButton.Visible = false;
+                        ResultLabel.Text = ResultLabel.Text + " (экзамен сдан)";
+                    }
+                    else
+                    {
+                        RefreshExamButton.Visible = true;
+                        ReportButton.Visible = false;
+                        ResultLabel.Text = ResultLabel.Text + " (экзамен не сдан)";
+                    }
+                }
+                else
+                {
+                    examresult = 0;
+                    ResultLabel.Text = "Экзамен не завершён";
+                }
             }
             catch
             {
@@ -316,19 +352,25 @@ namespace ExamSystem
             goToExam(5);
         }
 
+        private void RefreshExamButton_Click(object sender, EventArgs e)
+        {
+            delete.record("DELETE FROM exams WHERE id = " + examid);
+            ExamsFormcs_Load(sender, e);
+        }
 
         private void ReportButton_Click(object sender, EventArgs e)
         {
             Word.Application application = new Word.Application();
-            Object filename = @"D:\exam.dot";
+            Object filename = Path.Combine(Application.StartupPath, "report.dot");
             Object missing = Type.Missing;
             application.Documents.Open(ref filename);
             Word.Find find = application.Selection.Find;
 
             Dictionary<string, string> replacements = new Dictionary<string, string>(3);
-            replacements.Add("@@username", UserNameLabel.Text);
-            replacements.Add("@@nowdate", DateTime.Now.ToString("dd.MM.yyy"));
-            replacements.Add("@@dolg", CourseComboBox.Text + "/" + BlockComboBox.Text);
+            replacements.Add("<username>", UserNameLabel.Text);
+            replacements.Add("<nowdate>", DateTime.Now.ToString("dd.MM.yyy"));
+            replacements.Add("<spec>", CourseComboBox.Text + "/" + BlockComboBox.Text);
+            replacements.Add("<result>", examresult.ToString() + "%");
 
 
             foreach(KeyValuePair<string, string> keyValue in replacements)
@@ -348,14 +390,7 @@ namespace ExamSystem
                     Format: false,
                     ReplaceWith: missing, Replace: replace);
             }
-
-
-
-
             application.Visible = true;
-
-
-            
         }
     }
 }

@@ -84,6 +84,8 @@ namespace ExamSystem
             ExamTimeLabel.Text = ExamTimeLabel.Text + min.ToString() + ":" + sec.ToString();
 
             PartComboBox.SelectedIndex = 0;
+
+            ResultLabel.Text = ResultLabel.Text + " " + calculate.percentage(examid) + "%";
         }
 
         private void PartComboBox_SelectedValueChanged(object sender, EventArgs e)

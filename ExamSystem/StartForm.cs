@@ -20,7 +20,6 @@ namespace ExamSystem
 
         private void StartForm_Load(object sender, EventArgs e)
         {
-
         }
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
