@@ -126,3 +126,5 @@ D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.LearnForm.resources
 D:\git\Exam-System\ExamSystem\bin\Debug\MetroFramework.Design.dll
 D:\git\Exam-System\ExamSystem\bin\Debug\MetroFramework.dll
 D:\git\Exam-System\ExamSystem\bin\Debug\MetroFramework.Fonts.dll
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.adminform.resources
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.adminpassForm.resources
