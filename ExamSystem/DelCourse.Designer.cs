@@ -28,79 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CourseComboBox = new System.Windows.Forms.ComboBox();
-            this.CourseLabel = new System.Windows.Forms.Label();
-            this.CourseTextBox = new System.Windows.Forms.TextBox();
-            this.TextLabel = new System.Windows.Forms.Label();
-            this.UpdButton = new System.Windows.Forms.Button();
-            this.DelButton = new System.Windows.Forms.Button();
+            this.CourseLabel = new MetroFramework.Controls.MetroLabel();
+            this.TextLabel = new MetroFramework.Controls.MetroLabel();
+            this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.CourseTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.UpdButton = new MetroFramework.Controls.MetroButton();
+            this.DelButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
-            // 
-            // CourseComboBox
-            // 
-            this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.Location = new System.Drawing.Point(102, 40);
-            this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(184, 21);
-            this.CourseComboBox.TabIndex = 0;
-            this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
             // CourseLabel
             // 
             this.CourseLabel.AutoSize = true;
-            this.CourseLabel.Location = new System.Drawing.Point(65, 43);
+            this.CourseLabel.Location = new System.Drawing.Point(84, 63);
             this.CourseLabel.Name = "CourseLabel";
-            this.CourseLabel.Size = new System.Drawing.Size(31, 13);
-            this.CourseLabel.TabIndex = 1;
+            this.CourseLabel.Size = new System.Drawing.Size(36, 19);
+            this.CourseLabel.TabIndex = 6;
             this.CourseLabel.Text = "Курс";
-            // 
-            // CourseTextBox
-            // 
-            this.CourseTextBox.Location = new System.Drawing.Point(102, 67);
-            this.CourseTextBox.Name = "CourseTextBox";
-            this.CourseTextBox.Size = new System.Drawing.Size(184, 20);
-            this.CourseTextBox.TabIndex = 2;
             // 
             // TextLabel
             // 
             this.TextLabel.AutoSize = true;
-            this.TextLabel.Location = new System.Drawing.Point(65, 70);
+            this.TextLabel.Location = new System.Drawing.Point(18, 98);
             this.TextLabel.Name = "TextLabel";
-            this.TextLabel.Size = new System.Drawing.Size(37, 13);
-            this.TextLabel.TabIndex = 3;
-            this.TextLabel.Text = "Текст";
+            this.TextLabel.Size = new System.Drawing.Size(102, 19);
+            this.TextLabel.TabIndex = 7;
+            this.TextLabel.Text = "Наименование";
+            // 
+            // CourseComboBox
+            // 
+            this.CourseComboBox.FormattingEnabled = true;
+            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.Location = new System.Drawing.Point(126, 63);
+            this.CourseComboBox.Name = "CourseComboBox";
+            this.CourseComboBox.Size = new System.Drawing.Size(199, 29);
+            this.CourseComboBox.TabIndex = 8;
+            this.CourseComboBox.UseSelectable = true;
+            this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
+            // 
+            // CourseTextBox
+            // 
+            // 
+            // 
+            // 
+            this.CourseTextBox.CustomButton.Image = null;
+            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(177, 1);
+            this.CourseTextBox.CustomButton.Name = "";
+            this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.CourseTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.CourseTextBox.CustomButton.TabIndex = 1;
+            this.CourseTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.CourseTextBox.CustomButton.UseSelectable = true;
+            this.CourseTextBox.CustomButton.Visible = false;
+            this.CourseTextBox.Lines = new string[0];
+            this.CourseTextBox.Location = new System.Drawing.Point(126, 98);
+            this.CourseTextBox.MaxLength = 32767;
+            this.CourseTextBox.Name = "CourseTextBox";
+            this.CourseTextBox.PasswordChar = '\0';
+            this.CourseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CourseTextBox.SelectedText = "";
+            this.CourseTextBox.SelectionLength = 0;
+            this.CourseTextBox.SelectionStart = 0;
+            this.CourseTextBox.ShortcutsEnabled = true;
+            this.CourseTextBox.Size = new System.Drawing.Size(199, 23);
+            this.CourseTextBox.TabIndex = 9;
+            this.CourseTextBox.UseSelectable = true;
+            this.CourseTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.CourseTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // UpdButton
             // 
-            this.UpdButton.Location = new System.Drawing.Point(68, 106);
+            this.UpdButton.Location = new System.Drawing.Point(126, 145);
             this.UpdButton.Name = "UpdButton";
-            this.UpdButton.Size = new System.Drawing.Size(102, 58);
-            this.UpdButton.TabIndex = 4;
+            this.UpdButton.Size = new System.Drawing.Size(94, 61);
+            this.UpdButton.TabIndex = 10;
             this.UpdButton.Text = "Изменить";
-            this.UpdButton.UseVisualStyleBackColor = true;
+            this.UpdButton.UseSelectable = true;
             this.UpdButton.Click += new System.EventHandler(this.UpdButton_Click);
             // 
             // DelButton
             // 
-            this.DelButton.Location = new System.Drawing.Point(186, 106);
+            this.DelButton.Location = new System.Drawing.Point(231, 145);
             this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(100, 58);
-            this.DelButton.TabIndex = 5;
+            this.DelButton.Size = new System.Drawing.Size(94, 61);
+            this.DelButton.TabIndex = 11;
             this.DelButton.Text = "Удалить";
-            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.UseSelectable = true;
             this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
             // DelCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 206);
+            this.ClientSize = new System.Drawing.Size(364, 232);
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.UpdButton);
-            this.Controls.Add(this.TextLabel);
             this.Controls.Add(this.CourseTextBox);
-            this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.CourseComboBox);
+            this.Controls.Add(this.TextLabel);
+            this.Controls.Add(this.CourseLabel);
             this.Name = "DelCourse";
             this.Text = "Изменение курсов";
             this.Load += new System.EventHandler(this.DelCourse_Load);
@@ -110,12 +135,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox CourseComboBox;
-        private System.Windows.Forms.Label CourseLabel;
-        private System.Windows.Forms.TextBox CourseTextBox;
-        private System.Windows.Forms.Label TextLabel;
-        private System.Windows.Forms.Button UpdButton;
-        private System.Windows.Forms.Button DelButton;
+        private MetroFramework.Controls.MetroLabel CourseLabel;
+        private MetroFramework.Controls.MetroLabel TextLabel;
+        private MetroFramework.Controls.MetroComboBox CourseComboBox;
+        private MetroFramework.Controls.MetroTextBox CourseTextBox;
+        private MetroFramework.Controls.MetroButton UpdButton;
+        private MetroFramework.Controls.MetroButton DelButton;
     }
 }

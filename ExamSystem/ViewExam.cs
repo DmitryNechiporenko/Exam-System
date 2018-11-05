@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class ViewExam : Form
+    public partial class ViewExam : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 

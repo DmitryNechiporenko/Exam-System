@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class ExamQuiz : Form
+    public partial class ExamQuiz : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
         int examid;
@@ -72,13 +72,9 @@ namespace ExamSystem
         private void ExamQuiz_Load(object sender, EventArgs e)
         {
             QuestionTextBox.Visible = true;
-            Answer1Label.Visible = true;
             Answer1Radio.Visible = true;
-            Answer2Label.Visible = true;
             Answer2Radio.Visible = true;
-            Answer3Label.Visible = true;
             Answer3Radio.Visible = true;
-            Answer4Label.Visible = true;
             Answer4Radio.Visible = true;
             if (fb.State == ConnectionState.Closed)
             {
@@ -131,10 +127,10 @@ namespace ExamSystem
         private void ShowQuestion()
         {
             QuestionTextBox.Text = questions.Rows[rownum][1].ToString();
-            Answer1Label.Text = questions.Rows[rownum][2].ToString();
-            Answer2Label.Text = questions.Rows[rownum][3].ToString();
-            Answer3Label.Text = questions.Rows[rownum][4].ToString();
-            Answer4Label.Text = questions.Rows[rownum][5].ToString();
+            Answer1Radio.Text = questions.Rows[rownum][2].ToString();
+            Answer2Radio.Text = questions.Rows[rownum][3].ToString();
+            Answer3Radio.Text = questions.Rows[rownum][4].ToString();
+            Answer4Radio.Text = questions.Rows[rownum][5].ToString();
 
             Answer1Radio.Enabled = true;
             Answer2Radio.Enabled = true;
@@ -183,83 +179,103 @@ namespace ExamSystem
             }
             if (rownum == 0)
             {
-                q1Button.BackColor = Color.LightGreen;
+                q1Button.Highlight = true;
+                q1Button.Refresh();
             }
             if (rownum == 1)
             {
-                q2Button.BackColor = Color.LightGreen;
+                q2Button.Highlight = true;
+                q2Button.Refresh();
             }
             if (rownum == 2)
             {
-                q3Button.BackColor = Color.LightGreen;
+                q3Button.Highlight = true;
+                q3Button.Refresh();
             }
             if (rownum == 3)
             {
-                q4Button.BackColor = Color.LightGreen;
+                q4Button.Highlight = true;
+                q4Button.Refresh();
             }
             if (rownum == 4)
             {
-                q5Button.BackColor = Color.LightGreen;
+                q5Button.Highlight = true;
+                q5Button.Refresh();
             }
             if (rownum == 5)
             {
-                q6Button.BackColor = Color.LightGreen;
+                q6Button.Highlight = true;
+                q6Button.Refresh();
             }
             if (rownum == 6)
             {
-                q7Button.BackColor = Color.LightGreen;
+                q7Button.Highlight = true;
+                q7Button.Refresh();
             }
             if (rownum == 7)
             {
-                q8Button.BackColor = Color.LightGreen;
+                q8Button.Highlight = true;
+                q8Button.Refresh();
             }
             if (rownum == 8)
             {
-                q9Button.BackColor = Color.LightGreen;
+                q9Button.Highlight = true;
+                q9Button.Refresh();
             }
             if (rownum == 9)
             {
-                q10Button.BackColor = Color.LightGreen;
+                q10Button.Highlight = true;
+                q10Button.Refresh();
             }
             if (rownum == 10)
             {
-                q11Button.BackColor = Color.LightGreen;
+                q11Button.Highlight = true;
+                q11Button.Refresh();
             }
             if (rownum == 11)
             {
-                q12Button.BackColor = Color.LightGreen;
+                q12Button.Highlight = true;
+                q12Button.Refresh();
             }
             if (rownum == 12)
             {
-                q13Button.BackColor = Color.LightGreen;
+                q13Button.Highlight = true;
+                q13Button.Refresh();
             }
             if (rownum == 13)
             {
-                q14Button.BackColor = Color.LightGreen;
+                q14Button.Highlight = true;
+                q14Button.Refresh();
             }
             if (rownum == 14)
             {
-                q15Button.BackColor = Color.LightGreen;
+                q15Button.Highlight = true;
+                q15Button.Refresh();
             }
             if (rownum == 15)
             {
-                q16Button.BackColor = Color.LightGreen;
+                q16Button.Highlight = true;
+                q16Button.Refresh();
             }
             if (rownum == 16)
             {
-                q17Button.BackColor = Color.LightGreen;
+                q17Button.Highlight = true;
+                q17Button.Refresh();
             }
             if (rownum == 17)
             {
-                q18Button.BackColor = Color.LightGreen;
+                q18Button.Highlight = true;
+                q18Button.Refresh();
             }
             if (rownum == 18)
             {
-                q19Button.BackColor = Color.LightGreen;
+                q19Button.Highlight = true;
+                q19Button.Refresh();
             }
             if (rownum == 19)
             {
-                q20Button.BackColor = Color.LightGreen;
+                q20Button.Highlight = true;
+                q20Button.Refresh();
             }
         }
 

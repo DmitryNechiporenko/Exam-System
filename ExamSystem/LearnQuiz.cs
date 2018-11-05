@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class LearnQuiz : Form
+    public partial class LearnQuiz : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
         string all_blocks = "";
@@ -67,13 +67,9 @@ namespace ExamSystem
             orderButton.Visible = false;
             randomButton.Visible = false;
             QuestionTextBox.Visible = true;
-            Answer1Label.Visible = true;
             Answer1Radio.Visible = true;
-            Answer2Label.Visible = true;
             Answer2Radio.Visible = true;
-            Answer3Label.Visible = true;
             Answer3Radio.Visible = true;
-            Answer4Label.Visible = true;
             Answer4Radio.Visible = true;
             AnswerButton.Visible = true;
             CommentButton.Visible = true;
@@ -93,10 +89,10 @@ namespace ExamSystem
         private void ShowQuestion(int rownum)
         {
             QuestionTextBox.Text = questions.Rows[rownum][1].ToString();
-            Answer1Label.Text = questions.Rows[rownum][2].ToString();
-            Answer2Label.Text = questions.Rows[rownum][3].ToString();
-            Answer3Label.Text = questions.Rows[rownum][4].ToString();
-            Answer4Label.Text = questions.Rows[rownum][5].ToString();
+            Answer1Radio.Text = questions.Rows[rownum][2].ToString();
+            Answer2Radio.Text = questions.Rows[rownum][3].ToString();
+            Answer3Radio.Text = questions.Rows[rownum][4].ToString();
+            Answer4Radio.Text = questions.Rows[rownum][5].ToString();
             
             NextQuestionButton.Text = "Пропустить";
             AnswerButton.BackColor = Color.WhiteSmoke;
@@ -108,10 +104,6 @@ namespace ExamSystem
             Answer2Radio.Checked = false;
             Answer3Radio.Checked = false;
             Answer4Radio.Checked = false;
-            Answer1Label.Enabled = true;
-            Answer2Label.Enabled = true;
-            Answer3Label.Enabled = true;
-            Answer4Label.Enabled = true;
         }
 
         private int UserAnswer()
@@ -150,10 +142,6 @@ namespace ExamSystem
                 Answer2Radio.Enabled = false;
                 Answer3Radio.Enabled = false;
                 Answer4Radio.Enabled = false;
-                Answer1Label.Enabled = false;
-                Answer2Label.Enabled = false;
-                Answer3Label.Enabled = false;
-                Answer4Label.Enabled = false;
             }
             else
             {
@@ -164,14 +152,10 @@ namespace ExamSystem
                 Answer2Radio.Enabled = false;
                 Answer3Radio.Enabled = false;
                 Answer4Radio.Enabled = false;
-                Answer1Label.Enabled = false;
-                Answer2Label.Enabled = false;
-                Answer3Label.Enabled = false;
-                Answer4Label.Enabled = false;
                 MessageBox.Show("ОТВЕТ НЕПРАВИЛЬНЫЙ! \n" + questions.Rows[num][7].ToString());
                 
             }
-            
+            randomButton.Select();
         }
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
@@ -194,32 +178,19 @@ namespace ExamSystem
                 MessageBox.Show("Вы ответили правильно на " + currentcount + " из " + questions.Rows.Count + " вопросов! (" + (((double)currentcount / questions.Rows.Count)*100) + "%)");
                 Close();
             }
-            
+            randomButton.Select();
         }
 
         private void CommentButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show(questions.Rows[num][7].ToString());
+            randomButton.Select(); 
         }
 
-        private void Answer1Label_Click(object sender, EventArgs e)
-        {
-            Answer1Radio.Checked = true;
-        }
 
-        private void Answer2Label_Click(object sender, EventArgs e)
+        private void LearnQuiz_Load(object sender, EventArgs e)
         {
-            Answer2Radio.Checked = true;
-        }
 
-        private void Answer3Label_Click(object sender, EventArgs e)
-        {
-            Answer3Radio.Checked = true;
-        }
-
-        private void Answer4Label_Click(object sender, EventArgs e)
-        {
-            Answer4Radio.Checked = true;
         }
     }
 }

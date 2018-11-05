@@ -6,7 +6,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace ExamSystem
 {
-    public partial class DelBlock : Form
+    public partial class DelBlock : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 

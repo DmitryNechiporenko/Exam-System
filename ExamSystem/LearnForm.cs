@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class LearnForm : Form
+    public partial class LearnForm : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 
@@ -61,16 +61,23 @@ namespace ExamSystem
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            string[] foo = new string[ChoosedBlocksListBox.Items.Count];
-            for(int i = 0; i < ChoosedBlocksListBox.Items.Count; i++)
+            if (ChoosedBlocksListBox.Items.Count > 0)
             {
-                foo[i] = ChoosedBlocksListBox.Items[i].ToString();
-            }
+                string[] foo = new string[ChoosedBlocksListBox.Items.Count];
+                for (int i = 0; i < ChoosedBlocksListBox.Items.Count; i++)
+                {
+                    foo[i] = ChoosedBlocksListBox.Items[i].ToString();
+                }
 
-            this.Hide();
-            LearnQuiz lq = new LearnQuiz(foo);
-            lq.Closed += (s, args) => this.Close();
-            lq.Show();
+                this.Hide();
+                LearnQuiz lq = new LearnQuiz(foo);
+                lq.Closed += (s, args) => this.Close();
+                lq.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберите блок!");
+            }
         }
     }
 }

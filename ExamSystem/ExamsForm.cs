@@ -10,7 +10,7 @@ using System.IO;
 
 namespace ExamSystem
 {
-    public partial class ExamsForm : Form
+    public partial class ExamsForm : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 
@@ -91,56 +91,46 @@ namespace ExamSystem
 
                     if (reader[13].ToString().Length > 0)
                     {
-                        part1Button.BackColor = Color.LightGreen;
                         part1Button.Enabled = false;
                     }
                     else
                     {
-                        part1Button.BackColor = Color.LightGray;
                         part1Button.Enabled = true;
                         partsCount++;
                     }
                     if (reader[14].ToString().Length > 0)
                     {
-                        part2Button.BackColor = Color.LightGreen;
                         part2Button.Enabled = false;
                     }
                     else
                     {
-                        part2Button.BackColor = Color.LightGray;
                         part2Button.Enabled = true;
                         partsCount++;
                     }
                     if (reader[15].ToString().Length > 0)
                     {
-                        part3Button.BackColor = Color.LightGreen;
                         part3Button.Enabled = false;
                     }
                     else
                     {
-                        part3Button.BackColor = Color.LightGray;
                         part3Button.Enabled = true;
                         partsCount++;
                     }
                     if (reader[16].ToString().Length > 0)
                     {
-                        part4Button.BackColor = Color.LightGreen;
                         part4Button.Enabled = false;
                     }
                     else
                     {
-                        part4Button.BackColor = Color.LightGray;
                         part4Button.Enabled = true;
                         partsCount++;
                     }
                     if (reader[17].ToString().Length > 0)
                     {
-                        part5Button.BackColor = Color.LightGreen;
                         part5Button.Enabled = false;
                     }
                     else
                     {
-                        part5Button.BackColor = Color.LightGray;
                         part5Button.Enabled = true;
                         partsCount++;
                     }

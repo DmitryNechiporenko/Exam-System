@@ -28,95 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CourseComboBox = new System.Windows.Forms.ComboBox();
-            this.CourseBlocksListBox = new System.Windows.Forms.ListBox();
             this.ChoosedBlocksListBox = new System.Windows.Forms.ListBox();
-            this.AddBlockButton = new System.Windows.Forms.Button();
-            this.DeleteBlockButton = new System.Windows.Forms.Button();
-            this.StartButton = new System.Windows.Forms.Button();
-            this.ChooseCourseLabel = new System.Windows.Forms.Label();
+            this.CourseBlocksListBox = new System.Windows.Forms.ListBox();
+            this.AddBlockButton = new MetroFramework.Controls.MetroButton();
+            this.DeleteBlockButton = new MetroFramework.Controls.MetroButton();
+            this.StartButton = new MetroFramework.Controls.MetroButton();
+            this.ChooseCourseLabel = new MetroFramework.Controls.MetroLabel();
+            this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
-            // 
-            // CourseComboBox
-            // 
-            this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.Location = new System.Drawing.Point(209, 36);
-            this.CourseComboBox.MaxDropDownItems = 50;
-            this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(200, 21);
-            this.CourseComboBox.TabIndex = 0;
-            this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
-            // 
-            // CourseBlocksListBox
-            // 
-            this.CourseBlocksListBox.FormattingEnabled = true;
-            this.CourseBlocksListBox.Location = new System.Drawing.Point(12, 63);
-            this.CourseBlocksListBox.Name = "CourseBlocksListBox";
-            this.CourseBlocksListBox.Size = new System.Drawing.Size(191, 303);
-            this.CourseBlocksListBox.TabIndex = 1;
-            this.CourseBlocksListBox.DoubleClick += new System.EventHandler(this.AddBlockButton_Click);
             // 
             // ChoosedBlocksListBox
             // 
             this.ChoosedBlocksListBox.FormattingEnabled = true;
-            this.ChoosedBlocksListBox.Location = new System.Drawing.Point(415, 63);
+            this.ChoosedBlocksListBox.Location = new System.Drawing.Point(425, 106);
             this.ChoosedBlocksListBox.Name = "ChoosedBlocksListBox";
             this.ChoosedBlocksListBox.Size = new System.Drawing.Size(191, 303);
             this.ChoosedBlocksListBox.TabIndex = 2;
             this.ChoosedBlocksListBox.DoubleClick += new System.EventHandler(this.DeleteBlockButton_Click);
             // 
+            // CourseBlocksListBox
+            // 
+            this.CourseBlocksListBox.FormattingEnabled = true;
+            this.CourseBlocksListBox.Location = new System.Drawing.Point(22, 106);
+            this.CourseBlocksListBox.Name = "CourseBlocksListBox";
+            this.CourseBlocksListBox.Size = new System.Drawing.Size(191, 303);
+            this.CourseBlocksListBox.TabIndex = 7;
+            // 
             // AddBlockButton
             // 
-            this.AddBlockButton.Location = new System.Drawing.Point(209, 63);
+            this.AddBlockButton.Location = new System.Drawing.Point(219, 106);
             this.AddBlockButton.Name = "AddBlockButton";
             this.AddBlockButton.Size = new System.Drawing.Size(200, 45);
-            this.AddBlockButton.TabIndex = 3;
+            this.AddBlockButton.TabIndex = 8;
             this.AddBlockButton.Text = "Добавить блок";
-            this.AddBlockButton.UseVisualStyleBackColor = true;
+            this.AddBlockButton.UseSelectable = true;
             this.AddBlockButton.Click += new System.EventHandler(this.AddBlockButton_Click);
             // 
             // DeleteBlockButton
             // 
-            this.DeleteBlockButton.Location = new System.Drawing.Point(209, 114);
+            this.DeleteBlockButton.Location = new System.Drawing.Point(219, 157);
             this.DeleteBlockButton.Name = "DeleteBlockButton";
             this.DeleteBlockButton.Size = new System.Drawing.Size(200, 45);
-            this.DeleteBlockButton.TabIndex = 4;
+            this.DeleteBlockButton.TabIndex = 9;
             this.DeleteBlockButton.Text = "Удалить блок";
-            this.DeleteBlockButton.UseVisualStyleBackColor = true;
+            this.DeleteBlockButton.UseSelectable = true;
             this.DeleteBlockButton.Click += new System.EventHandler(this.DeleteBlockButton_Click);
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(209, 321);
+            this.StartButton.Location = new System.Drawing.Point(219, 364);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(200, 45);
-            this.StartButton.TabIndex = 5;
+            this.StartButton.TabIndex = 10;
             this.StartButton.Text = "Начать обучение";
-            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.UseSelectable = true;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // ChooseCourseLabel
             // 
             this.ChooseCourseLabel.AutoSize = true;
-            this.ChooseCourseLabel.Location = new System.Drawing.Point(260, 20);
+            this.ChooseCourseLabel.Location = new System.Drawing.Point(265, 47);
             this.ChooseCourseLabel.Name = "ChooseCourseLabel";
-            this.ChooseCourseLabel.Size = new System.Drawing.Size(83, 13);
-            this.ChooseCourseLabel.TabIndex = 6;
+            this.ChooseCourseLabel.Size = new System.Drawing.Size(99, 19);
+            this.ChooseCourseLabel.TabIndex = 11;
             this.ChooseCourseLabel.Text = "Выберите курс";
             // 
-            // LearnChooseBlocksForm
+            // CourseComboBox
+            // 
+            this.CourseComboBox.FormattingEnabled = true;
+            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.Location = new System.Drawing.Point(219, 69);
+            this.CourseComboBox.Name = "CourseComboBox";
+            this.CourseComboBox.Size = new System.Drawing.Size(200, 29);
+            this.CourseComboBox.TabIndex = 12;
+            this.CourseComboBox.UseSelectable = true;
+            this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
+            // 
+            // LearnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 378);
+            this.ClientSize = new System.Drawing.Size(641, 433);
+            this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.ChooseCourseLabel);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.DeleteBlockButton);
             this.Controls.Add(this.AddBlockButton);
-            this.Controls.Add(this.ChoosedBlocksListBox);
             this.Controls.Add(this.CourseBlocksListBox);
-            this.Controls.Add(this.CourseComboBox);
-            this.Name = "LearnChooseBlocksForm";
+            this.Controls.Add(this.ChoosedBlocksListBox);
+            this.Name = "LearnForm";
             this.Text = "Выбор блоков";
             this.Load += new System.EventHandler(this.LearnForm_Load);
             this.ResumeLayout(false);
@@ -125,13 +125,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox CourseComboBox;
-        private System.Windows.Forms.ListBox CourseBlocksListBox;
         private System.Windows.Forms.ListBox ChoosedBlocksListBox;
-        private System.Windows.Forms.Button AddBlockButton;
-        private System.Windows.Forms.Button DeleteBlockButton;
-        private System.Windows.Forms.Button StartButton;
-        private System.Windows.Forms.Label ChooseCourseLabel;
+        private System.Windows.Forms.ListBox CourseBlocksListBox;
+        private MetroFramework.Controls.MetroButton AddBlockButton;
+        private MetroFramework.Controls.MetroButton DeleteBlockButton;
+        private MetroFramework.Controls.MetroButton StartButton;
+        private MetroFramework.Controls.MetroLabel ChooseCourseLabel;
+        private MetroFramework.Controls.MetroComboBox CourseComboBox;
     }
 }

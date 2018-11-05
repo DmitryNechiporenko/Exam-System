@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class StartForm : Form
+    public partial class StartForm : MetroFramework.Forms.MetroForm
     {
         public StartForm()
         {

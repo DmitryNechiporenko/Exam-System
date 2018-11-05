@@ -28,117 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.surnameTextBox = new System.Windows.Forms.TextBox();
-            this.SurnameLabel = new System.Windows.Forms.Label();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.regButton = new System.Windows.Forms.Button();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.PatrLabel = new System.Windows.Forms.Label();
-            this.patrTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
+            this.surnameTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.patrTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.passwordTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.nameTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.SurnameLabel = new MetroFramework.Controls.MetroLabel();
+            this.NameLabel = new MetroFramework.Controls.MetroLabel();
+            this.PatrLabel = new MetroFramework.Controls.MetroLabel();
+            this.passwordLabel = new MetroFramework.Controls.MetroLabel();
+            this.regButton = new MetroFramework.Controls.MetroButton();
+            this.loginButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // surnameTextBox
             // 
-            this.surnameTextBox.Location = new System.Drawing.Point(150, 22);
+            // 
+            // 
+            // 
+            this.surnameTextBox.CustomButton.Image = null;
+            this.surnameTextBox.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.surnameTextBox.CustomButton.Name = "";
+            this.surnameTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.surnameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.surnameTextBox.CustomButton.TabIndex = 1;
+            this.surnameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.surnameTextBox.CustomButton.UseSelectable = true;
+            this.surnameTextBox.CustomButton.Visible = false;
+            this.surnameTextBox.Lines = new string[0];
+            this.surnameTextBox.Location = new System.Drawing.Point(172, 74);
+            this.surnameTextBox.MaxLength = 32767;
             this.surnameTextBox.Name = "surnameTextBox";
-            this.surnameTextBox.Size = new System.Drawing.Size(161, 20);
-            this.surnameTextBox.TabIndex = 0;
+            this.surnameTextBox.PasswordChar = '\0';
+            this.surnameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.surnameTextBox.SelectedText = "";
+            this.surnameTextBox.SelectionLength = 0;
+            this.surnameTextBox.SelectionStart = 0;
+            this.surnameTextBox.ShortcutsEnabled = true;
+            this.surnameTextBox.Size = new System.Drawing.Size(163, 23);
+            this.surnameTextBox.TabIndex = 1000;
+            this.surnameTextBox.UseSelectable = true;
+            this.surnameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.surnameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // patrTextBox
+            // 
+            // 
+            // 
+            // 
+            this.patrTextBox.CustomButton.Image = null;
+            this.patrTextBox.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.patrTextBox.CustomButton.Name = "";
+            this.patrTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.patrTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.patrTextBox.CustomButton.TabIndex = 1;
+            this.patrTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.patrTextBox.CustomButton.UseSelectable = true;
+            this.patrTextBox.CustomButton.Visible = false;
+            this.patrTextBox.Lines = new string[0];
+            this.patrTextBox.Location = new System.Drawing.Point(172, 132);
+            this.patrTextBox.MaxLength = 32767;
+            this.patrTextBox.Name = "patrTextBox";
+            this.patrTextBox.PasswordChar = '\0';
+            this.patrTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.patrTextBox.SelectedText = "";
+            this.patrTextBox.SelectionLength = 0;
+            this.patrTextBox.SelectionStart = 0;
+            this.patrTextBox.ShortcutsEnabled = true;
+            this.patrTextBox.Size = new System.Drawing.Size(163, 23);
+            this.patrTextBox.TabIndex = 1002;
+            this.patrTextBox.UseSelectable = true;
+            this.patrTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.patrTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // passwordTextBox
+            // 
+            // 
+            // 
+            // 
+            this.passwordTextBox.CustomButton.Image = null;
+            this.passwordTextBox.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.passwordTextBox.CustomButton.Name = "";
+            this.passwordTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.passwordTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.passwordTextBox.CustomButton.TabIndex = 1;
+            this.passwordTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passwordTextBox.CustomButton.UseSelectable = true;
+            this.passwordTextBox.CustomButton.Visible = false;
+            this.passwordTextBox.Lines = new string[0];
+            this.passwordTextBox.Location = new System.Drawing.Point(172, 161);
+            this.passwordTextBox.MaxLength = 32767;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
+            this.passwordTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.passwordTextBox.SelectedText = "";
+            this.passwordTextBox.SelectionLength = 0;
+            this.passwordTextBox.SelectionStart = 0;
+            this.passwordTextBox.ShortcutsEnabled = true;
+            this.passwordTextBox.Size = new System.Drawing.Size(163, 23);
+            this.passwordTextBox.TabIndex = 1003;
+            this.passwordTextBox.UseSelectable = true;
+            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.passwordTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.passwordTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // nameTextBox
+            // 
+            // 
+            // 
+            // 
+            this.nameTextBox.CustomButton.Image = null;
+            this.nameTextBox.CustomButton.Location = new System.Drawing.Point(141, 1);
+            this.nameTextBox.CustomButton.Name = "";
+            this.nameTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.nameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.nameTextBox.CustomButton.TabIndex = 1;
+            this.nameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.nameTextBox.CustomButton.UseSelectable = true;
+            this.nameTextBox.CustomButton.Visible = false;
+            this.nameTextBox.Lines = new string[0];
+            this.nameTextBox.Location = new System.Drawing.Point(172, 103);
+            this.nameTextBox.MaxLength = 32767;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.PasswordChar = '\0';
+            this.nameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.nameTextBox.SelectedText = "";
+            this.nameTextBox.SelectionLength = 0;
+            this.nameTextBox.SelectionStart = 0;
+            this.nameTextBox.ShortcutsEnabled = true;
+            this.nameTextBox.Size = new System.Drawing.Size(163, 23);
+            this.nameTextBox.TabIndex = 1001;
+            this.nameTextBox.UseSelectable = true;
+            this.nameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.nameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // SurnameLabel
             // 
             this.SurnameLabel.AutoSize = true;
-            this.SurnameLabel.Location = new System.Drawing.Point(88, 25);
+            this.SurnameLabel.Location = new System.Drawing.Point(101, 74);
             this.SurnameLabel.Name = "SurnameLabel";
-            this.SurnameLabel.Size = new System.Drawing.Size(56, 13);
-            this.SurnameLabel.TabIndex = 999;
+            this.SurnameLabel.Size = new System.Drawing.Size(65, 19);
+            this.SurnameLabel.TabIndex = 1004;
             this.SurnameLabel.Text = "Фамилия";
-            // 
-            // loginButton
-            // 
-            this.loginButton.Location = new System.Drawing.Point(227, 152);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(84, 38);
-            this.loginButton.TabIndex = 4;
-            this.loginButton.Text = "Войти";
-            this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // regButton
-            // 
-            this.regButton.Location = new System.Drawing.Point(100, 152);
-            this.regButton.Name = "regButton";
-            this.regButton.Size = new System.Drawing.Size(121, 38);
-            this.regButton.TabIndex = 5;
-            this.regButton.Text = "Зарегистрироваться";
-            this.regButton.UseVisualStyleBackColor = true;
-            this.regButton.Click += new System.EventHandler(this.regButton_Click);
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(115, 51);
+            this.NameLabel.Location = new System.Drawing.Point(131, 103);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(29, 13);
-            this.NameLabel.TabIndex = 998;
+            this.NameLabel.Size = new System.Drawing.Size(35, 19);
+            this.NameLabel.TabIndex = 1005;
             this.NameLabel.Text = "Имя";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(150, 48);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(161, 20);
-            this.nameTextBox.TabIndex = 1;
             // 
             // PatrLabel
             // 
             this.PatrLabel.AutoSize = true;
-            this.PatrLabel.Location = new System.Drawing.Point(11, 77);
+            this.PatrLabel.Location = new System.Drawing.Point(8, 132);
             this.PatrLabel.Name = "PatrLabel";
-            this.PatrLabel.Size = new System.Drawing.Size(133, 13);
-            this.PatrLabel.TabIndex = 997;
+            this.PatrLabel.Size = new System.Drawing.Size(158, 19);
+            this.PatrLabel.TabIndex = 1006;
             this.PatrLabel.Text = "Отчество (если имеется)";
-            // 
-            // patrTextBox
-            // 
-            this.patrTextBox.Location = new System.Drawing.Point(150, 74);
-            this.patrTextBox.Name = "patrTextBox";
-            this.patrTextBox.Size = new System.Drawing.Size(161, 20);
-            this.patrTextBox.TabIndex = 2;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(150, 100);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(161, 20);
-            this.passwordTextBox.TabIndex = 3;
-            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(97, 103);
+            this.passwordLabel.Location = new System.Drawing.Point(112, 161);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(45, 13);
-            this.passwordLabel.TabIndex = 996;
+            this.passwordLabel.Size = new System.Drawing.Size(54, 19);
+            this.passwordLabel.TabIndex = 1007;
             this.passwordLabel.Text = "Пароль";
+            // 
+            // regButton
+            // 
+            this.regButton.Location = new System.Drawing.Point(115, 203);
+            this.regButton.Name = "regButton";
+            this.regButton.Size = new System.Drawing.Size(129, 37);
+            this.regButton.TabIndex = 1008;
+            this.regButton.Text = "Зарегистрироваться";
+            this.regButton.UseSelectable = true;
+            this.regButton.Click += new System.EventHandler(this.regButton_Click);
+            // 
+            // loginButton
+            // 
+            this.loginButton.Location = new System.Drawing.Point(250, 203);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(85, 37);
+            this.loginButton.TabIndex = 1009;
+            this.loginButton.Text = "Войти";
+            this.loginButton.UseSelectable = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 202);
-            this.Controls.Add(this.passwordLabel);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.PatrLabel);
-            this.Controls.Add(this.patrTextBox);
-            this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.regButton);
+            this.ClientSize = new System.Drawing.Size(368, 275);
             this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.regButton);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.PatrLabel);
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.SurnameLabel);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.patrTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Name = "loginForm";
             this.Text = "Вход";
@@ -148,16 +240,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox surnameTextBox;
-        private System.Windows.Forms.Label SurnameLabel;
-        private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Button regButton;
-        private System.Windows.Forms.Label NameLabel;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Label PatrLabel;
-        private System.Windows.Forms.TextBox patrTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Label passwordLabel;
+        private MetroFramework.Controls.MetroTextBox surnameTextBox;
+        private MetroFramework.Controls.MetroTextBox patrTextBox;
+        private MetroFramework.Controls.MetroTextBox passwordTextBox;
+        private MetroFramework.Controls.MetroTextBox nameTextBox;
+        private MetroFramework.Controls.MetroLabel SurnameLabel;
+        private MetroFramework.Controls.MetroLabel NameLabel;
+        private MetroFramework.Controls.MetroLabel PatrLabel;
+        private MetroFramework.Controls.MetroLabel passwordLabel;
+        private MetroFramework.Controls.MetroButton regButton;
+        private MetroFramework.Controls.MetroButton loginButton;
     }
 }

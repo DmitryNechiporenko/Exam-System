@@ -28,197 +28,193 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BlockComboBox = new System.Windows.Forms.ComboBox();
-            this.ExamLabel = new System.Windows.Forms.Label();
-            this.BlockLabel = new System.Windows.Forms.Label();
-            this.CourseLabel = new System.Windows.Forms.Label();
-            this.UserNameLabel = new System.Windows.Forms.Label();
-            this.CourseComboBox = new System.Windows.Forms.ComboBox();
-            this.CreateExamButton = new System.Windows.Forms.Button();
-            this.part1Button = new System.Windows.Forms.Button();
-            this.part2Button = new System.Windows.Forms.Button();
-            this.part3Button = new System.Windows.Forms.Button();
-            this.part4Button = new System.Windows.Forms.Button();
-            this.part5Button = new System.Windows.Forms.Button();
-            this.ReportButton = new System.Windows.Forms.Button();
-            this.RefreshExamButton = new System.Windows.Forms.Button();
-            this.ResultLabel = new System.Windows.Forms.Label();
+            this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
+            this.CourseLabel = new MetroFramework.Controls.MetroLabel();
+            this.BlockLabel = new MetroFramework.Controls.MetroLabel();
+            this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.BlockComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.part1Button = new MetroFramework.Controls.MetroButton();
+            this.part5Button = new MetroFramework.Controls.MetroButton();
+            this.part4Button = new MetroFramework.Controls.MetroButton();
+            this.part3Button = new MetroFramework.Controls.MetroButton();
+            this.part2Button = new MetroFramework.Controls.MetroButton();
+            this.ExamLabel = new MetroFramework.Controls.MetroLabel();
+            this.CreateExamButton = new MetroFramework.Controls.MetroButton();
+            this.ResultLabel = new MetroFramework.Controls.MetroLabel();
+            this.RefreshExamButton = new MetroFramework.Controls.MetroButton();
+            this.ReportButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
-            // 
-            // BlockComboBox
-            // 
-            this.BlockComboBox.FormattingEnabled = true;
-            this.BlockComboBox.Location = new System.Drawing.Point(9, 129);
-            this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(271, 21);
-            this.BlockComboBox.TabIndex = 10008;
-            this.BlockComboBox.SelectedValueChanged += new System.EventHandler(this.BlockComboBox_SelectedValueChanged);
-            // 
-            // ExamLabel
-            // 
-            this.ExamLabel.AutoSize = true;
-            this.ExamLabel.Location = new System.Drawing.Point(420, 91);
-            this.ExamLabel.Name = "ExamLabel";
-            this.ExamLabel.Size = new System.Drawing.Size(118, 13);
-            this.ExamLabel.TabIndex = 10007;
-            this.ExamLabel.Text = "Экзамена не найдено";
-            // 
-            // BlockLabel
-            // 
-            this.BlockLabel.AutoSize = true;
-            this.BlockLabel.Location = new System.Drawing.Point(8, 113);
-            this.BlockLabel.Name = "BlockLabel";
-            this.BlockLabel.Size = new System.Drawing.Size(84, 13);
-            this.BlockLabel.TabIndex = 10006;
-            this.BlockLabel.Text = "Выберите блок";
-            // 
-            // CourseLabel
-            // 
-            this.CourseLabel.AutoSize = true;
-            this.CourseLabel.Location = new System.Drawing.Point(9, 46);
-            this.CourseLabel.Name = "CourseLabel";
-            this.CourseLabel.Size = new System.Drawing.Size(83, 13);
-            this.CourseLabel.TabIndex = 10004;
-            this.CourseLabel.Text = "Выберите курс";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UserNameLabel.Location = new System.Drawing.Point(9, 15);
+            this.UserNameLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.UserNameLabel.Location = new System.Drawing.Point(23, 60);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(38, 17);
-            this.UserNameLabel.TabIndex = 10005;
+            this.UserNameLabel.Size = new System.Drawing.Size(40, 19);
+            this.UserNameLabel.TabIndex = 10018;
             this.UserNameLabel.Text = "ФИО";
+            // 
+            // CourseLabel
+            // 
+            this.CourseLabel.AutoSize = true;
+            this.CourseLabel.Location = new System.Drawing.Point(23, 97);
+            this.CourseLabel.Name = "CourseLabel";
+            this.CourseLabel.Size = new System.Drawing.Size(99, 19);
+            this.CourseLabel.TabIndex = 10019;
+            this.CourseLabel.Text = "Выберите курс";
+            // 
+            // BlockLabel
+            // 
+            this.BlockLabel.AutoSize = true;
+            this.BlockLabel.Location = new System.Drawing.Point(23, 187);
+            this.BlockLabel.Name = "BlockLabel";
+            this.BlockLabel.Size = new System.Drawing.Size(102, 19);
+            this.BlockLabel.TabIndex = 10020;
+            this.BlockLabel.Text = "Выберите блок";
             // 
             // CourseComboBox
             // 
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.Location = new System.Drawing.Point(12, 62);
-            this.CourseComboBox.MaxDropDownItems = 100;
+            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.Location = new System.Drawing.Point(23, 119);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(268, 21);
-            this.CourseComboBox.TabIndex = 10003;
+            this.CourseComboBox.Size = new System.Drawing.Size(271, 29);
+            this.CourseComboBox.TabIndex = 10021;
+            this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
-            // CreateExamButton
+            // BlockComboBox
             // 
-            this.CreateExamButton.Location = new System.Drawing.Point(423, 107);
-            this.CreateExamButton.Name = "CreateExamButton";
-            this.CreateExamButton.Size = new System.Drawing.Size(115, 24);
-            this.CreateExamButton.TabIndex = 10009;
-            this.CreateExamButton.Text = "Создать";
-            this.CreateExamButton.UseVisualStyleBackColor = true;
-            this.CreateExamButton.Visible = false;
-            this.CreateExamButton.Click += new System.EventHandler(this.CreateExamButton_Click);
+            this.BlockComboBox.FormattingEnabled = true;
+            this.BlockComboBox.ItemHeight = 23;
+            this.BlockComboBox.Location = new System.Drawing.Point(23, 209);
+            this.BlockComboBox.Name = "BlockComboBox";
+            this.BlockComboBox.Size = new System.Drawing.Size(271, 29);
+            this.BlockComboBox.TabIndex = 10022;
+            this.BlockComboBox.UseSelectable = true;
+            this.BlockComboBox.SelectedValueChanged += new System.EventHandler(this.BlockComboBox_SelectedValueChanged);
             // 
             // part1Button
             // 
-            this.part1Button.Location = new System.Drawing.Point(334, 86);
+            this.part1Button.Location = new System.Drawing.Point(331, 143);
             this.part1Button.Name = "part1Button";
-            this.part1Button.Size = new System.Drawing.Size(51, 45);
-            this.part1Button.TabIndex = 10010;
-            this.part1Button.Text = "1 часть";
-            this.part1Button.UseVisualStyleBackColor = true;
-            this.part1Button.Visible = false;
+            this.part1Button.Size = new System.Drawing.Size(62, 62);
+            this.part1Button.TabIndex = 10023;
+            this.part1Button.Text = "1 \r\nЧасть";
+            this.part1Button.UseSelectable = true;
             this.part1Button.Click += new System.EventHandler(this.part1Button_Click);
-            // 
-            // part2Button
-            // 
-            this.part2Button.Location = new System.Drawing.Point(391, 86);
-            this.part2Button.Name = "part2Button";
-            this.part2Button.Size = new System.Drawing.Size(51, 45);
-            this.part2Button.TabIndex = 10011;
-            this.part2Button.Text = "2 часть";
-            this.part2Button.UseVisualStyleBackColor = true;
-            this.part2Button.Visible = false;
-            this.part2Button.Click += new System.EventHandler(this.part2Button_Click);
-            // 
-            // part3Button
-            // 
-            this.part3Button.Location = new System.Drawing.Point(448, 86);
-            this.part3Button.Name = "part3Button";
-            this.part3Button.Size = new System.Drawing.Size(51, 45);
-            this.part3Button.TabIndex = 10012;
-            this.part3Button.Text = "3 часть";
-            this.part3Button.UseVisualStyleBackColor = true;
-            this.part3Button.Visible = false;
-            this.part3Button.Click += new System.EventHandler(this.part3Button_Click);
-            // 
-            // part4Button
-            // 
-            this.part4Button.Location = new System.Drawing.Point(505, 86);
-            this.part4Button.Name = "part4Button";
-            this.part4Button.Size = new System.Drawing.Size(51, 45);
-            this.part4Button.TabIndex = 10013;
-            this.part4Button.Text = "4 часть";
-            this.part4Button.UseVisualStyleBackColor = true;
-            this.part4Button.Visible = false;
-            this.part4Button.Click += new System.EventHandler(this.part4Button_Click);
             // 
             // part5Button
             // 
-            this.part5Button.Location = new System.Drawing.Point(562, 86);
+            this.part5Button.Location = new System.Drawing.Point(603, 144);
             this.part5Button.Name = "part5Button";
-            this.part5Button.Size = new System.Drawing.Size(51, 45);
-            this.part5Button.TabIndex = 10014;
-            this.part5Button.Text = "5 часть";
-            this.part5Button.UseVisualStyleBackColor = true;
-            this.part5Button.Visible = false;
+            this.part5Button.Size = new System.Drawing.Size(62, 62);
+            this.part5Button.TabIndex = 10024;
+            this.part5Button.Text = "5 \r\nЧасть";
+            this.part5Button.UseSelectable = true;
             this.part5Button.Click += new System.EventHandler(this.part5Button_Click);
             // 
-            // ReportButton
+            // part4Button
             // 
-            this.ReportButton.Location = new System.Drawing.Point(484, 229);
-            this.ReportButton.Name = "ReportButton";
-            this.ReportButton.Size = new System.Drawing.Size(129, 40);
-            this.ReportButton.TabIndex = 10015;
-            this.ReportButton.Text = "Отчет";
-            this.ReportButton.UseVisualStyleBackColor = true;
-            this.ReportButton.Visible = false;
-            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
+            this.part4Button.Location = new System.Drawing.Point(535, 143);
+            this.part4Button.Name = "part4Button";
+            this.part4Button.Size = new System.Drawing.Size(62, 62);
+            this.part4Button.TabIndex = 10025;
+            this.part4Button.Text = "4 \r\nЧасть";
+            this.part4Button.UseSelectable = true;
+            this.part4Button.Click += new System.EventHandler(this.part4Button_Click);
             // 
-            // RefreshExamButton
+            // part3Button
             // 
-            this.RefreshExamButton.Location = new System.Drawing.Point(334, 229);
-            this.RefreshExamButton.Name = "RefreshExamButton";
-            this.RefreshExamButton.Size = new System.Drawing.Size(129, 40);
-            this.RefreshExamButton.TabIndex = 10016;
-            this.RefreshExamButton.Text = "Начать заново";
-            this.RefreshExamButton.UseVisualStyleBackColor = true;
-            this.RefreshExamButton.Visible = false;
-            this.RefreshExamButton.Click += new System.EventHandler(this.RefreshExamButton_Click);
+            this.part3Button.Location = new System.Drawing.Point(467, 143);
+            this.part3Button.Name = "part3Button";
+            this.part3Button.Size = new System.Drawing.Size(62, 62);
+            this.part3Button.TabIndex = 10026;
+            this.part3Button.Text = "3 \r\nЧасть";
+            this.part3Button.UseSelectable = true;
+            this.part3Button.Click += new System.EventHandler(this.part3Button_Click);
+            // 
+            // part2Button
+            // 
+            this.part2Button.Location = new System.Drawing.Point(399, 143);
+            this.part2Button.Name = "part2Button";
+            this.part2Button.Size = new System.Drawing.Size(62, 62);
+            this.part2Button.TabIndex = 10027;
+            this.part2Button.Text = "2 \r\nЧасть";
+            this.part2Button.UseSelectable = true;
+            this.part2Button.Click += new System.EventHandler(this.part2Button_Click);
+            // 
+            // ExamLabel
+            // 
+            this.ExamLabel.AutoSize = true;
+            this.ExamLabel.Location = new System.Drawing.Point(418, 126);
+            this.ExamLabel.Name = "ExamLabel";
+            this.ExamLabel.Size = new System.Drawing.Size(144, 19);
+            this.ExamLabel.TabIndex = 10028;
+            this.ExamLabel.Text = "Экзамена не найдено";
+            // 
+            // CreateExamButton
+            // 
+            this.CreateExamButton.Location = new System.Drawing.Point(435, 158);
+            this.CreateExamButton.Name = "CreateExamButton";
+            this.CreateExamButton.Size = new System.Drawing.Size(107, 28);
+            this.CreateExamButton.TabIndex = 10029;
+            this.CreateExamButton.Text = "Создать";
+            this.CreateExamButton.UseSelectable = true;
+            this.CreateExamButton.Click += new System.EventHandler(this.CreateExamButton_Click);
             // 
             // ResultLabel
             // 
             this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResultLabel.Location = new System.Drawing.Point(330, 168);
+            this.ResultLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.ResultLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.ResultLabel.Location = new System.Drawing.Point(331, 213);
             this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(97, 20);
-            this.ResultLabel.TabIndex = 10017;
+            this.ResultLabel.Size = new System.Drawing.Size(98, 25);
+            this.ResultLabel.TabIndex = 10030;
             this.ResultLabel.Text = "Результат: ";
+            // 
+            // RefreshExamButton
+            // 
+            this.RefreshExamButton.Location = new System.Drawing.Point(331, 261);
+            this.RefreshExamButton.Name = "RefreshExamButton";
+            this.RefreshExamButton.Size = new System.Drawing.Size(133, 49);
+            this.RefreshExamButton.TabIndex = 10031;
+            this.RefreshExamButton.Text = "Начать заново";
+            this.RefreshExamButton.UseSelectable = true;
+            this.RefreshExamButton.Click += new System.EventHandler(this.RefreshExamButton_Click);
+            // 
+            // ReportButton
+            // 
+            this.ReportButton.Location = new System.Drawing.Point(532, 261);
+            this.ReportButton.Name = "ReportButton";
+            this.ReportButton.Size = new System.Drawing.Size(133, 49);
+            this.ReportButton.TabIndex = 10032;
+            this.ReportButton.Text = "Отчет";
+            this.ReportButton.UseSelectable = true;
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 281);
-            this.Controls.Add(this.ResultLabel);
-            this.Controls.Add(this.RefreshExamButton);
+            this.ClientSize = new System.Drawing.Size(704, 354);
             this.Controls.Add(this.ReportButton);
-            this.Controls.Add(this.part5Button);
-            this.Controls.Add(this.part4Button);
-            this.Controls.Add(this.part3Button);
-            this.Controls.Add(this.part2Button);
-            this.Controls.Add(this.part1Button);
+            this.Controls.Add(this.RefreshExamButton);
+            this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.CreateExamButton);
-            this.Controls.Add(this.BlockComboBox);
             this.Controls.Add(this.ExamLabel);
+            this.Controls.Add(this.part2Button);
+            this.Controls.Add(this.part3Button);
+            this.Controls.Add(this.part4Button);
+            this.Controls.Add(this.part5Button);
+            this.Controls.Add(this.part1Button);
+            this.Controls.Add(this.BlockComboBox);
+            this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.UserNameLabel);
-            this.Controls.Add(this.CourseComboBox);
             this.Name = "ExamsForm";
             this.Text = "Выбор экзамена";
             this.Load += new System.EventHandler(this.ExamsFormcs_Load);
@@ -228,21 +224,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox BlockComboBox;
-        private System.Windows.Forms.Label ExamLabel;
-        private System.Windows.Forms.Label BlockLabel;
-        private System.Windows.Forms.Label CourseLabel;
-        private System.Windows.Forms.Label UserNameLabel;
-        private System.Windows.Forms.ComboBox CourseComboBox;
-        private System.Windows.Forms.Button CreateExamButton;
-        private System.Windows.Forms.Button part1Button;
-        private System.Windows.Forms.Button part2Button;
-        private System.Windows.Forms.Button part3Button;
-        private System.Windows.Forms.Button part4Button;
-        private System.Windows.Forms.Button part5Button;
-        private System.Windows.Forms.Button ReportButton;
-        private System.Windows.Forms.Button RefreshExamButton;
-        private System.Windows.Forms.Label ResultLabel;
+        private MetroFramework.Controls.MetroLabel UserNameLabel;
+        private MetroFramework.Controls.MetroLabel CourseLabel;
+        private MetroFramework.Controls.MetroLabel BlockLabel;
+        private MetroFramework.Controls.MetroComboBox CourseComboBox;
+        private MetroFramework.Controls.MetroComboBox BlockComboBox;
+        private MetroFramework.Controls.MetroButton part1Button;
+        private MetroFramework.Controls.MetroButton part5Button;
+        private MetroFramework.Controls.MetroButton part4Button;
+        private MetroFramework.Controls.MetroButton part3Button;
+        private MetroFramework.Controls.MetroButton part2Button;
+        private MetroFramework.Controls.MetroLabel ExamLabel;
+        private MetroFramework.Controls.MetroButton CreateExamButton;
+        private MetroFramework.Controls.MetroLabel ResultLabel;
+        private MetroFramework.Controls.MetroButton RefreshExamButton;
+        private MetroFramework.Controls.MetroButton ReportButton;
     }
 }

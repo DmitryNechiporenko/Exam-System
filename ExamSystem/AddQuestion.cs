@@ -5,7 +5,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace ExamSystem
 {
-    public partial class AddQuestion : Form
+    public partial class AddQuestion : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 

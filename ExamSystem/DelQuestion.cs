@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ExamSystem
 {
-    public partial class DelQuestion : Form
+    public partial class DelQuestion : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
 
