@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminform));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.CourseLabel = new MetroFramework.Controls.MetroLabel();
-            this.AddCourseButton = new MetroFramework.Controls.MetroButton();
             this.DelCourseButton = new MetroFramework.Controls.MetroButton();
+            this.AddCourseButton = new MetroFramework.Controls.MetroButton();
+            this.CourseLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.DelBlockButton = new MetroFramework.Controls.MetroButton();
             this.AddBlockButton = new MetroFramework.Controls.MetroButton();
             this.BlockLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.DelQuesButton = new MetroFramework.Controls.MetroButton();
             this.AddQuesButton = new MetroFramework.Controls.MetroButton();
             this.QuestionLabel = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -82,6 +83,36 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // DelCourseButton
+            // 
+            this.DelCourseButton.Location = new System.Drawing.Point(114, 197);
+            this.DelCourseButton.Name = "DelCourseButton";
+            this.DelCourseButton.Size = new System.Drawing.Size(181, 75);
+            this.DelCourseButton.TabIndex = 4;
+            this.DelCourseButton.Text = "Удалить/Изменить";
+            this.DelCourseButton.UseSelectable = true;
+            this.DelCourseButton.Click += new System.EventHandler(this.DelCourseButton_Click);
+            // 
+            // AddCourseButton
+            // 
+            this.AddCourseButton.Location = new System.Drawing.Point(114, 90);
+            this.AddCourseButton.Name = "AddCourseButton";
+            this.AddCourseButton.Size = new System.Drawing.Size(181, 75);
+            this.AddCourseButton.TabIndex = 3;
+            this.AddCourseButton.Text = "Добавить";
+            this.AddCourseButton.UseSelectable = true;
+            this.AddCourseButton.Click += new System.EventHandler(this.AddCourseButton_Click);
+            // 
+            // CourseLabel
+            // 
+            this.CourseLabel.AutoSize = true;
+            this.CourseLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.CourseLabel.Location = new System.Drawing.Point(174, 43);
+            this.CourseLabel.Name = "CourseLabel";
+            this.CourseLabel.Size = new System.Drawing.Size(59, 25);
+            this.CourseLabel.TabIndex = 2;
+            this.CourseLabel.Text = "Курсы";
+            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.DelBlockButton);
@@ -98,69 +129,6 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.Controls.Add(this.DelQuesButton);
-            this.metroTabPage3.Controls.Add(this.AddQuesButton);
-            this.metroTabPage3.Controls.Add(this.QuestionLabel);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(427, 311);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "Вопросы";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
-            // 
-            // metroTabPage4
-            // 
-            this.metroTabPage4.Controls.Add(this.metroButton1);
-            this.metroTabPage4.Controls.Add(this.metroLabel1);
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(427, 311);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "Пользователи";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
-            // 
-            // CourseLabel
-            // 
-            this.CourseLabel.AutoSize = true;
-            this.CourseLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.CourseLabel.Location = new System.Drawing.Point(174, 43);
-            this.CourseLabel.Name = "CourseLabel";
-            this.CourseLabel.Size = new System.Drawing.Size(59, 25);
-            this.CourseLabel.TabIndex = 2;
-            this.CourseLabel.Text = "Курсы";
-            // 
-            // AddCourseButton
-            // 
-            this.AddCourseButton.Location = new System.Drawing.Point(114, 90);
-            this.AddCourseButton.Name = "AddCourseButton";
-            this.AddCourseButton.Size = new System.Drawing.Size(181, 75);
-            this.AddCourseButton.TabIndex = 3;
-            this.AddCourseButton.Text = "Добавить";
-            this.AddCourseButton.UseSelectable = true;
-            this.AddCourseButton.Click += new System.EventHandler(this.AddCourseButton_Click);
-            // 
-            // DelCourseButton
-            // 
-            this.DelCourseButton.Location = new System.Drawing.Point(114, 197);
-            this.DelCourseButton.Name = "DelCourseButton";
-            this.DelCourseButton.Size = new System.Drawing.Size(181, 75);
-            this.DelCourseButton.TabIndex = 4;
-            this.DelCourseButton.Text = "Удалить/Изменить";
-            this.DelCourseButton.UseSelectable = true;
-            this.DelCourseButton.Click += new System.EventHandler(this.DelCourseButton_Click);
             // 
             // DelBlockButton
             // 
@@ -192,6 +160,23 @@
             this.BlockLabel.TabIndex = 5;
             this.BlockLabel.Text = "Блоки";
             // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.DelQuesButton);
+            this.metroTabPage3.Controls.Add(this.AddQuesButton);
+            this.metroTabPage3.Controls.Add(this.QuestionLabel);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(427, 311);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "Вопросы";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
             // DelQuesButton
             // 
             this.DelQuesButton.Location = new System.Drawing.Point(114, 197);
@@ -222,15 +207,21 @@
             this.QuestionLabel.TabIndex = 8;
             this.QuestionLabel.Text = "Вопросы";
             // 
-            // metroLabel1
+            // metroTabPage4
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(146, 43);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(122, 25);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Пользователи";
+            this.metroTabPage4.Controls.Add(this.metroButton1);
+            this.metroTabPage4.Controls.Add(this.metroLabel1);
+            this.metroTabPage4.HorizontalScrollbarBarColor = true;
+            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.HorizontalScrollbarSize = 10;
+            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage4.Name = "metroTabPage4";
+            this.metroTabPage4.Size = new System.Drawing.Size(427, 311);
+            this.metroTabPage4.TabIndex = 3;
+            this.metroTabPage4.Text = "Пользователи";
+            this.metroTabPage4.VerticalScrollbarBarColor = true;
+            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage4.VerticalScrollbarSize = 10;
             // 
             // metroButton1
             // 
@@ -242,12 +233,23 @@
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(146, 43);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(122, 25);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Пользователи";
+            // 
             // adminform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 431);
             this.Controls.Add(this.metroTabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminform";
             this.Text = "Редактирование";
             this.metroTabControl1.ResumeLayout(false);

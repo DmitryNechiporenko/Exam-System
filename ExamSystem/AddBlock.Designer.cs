@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBlock));
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.BlockLabel = new MetroFramework.Controls.MetroLabel();
             this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
@@ -113,6 +114,7 @@
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddBlock";
             this.Text = "Добавление блока";
             this.Load += new System.EventHandler(this.AddBlock_Load);

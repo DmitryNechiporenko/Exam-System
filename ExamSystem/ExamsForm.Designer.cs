@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExamsForm));
             this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.BlockLabel = new MetroFramework.Controls.MetroLabel();
@@ -51,7 +52,7 @@
             this.UserNameLabel.FontSize = MetroFramework.MetroLabelSize.Small;
             this.UserNameLabel.Location = new System.Drawing.Point(23, 60);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(40, 19);
+            this.UserNameLabel.Size = new System.Drawing.Size(33, 15);
             this.UserNameLabel.TabIndex = 10018;
             this.UserNameLabel.Text = "ФИО";
             // 
@@ -215,6 +216,7 @@
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.UserNameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExamsForm";
             this.Text = "Выбор экзамена";
             this.Load += new System.EventHandler(this.ExamsFormcs_Load);

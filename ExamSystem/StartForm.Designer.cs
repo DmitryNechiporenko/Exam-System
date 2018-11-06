@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.LearnButton = new MetroFramework.Controls.MetroButton();
             this.examButton = new MetroFramework.Controls.MetroButton();
             this.adminButton = new MetroFramework.Controls.MetroButton();
@@ -71,6 +72,7 @@
             this.Controls.Add(this.adminButton);
             this.Controls.Add(this.examButton);
             this.Controls.Add(this.LearnButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
             this.Text = "Система тестирования";
             this.Load += new System.EventHandler(this.StartForm_Load);

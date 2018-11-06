@@ -95,7 +95,7 @@ namespace ExamSystem
 
             DeleteSQL.Dispose();
             fb.Close();
-            CourseComboBox_SelectedValueChanged(sender, e);
+            DelCourse_Load(sender, e);
         }
     }
 }

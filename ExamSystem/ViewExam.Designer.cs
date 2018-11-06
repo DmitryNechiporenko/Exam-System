@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewExam));
             this.QuestionsListBox = new System.Windows.Forms.ListBox();
             this.PartComboBox = new MetroFramework.Controls.MetroComboBox();
             this.QuestionLabel = new MetroFramework.Controls.MetroLabel();
@@ -237,6 +238,7 @@
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.PartComboBox);
             this.Controls.Add(this.QuestionsListBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewExam";
             this.Text = "Просмотр экзамена";
             this.ResumeLayout(false);

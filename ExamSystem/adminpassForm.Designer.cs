@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminpassForm));
             this.passTextBox = new MetroFramework.Controls.MetroTextBox();
             this.contButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
@@ -80,6 +81,7 @@
             this.ClientSize = new System.Drawing.Size(290, 155);
             this.Controls.Add(this.contButton);
             this.Controls.Add(this.passTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "adminpassForm";
             this.Text = "Введите пароль";
             this.ResumeLayout(false);

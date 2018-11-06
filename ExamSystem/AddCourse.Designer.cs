@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCourse));
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.CourseTextBox = new MetroFramework.Controls.MetroTextBox();
             this.AddButton = new MetroFramework.Controls.MetroButton();
@@ -48,7 +49,7 @@
             // 
             // 
             this.CourseTextBox.CustomButton.Image = null;
-            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(135, 1);
+            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(157, 1);
             this.CourseTextBox.CustomButton.Name = "";
             this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.CourseTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -90,6 +91,7 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CourseTextBox);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddCourse";
             this.Text = "Добавление курса";
             this.ResumeLayout(false);

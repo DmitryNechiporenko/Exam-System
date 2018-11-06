@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DelBlock));
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.BlockLabel = new MetroFramework.Controls.MetroLabel();
             this.TextLabel = new MetroFramework.Controls.MetroLabel();
@@ -150,6 +151,7 @@
             this.Controls.Add(this.TextLabel);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DelBlock";
             this.Text = "Изменение блоков";
             this.Load += new System.EventHandler(this.DelBlock_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DelQuestion));
             this.commentTextBox = new MetroFramework.Controls.MetroTextBox();
             this.A4Radio = new MetroFramework.Controls.MetroRadioButton();
             this.A3Radio = new MetroFramework.Controls.MetroRadioButton();
@@ -443,6 +444,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DelQuestion";
             this.Text = "Изменение вопросов";
             this.Load += new System.EventHandler(this.DelQuestion_Load);

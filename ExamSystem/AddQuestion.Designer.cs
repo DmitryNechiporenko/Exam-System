@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddQuestion));
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.BlockLabel = new MetroFramework.Controls.MetroLabel();
             this.QuestionLabel = new MetroFramework.Controls.MetroLabel();
@@ -405,6 +406,7 @@
             this.Controls.Add(this.QuestionLabel);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddQuestion";
             this.Text = "Добавление вопроса";
             this.Load += new System.EventHandler(this.AddQuestion_Load);

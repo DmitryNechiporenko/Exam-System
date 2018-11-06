@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearnQuiz));
             this.QuestionTextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer1Radio = new MetroFramework.Controls.MetroRadioButton();
             this.Answer2Radio = new MetroFramework.Controls.MetroRadioButton();
@@ -194,6 +195,7 @@
             this.Controls.Add(this.Answer2Radio);
             this.Controls.Add(this.Answer1Radio);
             this.Controls.Add(this.QuestionTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LearnQuiz";
             this.Text = "Обучение";
             this.Load += new System.EventHandler(this.LearnQuiz_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DelCourse));
             this.CourseLabel = new MetroFramework.Controls.MetroLabel();
             this.TextLabel = new MetroFramework.Controls.MetroLabel();
             this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
@@ -126,6 +127,7 @@
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.TextLabel);
             this.Controls.Add(this.CourseLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DelCourse";
             this.Text = "Изменение курсов";
             this.Load += new System.EventHandler(this.DelCourse_Load);

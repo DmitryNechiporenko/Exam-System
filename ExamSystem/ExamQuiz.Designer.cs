@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExamQuiz));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.q1Button = new MetroFramework.Controls.MetroButton();
             this.q2Button = new MetroFramework.Controls.MetroButton();
@@ -448,6 +449,7 @@
             this.Controls.Add(this.q3Button);
             this.Controls.Add(this.q2Button);
             this.Controls.Add(this.q1Button);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExamQuiz";
             this.Text = "Экзамен";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExamQuiz_FormClosing);

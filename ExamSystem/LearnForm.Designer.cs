@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearnForm));
             this.ChoosedBlocksListBox = new System.Windows.Forms.ListBox();
             this.CourseBlocksListBox = new System.Windows.Forms.ListBox();
             this.AddBlockButton = new MetroFramework.Controls.MetroButton();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.AddBlockButton);
             this.Controls.Add(this.CourseBlocksListBox);
             this.Controls.Add(this.ChoosedBlocksListBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LearnForm";
             this.Text = "Выбор блоков";
             this.Load += new System.EventHandler(this.LearnForm_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(regForm));
             this.surnameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.nameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.patrTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -349,6 +350,7 @@
             this.Controls.Add(this.patrTextBox);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.surnameTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "regForm";
             this.Text = "Регистрация";
             this.ResumeLayout(false);
