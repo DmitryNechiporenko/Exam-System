@@ -36,6 +36,8 @@
             this.StartButton = new MetroFramework.Controls.MetroButton();
             this.ChooseCourseLabel = new MetroFramework.Controls.MetroLabel();
             this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ChoosedBlocksListBox
@@ -105,11 +107,22 @@
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(543, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10034;
+            this.pictureBox1.TabStop = false;
+            // 
             // LearnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 433);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.ChooseCourseLabel);
             this.Controls.Add(this.StartButton);
@@ -121,6 +134,7 @@
             this.Name = "LearnForm";
             this.Text = "Выбор блоков";
             this.Load += new System.EventHandler(this.LearnForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +148,6 @@
         private MetroFramework.Controls.MetroButton StartButton;
         private MetroFramework.Controls.MetroLabel ChooseCourseLabel;
         private MetroFramework.Controls.MetroComboBox CourseComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

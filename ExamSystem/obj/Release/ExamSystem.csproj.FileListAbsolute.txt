@@ -6,7 +6,6 @@ D:\git\Exam-System\ExamSystem\bin\Release\MetroFramework.Design.dll
 D:\git\Exam-System\ExamSystem\bin\Release\MetroFramework.dll
 D:\git\Exam-System\ExamSystem\bin\Release\MetroFramework.Fonts.dll
 D:\git\Exam-System\ExamSystem\bin\Release\FirebirdSql.Data.FirebirdClient.pdb
-D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csprojAssemblyReference.cache
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.AddBlock.resources
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.AddCourse.resources
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.AddQuestion.resources
@@ -30,3 +29,4 @@ D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.CoreCompileInputs.ca
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.CopyComplete
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.exe
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.pdb
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csprojAssemblyReference.cache

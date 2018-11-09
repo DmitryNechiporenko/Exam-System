@@ -63,6 +63,8 @@
             this.minLabel = new MetroFramework.Controls.MetroLabel();
             this.splitLabel = new MetroFramework.Controls.MetroLabel();
             this.secLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -72,7 +74,7 @@
             // 
             // q1Button
             // 
-            this.q1Button.Location = new System.Drawing.Point(24, 63);
+            this.q1Button.Location = new System.Drawing.Point(24, 85);
             this.q1Button.Name = "q1Button";
             this.q1Button.Size = new System.Drawing.Size(28, 28);
             this.q1Button.TabIndex = 53;
@@ -82,7 +84,7 @@
             // 
             // q2Button
             // 
-            this.q2Button.Location = new System.Drawing.Point(58, 63);
+            this.q2Button.Location = new System.Drawing.Point(58, 85);
             this.q2Button.Name = "q2Button";
             this.q2Button.Size = new System.Drawing.Size(28, 28);
             this.q2Button.TabIndex = 54;
@@ -92,7 +94,7 @@
             // 
             // q3Button
             // 
-            this.q3Button.Location = new System.Drawing.Point(92, 63);
+            this.q3Button.Location = new System.Drawing.Point(92, 85);
             this.q3Button.Name = "q3Button";
             this.q3Button.Size = new System.Drawing.Size(28, 28);
             this.q3Button.TabIndex = 55;
@@ -102,7 +104,7 @@
             // 
             // q4Button
             // 
-            this.q4Button.Location = new System.Drawing.Point(126, 63);
+            this.q4Button.Location = new System.Drawing.Point(126, 85);
             this.q4Button.Name = "q4Button";
             this.q4Button.Size = new System.Drawing.Size(28, 28);
             this.q4Button.TabIndex = 56;
@@ -112,7 +114,7 @@
             // 
             // q5Button
             // 
-            this.q5Button.Location = new System.Drawing.Point(160, 63);
+            this.q5Button.Location = new System.Drawing.Point(160, 85);
             this.q5Button.Name = "q5Button";
             this.q5Button.Size = new System.Drawing.Size(28, 28);
             this.q5Button.TabIndex = 57;
@@ -122,7 +124,7 @@
             // 
             // q6Button
             // 
-            this.q6Button.Location = new System.Drawing.Point(194, 63);
+            this.q6Button.Location = new System.Drawing.Point(194, 85);
             this.q6Button.Name = "q6Button";
             this.q6Button.Size = new System.Drawing.Size(28, 28);
             this.q6Button.TabIndex = 58;
@@ -132,7 +134,7 @@
             // 
             // q7Button
             // 
-            this.q7Button.Location = new System.Drawing.Point(228, 63);
+            this.q7Button.Location = new System.Drawing.Point(228, 85);
             this.q7Button.Name = "q7Button";
             this.q7Button.Size = new System.Drawing.Size(28, 28);
             this.q7Button.TabIndex = 59;
@@ -142,7 +144,7 @@
             // 
             // q8Button
             // 
-            this.q8Button.Location = new System.Drawing.Point(262, 63);
+            this.q8Button.Location = new System.Drawing.Point(262, 85);
             this.q8Button.Name = "q8Button";
             this.q8Button.Size = new System.Drawing.Size(28, 28);
             this.q8Button.TabIndex = 60;
@@ -152,7 +154,7 @@
             // 
             // q9Button
             // 
-            this.q9Button.Location = new System.Drawing.Point(296, 63);
+            this.q9Button.Location = new System.Drawing.Point(296, 85);
             this.q9Button.Name = "q9Button";
             this.q9Button.Size = new System.Drawing.Size(28, 28);
             this.q9Button.TabIndex = 61;
@@ -162,7 +164,7 @@
             // 
             // q10Button
             // 
-            this.q10Button.Location = new System.Drawing.Point(330, 63);
+            this.q10Button.Location = new System.Drawing.Point(330, 85);
             this.q10Button.Name = "q10Button";
             this.q10Button.Size = new System.Drawing.Size(28, 28);
             this.q10Button.TabIndex = 62;
@@ -172,7 +174,7 @@
             // 
             // q11Button
             // 
-            this.q11Button.Location = new System.Drawing.Point(364, 63);
+            this.q11Button.Location = new System.Drawing.Point(364, 85);
             this.q11Button.Name = "q11Button";
             this.q11Button.Size = new System.Drawing.Size(28, 28);
             this.q11Button.TabIndex = 63;
@@ -182,7 +184,7 @@
             // 
             // q12Button
             // 
-            this.q12Button.Location = new System.Drawing.Point(398, 63);
+            this.q12Button.Location = new System.Drawing.Point(398, 85);
             this.q12Button.Name = "q12Button";
             this.q12Button.Size = new System.Drawing.Size(28, 28);
             this.q12Button.TabIndex = 64;
@@ -192,7 +194,7 @@
             // 
             // q13Button
             // 
-            this.q13Button.Location = new System.Drawing.Point(432, 63);
+            this.q13Button.Location = new System.Drawing.Point(432, 85);
             this.q13Button.Name = "q13Button";
             this.q13Button.Size = new System.Drawing.Size(28, 28);
             this.q13Button.TabIndex = 65;
@@ -202,7 +204,7 @@
             // 
             // q14Button
             // 
-            this.q14Button.Location = new System.Drawing.Point(466, 63);
+            this.q14Button.Location = new System.Drawing.Point(466, 85);
             this.q14Button.Name = "q14Button";
             this.q14Button.Size = new System.Drawing.Size(28, 28);
             this.q14Button.TabIndex = 66;
@@ -212,7 +214,7 @@
             // 
             // q20Button
             // 
-            this.q20Button.Location = new System.Drawing.Point(670, 63);
+            this.q20Button.Location = new System.Drawing.Point(670, 85);
             this.q20Button.Name = "q20Button";
             this.q20Button.Size = new System.Drawing.Size(28, 28);
             this.q20Button.TabIndex = 72;
@@ -222,7 +224,7 @@
             // 
             // q19Button
             // 
-            this.q19Button.Location = new System.Drawing.Point(636, 63);
+            this.q19Button.Location = new System.Drawing.Point(636, 85);
             this.q19Button.Name = "q19Button";
             this.q19Button.Size = new System.Drawing.Size(28, 28);
             this.q19Button.TabIndex = 71;
@@ -232,7 +234,7 @@
             // 
             // q18Button
             // 
-            this.q18Button.Location = new System.Drawing.Point(602, 63);
+            this.q18Button.Location = new System.Drawing.Point(602, 85);
             this.q18Button.Name = "q18Button";
             this.q18Button.Size = new System.Drawing.Size(28, 28);
             this.q18Button.TabIndex = 70;
@@ -242,7 +244,7 @@
             // 
             // q17Button
             // 
-            this.q17Button.Location = new System.Drawing.Point(568, 63);
+            this.q17Button.Location = new System.Drawing.Point(568, 85);
             this.q17Button.Name = "q17Button";
             this.q17Button.Size = new System.Drawing.Size(28, 28);
             this.q17Button.TabIndex = 69;
@@ -252,7 +254,7 @@
             // 
             // q16Button
             // 
-            this.q16Button.Location = new System.Drawing.Point(534, 63);
+            this.q16Button.Location = new System.Drawing.Point(534, 85);
             this.q16Button.Name = "q16Button";
             this.q16Button.Size = new System.Drawing.Size(28, 28);
             this.q16Button.TabIndex = 68;
@@ -262,7 +264,7 @@
             // 
             // q15Button
             // 
-            this.q15Button.Location = new System.Drawing.Point(500, 63);
+            this.q15Button.Location = new System.Drawing.Point(500, 85);
             this.q15Button.Name = "q15Button";
             this.q15Button.Size = new System.Drawing.Size(28, 28);
             this.q15Button.TabIndex = 67;
@@ -285,7 +287,7 @@
             this.QuestionTextBox.CustomButton.UseSelectable = true;
             this.QuestionTextBox.CustomButton.Visible = false;
             this.QuestionTextBox.Lines = new string[0];
-            this.QuestionTextBox.Location = new System.Drawing.Point(23, 99);
+            this.QuestionTextBox.Location = new System.Drawing.Point(23, 121);
             this.QuestionTextBox.MaxLength = 32767;
             this.QuestionTextBox.Multiline = true;
             this.QuestionTextBox.Name = "QuestionTextBox";
@@ -305,7 +307,7 @@
             // Answer1Radio
             // 
             this.Answer1Radio.AutoSize = true;
-            this.Answer1Radio.Location = new System.Drawing.Point(23, 272);
+            this.Answer1Radio.Location = new System.Drawing.Point(23, 294);
             this.Answer1Radio.Name = "Answer1Radio";
             this.Answer1Radio.Size = new System.Drawing.Size(71, 15);
             this.Answer1Radio.TabIndex = 78;
@@ -315,7 +317,7 @@
             // Answer2Radio
             // 
             this.Answer2Radio.AutoSize = true;
-            this.Answer2Radio.Location = new System.Drawing.Point(23, 303);
+            this.Answer2Radio.Location = new System.Drawing.Point(23, 325);
             this.Answer2Radio.Name = "Answer2Radio";
             this.Answer2Radio.Size = new System.Drawing.Size(71, 15);
             this.Answer2Radio.TabIndex = 79;
@@ -325,7 +327,7 @@
             // Answer3Radio
             // 
             this.Answer3Radio.AutoSize = true;
-            this.Answer3Radio.Location = new System.Drawing.Point(23, 336);
+            this.Answer3Radio.Location = new System.Drawing.Point(23, 358);
             this.Answer3Radio.Name = "Answer3Radio";
             this.Answer3Radio.Size = new System.Drawing.Size(71, 15);
             this.Answer3Radio.TabIndex = 80;
@@ -335,7 +337,7 @@
             // Answer4Radio
             // 
             this.Answer4Radio.AutoSize = true;
-            this.Answer4Radio.Location = new System.Drawing.Point(23, 369);
+            this.Answer4Radio.Location = new System.Drawing.Point(23, 391);
             this.Answer4Radio.Name = "Answer4Radio";
             this.Answer4Radio.Size = new System.Drawing.Size(71, 15);
             this.Answer4Radio.TabIndex = 81;
@@ -344,7 +346,7 @@
             // 
             // prevButton
             // 
-            this.prevButton.Location = new System.Drawing.Point(23, 417);
+            this.prevButton.Location = new System.Drawing.Point(23, 501);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(59, 32);
             this.prevButton.TabIndex = 82;
@@ -354,7 +356,7 @@
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(89, 417);
+            this.NextButton.Location = new System.Drawing.Point(89, 501);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(59, 32);
             this.NextButton.TabIndex = 83;
@@ -364,7 +366,7 @@
             // 
             // AnswerButton
             // 
-            this.AnswerButton.Location = new System.Drawing.Point(416, 391);
+            this.AnswerButton.Location = new System.Drawing.Point(417, 475);
             this.AnswerButton.Name = "AnswerButton";
             this.AnswerButton.Size = new System.Drawing.Size(124, 58);
             this.AnswerButton.TabIndex = 84;
@@ -374,7 +376,7 @@
             // 
             // FinishButton
             // 
-            this.FinishButton.Location = new System.Drawing.Point(574, 391);
+            this.FinishButton.Location = new System.Drawing.Point(578, 475);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(124, 58);
             this.FinishButton.TabIndex = 85;
@@ -386,7 +388,7 @@
             // 
             this.minLabel.AutoSize = true;
             this.minLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.minLabel.Location = new System.Drawing.Point(638, 23);
+            this.minLabel.Location = new System.Drawing.Point(24, 463);
             this.minLabel.Name = "minLabel";
             this.minLabel.Size = new System.Drawing.Size(30, 25);
             this.minLabel.TabIndex = 86;
@@ -396,7 +398,7 @@
             // 
             this.splitLabel.AutoSize = true;
             this.splitLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.splitLabel.Location = new System.Drawing.Point(661, 23);
+            this.splitLabel.Location = new System.Drawing.Point(47, 463);
             this.splitLabel.Name = "splitLabel";
             this.splitLabel.Size = new System.Drawing.Size(16, 25);
             this.splitLabel.TabIndex = 87;
@@ -406,17 +408,28 @@
             // 
             this.secLabel.AutoSize = true;
             this.secLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.secLabel.Location = new System.Drawing.Point(668, 23);
+            this.secLabel.Location = new System.Drawing.Point(54, 463);
             this.secLabel.Name = "secLabel";
             this.secLabel.Size = new System.Drawing.Size(30, 25);
             this.secLabel.TabIndex = 88;
             this.secLabel.Text = "00";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(627, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
+            // 
             // ExamQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 479);
+            this.ClientSize = new System.Drawing.Size(725, 556);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.secLabel);
             this.Controls.Add(this.splitLabel);
             this.Controls.Add(this.minLabel);
@@ -454,6 +467,7 @@
             this.Text = "Экзамен";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExamQuiz_FormClosing);
             this.Load += new System.EventHandler(this.ExamQuiz_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,5 +507,6 @@
         private MetroFramework.Controls.MetroLabel minLabel;
         private MetroFramework.Controls.MetroLabel splitLabel;
         private MetroFramework.Controls.MetroLabel secLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

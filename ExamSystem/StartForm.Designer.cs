@@ -32,11 +32,13 @@
             this.LearnButton = new MetroFramework.Controls.MetroButton();
             this.examButton = new MetroFramework.Controls.MetroButton();
             this.adminButton = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LearnButton
             // 
-            this.LearnButton.Location = new System.Drawing.Point(20, 63);
+            this.LearnButton.Location = new System.Drawing.Point(48, 110);
             this.LearnButton.Name = "LearnButton";
             this.LearnButton.Size = new System.Drawing.Size(214, 87);
             this.LearnButton.TabIndex = 2;
@@ -46,7 +48,7 @@
             // 
             // examButton
             // 
-            this.examButton.Location = new System.Drawing.Point(242, 63);
+            this.examButton.Location = new System.Drawing.Point(270, 110);
             this.examButton.Name = "examButton";
             this.examButton.Size = new System.Drawing.Size(214, 87);
             this.examButton.TabIndex = 3;
@@ -56,7 +58,7 @@
             // 
             // adminButton
             // 
-            this.adminButton.Location = new System.Drawing.Point(353, 188);
+            this.adminButton.Location = new System.Drawing.Point(412, 250);
             this.adminButton.Name = "adminButton";
             this.adminButton.Size = new System.Drawing.Size(103, 23);
             this.adminButton.TabIndex = 4;
@@ -64,11 +66,22 @@
             this.adminButton.UseSelectable = true;
             this.adminButton.Click += new System.EventHandler(this.adminButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(440, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 218);
+            this.ClientSize = new System.Drawing.Size(538, 296);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.adminButton);
             this.Controls.Add(this.examButton);
             this.Controls.Add(this.LearnButton);
@@ -76,6 +89,7 @@
             this.Name = "StartForm";
             this.Text = "Система тестирования";
             this.Load += new System.EventHandler(this.StartForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,6 +98,7 @@
         private MetroFramework.Controls.MetroButton LearnButton;
         private MetroFramework.Controls.MetroButton examButton;
         private MetroFramework.Controls.MetroButton adminButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

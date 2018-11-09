@@ -40,6 +40,8 @@
             this.CurrentAnswerLabel = new MetroFramework.Controls.MetroLabel();
             this.ExamTimeLabel = new MetroFramework.Controls.MetroLabel();
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // QuestionsListBox
@@ -222,11 +224,22 @@
             this.ResultLabel.TabIndex = 21;
             this.ResultLabel.Text = "Результат";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(720, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10036;
+            this.pictureBox1.TabStop = false;
+            // 
             // ViewExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 604);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.ExamTimeLabel);
             this.Controls.Add(this.CurrentAnswerLabel);
@@ -241,6 +254,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewExam";
             this.Text = "Просмотр экзамена";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +272,6 @@
         private MetroFramework.Controls.MetroLabel CurrentAnswerLabel;
         private MetroFramework.Controls.MetroLabel ExamTimeLabel;
         private MetroFramework.Controls.MetroLabel ResultLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -36,7 +36,9 @@
             this.ViewExamButton = new MetroFramework.Controls.MetroButton();
             this.DeleteButton = new MetroFramework.Controls.MetroButton();
             this.ExamsComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // usersGridView
@@ -90,7 +92,7 @@
             // 
             // ViewExamButton
             // 
-            this.ViewExamButton.Location = new System.Drawing.Point(906, 98);
+            this.ViewExamButton.Location = new System.Drawing.Point(906, 149);
             this.ViewExamButton.Name = "ViewExamButton";
             this.ViewExamButton.Size = new System.Drawing.Size(145, 58);
             this.ViewExamButton.TabIndex = 5;
@@ -112,17 +114,28 @@
             // 
             this.ExamsComboBox.FormattingEnabled = true;
             this.ExamsComboBox.ItemHeight = 23;
-            this.ExamsComboBox.Location = new System.Drawing.Point(909, 60);
+            this.ExamsComboBox.Location = new System.Drawing.Point(909, 111);
             this.ExamsComboBox.Name = "ExamsComboBox";
             this.ExamsComboBox.Size = new System.Drawing.Size(142, 29);
             this.ExamsComboBox.TabIndex = 7;
             this.ExamsComboBox.UseSelectable = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(970, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10037;
+            this.pictureBox1.TabStop = false;
             // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 550);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExamsComboBox);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ViewExamButton);
@@ -132,6 +145,7 @@
             this.Text = "Просмотр пользователей";
             this.Load += new System.EventHandler(this.view_users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -141,5 +155,6 @@
         private MetroFramework.Controls.MetroButton ViewExamButton;
         private MetroFramework.Controls.MetroButton DeleteButton;
         private MetroFramework.Controls.MetroComboBox ExamsComboBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -44,6 +44,8 @@
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
             this.RefreshExamButton = new MetroFramework.Controls.MetroButton();
             this.ReportButton = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // UserNameLabel
@@ -196,11 +198,22 @@
             this.ReportButton.UseSelectable = true;
             this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(606, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10033;
+            this.pictureBox1.TabStop = false;
+            // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 354);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ReportButton);
             this.Controls.Add(this.RefreshExamButton);
             this.Controls.Add(this.ResultLabel);
@@ -220,6 +233,7 @@
             this.Name = "ExamsForm";
             this.Text = "Выбор экзамена";
             this.Load += new System.EventHandler(this.ExamsFormcs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +255,6 @@
         private MetroFramework.Controls.MetroLabel ResultLabel;
         private MetroFramework.Controls.MetroButton RefreshExamButton;
         private MetroFramework.Controls.MetroButton ReportButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
