@@ -19,13 +19,13 @@ namespace ExamSystem
         int num = 0;
         int currentcount = 0;
 
-        public LearnQuiz(string[] input_arr)
+        public LearnQuiz(string[] blocklist)
         {
             InitializeComponent();
 
-            foreach (string st in input_arr)
+            foreach (string block in blocklist)
             {
-                all_blocks = all_blocks + "'" + st + "'" + ",";
+                all_blocks = all_blocks + "'" + block + "'" + ",";
             }
             all_blocks = all_blocks.Substring(0, all_blocks.Length - 1);
 
@@ -42,14 +42,10 @@ namespace ExamSystem
         private void get_questions(string query)
         {
             if (fb.State == ConnectionState.Closed)
-            {
                 fb.Open();
-            }
             FbTransaction fbt = fb.BeginTransaction();
-
             FbCommand SelectSQL = new FbCommand(query, fb);
             SelectSQL.Transaction = fbt;
-
             FbDataReader reader = SelectSQL.ExecuteReader();
             while (reader.Read())
             {

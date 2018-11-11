@@ -15,7 +15,7 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
 
         int userid, examid;
-        double examresult = 0;
+        double[] examresult = {0, 0, 0, 0, 0 };
         public ExamsForm(int userid)
         {
             InitializeComponent();
@@ -154,28 +154,30 @@ namespace ExamSystem
                 ResultLabel.Visible = !CreateExamButton.Visible;
                 RefreshExamButton.Visible = false;
                 ReportButton.Visible = false;
+                GoToLearnButton.Visible = false;
 
                 if (partsCount == 0)
                 {
-                    examresult = calculate.percentage(this.examid);
-                    ResultLabel.Text = "Результат: " + examresult + "%";
+                    examresult = calculate.percentage(this.examid, false);
+                    ResultLabel.Text = "Результат: " + examresult[0] + "%";
 
-                    if(examresult >= 75)
+                    if(examresult[0] >= 75)
                     {
                         ReportButton.Visible = true;
                         RefreshExamButton.Visible = false;
+                        GoToLearnButton.Visible = false;
                         ResultLabel.Text = ResultLabel.Text + " (экзамен сдан)";
                     }
                     else
                     {
                         RefreshExamButton.Visible = true;
+                        GoToLearnButton.Visible = true;
                         ReportButton.Visible = false;
                         ResultLabel.Text = ResultLabel.Text + " (экзамен не сдан)";
                     }
                 }
                 else
                 {
-                    examresult = 0;
                     ResultLabel.Text = "Экзамен не завершён";
                 }
             }
@@ -348,8 +350,18 @@ namespace ExamSystem
             ExamsFormcs_Load(sender, e);
         }
 
+        private void GoToLearnButton_Click(object sender, EventArgs e)
+        {
+            string[] blocklist = { BlockComboBox.Text };
+            this.Hide();
+            LearnQuiz lq = new LearnQuiz(blocklist);
+            lq.Closed += (s, args) => this.Show();
+            lq.Show();
+        }
+
         private void ReportButton_Click(object sender, EventArgs e)
         {
+            double[] fullExamResult = calculate.percentage(examid, true);
             Word.Application application = new Word.Application();
             Object filename = Path.Combine(Application.StartupPath, "report.dot");
             Object missing = Type.Missing;
@@ -360,7 +372,12 @@ namespace ExamSystem
             replacements.Add("<username>", UserNameLabel.Text);
             replacements.Add("<nowdate>", DateTime.Now.ToString("dd.MM.yyy"));
             replacements.Add("<spec>", CourseComboBox.Text + "/" + BlockComboBox.Text);
-            replacements.Add("<result>", examresult.ToString() + "%");
+            replacements.Add("<part1>", fullExamResult[0] + "%");
+            replacements.Add("<part2>", fullExamResult[1] + "%");
+            replacements.Add("<part3>", fullExamResult[2] + "%");
+            replacements.Add("<part4>", fullExamResult[3] + "%");
+            replacements.Add("<part5>", fullExamResult[4] + "%");
+            replacements.Add("<result>", examresult[0] + "%");
 
 
             foreach(KeyValuePair<string, string> keyValue in replacements)

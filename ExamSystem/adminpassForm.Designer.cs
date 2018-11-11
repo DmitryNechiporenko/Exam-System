@@ -66,6 +66,7 @@
             // 
             // contButton
             // 
+            this.contButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.contButton.Location = new System.Drawing.Point(61, 109);
             this.contButton.Name = "contButton";
             this.contButton.Size = new System.Drawing.Size(161, 23);

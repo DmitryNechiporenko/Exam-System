@@ -200,6 +200,7 @@
             // 
             // regButton
             // 
+            this.regButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.regButton.Location = new System.Drawing.Point(115, 203);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(129, 37);
@@ -210,6 +211,7 @@
             // 
             // loginButton
             // 
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginButton.Location = new System.Drawing.Point(250, 203);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(85, 37);

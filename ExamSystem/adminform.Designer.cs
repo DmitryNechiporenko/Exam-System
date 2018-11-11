@@ -60,6 +60,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 58);
             this.metroTabControl1.Name = "metroTabControl1";
@@ -67,12 +68,15 @@
             this.metroTabControl1.Size = new System.Drawing.Size(435, 353);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
+            this.metroTabControl1.MouseEnter += new System.EventHandler(this.metroTabControl1_MouseEnter);
+            this.metroTabControl1.MouseLeave += new System.EventHandler(this.metroTabControl1_MouseLeave);
             // 
             // metroTabPage1
             // 
             this.metroTabPage1.Controls.Add(this.DelCourseButton);
             this.metroTabPage1.Controls.Add(this.AddCourseButton);
             this.metroTabPage1.Controls.Add(this.CourseLabel);
+            this.metroTabPage1.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
@@ -87,6 +91,7 @@
             // 
             // DelCourseButton
             // 
+            this.DelCourseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelCourseButton.Location = new System.Drawing.Point(114, 197);
             this.DelCourseButton.Name = "DelCourseButton";
             this.DelCourseButton.Size = new System.Drawing.Size(181, 75);
@@ -97,6 +102,7 @@
             // 
             // AddCourseButton
             // 
+            this.AddCourseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddCourseButton.Location = new System.Drawing.Point(114, 90);
             this.AddCourseButton.Name = "AddCourseButton";
             this.AddCourseButton.Size = new System.Drawing.Size(181, 75);
@@ -120,6 +126,7 @@
             this.metroTabPage2.Controls.Add(this.DelBlockButton);
             this.metroTabPage2.Controls.Add(this.AddBlockButton);
             this.metroTabPage2.Controls.Add(this.BlockLabel);
+            this.metroTabPage2.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
@@ -134,6 +141,7 @@
             // 
             // DelBlockButton
             // 
+            this.DelBlockButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelBlockButton.Location = new System.Drawing.Point(114, 197);
             this.DelBlockButton.Name = "DelBlockButton";
             this.DelBlockButton.Size = new System.Drawing.Size(181, 75);
@@ -144,6 +152,7 @@
             // 
             // AddBlockButton
             // 
+            this.AddBlockButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBlockButton.Location = new System.Drawing.Point(114, 90);
             this.AddBlockButton.Name = "AddBlockButton";
             this.AddBlockButton.Size = new System.Drawing.Size(181, 75);
@@ -167,6 +176,7 @@
             this.metroTabPage3.Controls.Add(this.DelQuesButton);
             this.metroTabPage3.Controls.Add(this.AddQuesButton);
             this.metroTabPage3.Controls.Add(this.QuestionLabel);
+            this.metroTabPage3.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTabPage3.HorizontalScrollbarBarColor = true;
             this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.HorizontalScrollbarSize = 10;
@@ -181,6 +191,7 @@
             // 
             // DelQuesButton
             // 
+            this.DelQuesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelQuesButton.Location = new System.Drawing.Point(114, 197);
             this.DelQuesButton.Name = "DelQuesButton";
             this.DelQuesButton.Size = new System.Drawing.Size(181, 75);
@@ -191,6 +202,7 @@
             // 
             // AddQuesButton
             // 
+            this.AddQuesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddQuesButton.Location = new System.Drawing.Point(114, 90);
             this.AddQuesButton.Name = "AddQuesButton";
             this.AddQuesButton.Size = new System.Drawing.Size(181, 75);
@@ -213,6 +225,7 @@
             // 
             this.metroTabPage4.Controls.Add(this.metroButton1);
             this.metroTabPage4.Controls.Add(this.metroLabel1);
+            this.metroTabPage4.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTabPage4.HorizontalScrollbarBarColor = true;
             this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage4.HorizontalScrollbarSize = 10;
@@ -227,6 +240,7 @@
             // 
             // metroButton1
             // 
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroButton1.Location = new System.Drawing.Point(114, 90);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(181, 75);

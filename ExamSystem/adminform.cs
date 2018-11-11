@@ -58,5 +58,17 @@ namespace ExamSystem
             ViewUsers f = new ViewUsers();
             f.ShowDialog();
         }
+
+        private void metroTabControl1_MouseEnter(object sender, EventArgs e)
+        {
+            metroTabControl1.Style = MetroFramework.MetroColorStyle.Purple;
+            metroTabControl1.Refresh();
+        }
+
+        private void metroTabControl1_MouseLeave(object sender, EventArgs e)
+        {
+            metroTabControl1.Style = MetroFramework.MetroColorStyle.Default;
+            metroTabControl1.Refresh();
+        }
     }
 }

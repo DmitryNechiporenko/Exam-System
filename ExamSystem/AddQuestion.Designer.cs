@@ -302,6 +302,7 @@
             // A1Radio
             // 
             this.A1Radio.AutoSize = true;
+            this.A1Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A1Radio.Location = new System.Drawing.Point(392, 332);
             this.A1Radio.Name = "A1Radio";
             this.A1Radio.Size = new System.Drawing.Size(26, 15);
@@ -312,6 +313,7 @@
             // A2Radio
             // 
             this.A2Radio.AutoSize = true;
+            this.A2Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A2Radio.Location = new System.Drawing.Point(392, 361);
             this.A2Radio.Name = "A2Radio";
             this.A2Radio.Size = new System.Drawing.Size(26, 15);
@@ -322,6 +324,7 @@
             // A3Radio
             // 
             this.A3Radio.AutoSize = true;
+            this.A3Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A3Radio.Location = new System.Drawing.Point(392, 390);
             this.A3Radio.Name = "A3Radio";
             this.A3Radio.Size = new System.Drawing.Size(26, 15);
@@ -332,6 +335,7 @@
             // A4Radio
             // 
             this.A4Radio.AutoSize = true;
+            this.A4Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A4Radio.Location = new System.Drawing.Point(392, 419);
             this.A4Radio.Name = "A4Radio";
             this.A4Radio.Size = new System.Drawing.Size(26, 15);
@@ -372,6 +376,7 @@
             // 
             // AddButton
             // 
+            this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Location = new System.Drawing.Point(109, 549);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(277, 85);

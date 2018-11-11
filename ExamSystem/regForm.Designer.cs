@@ -322,6 +322,7 @@
             // 
             // regButton
             // 
+            this.regButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.regButton.Location = new System.Drawing.Point(174, 295);
             this.regButton.Name = "regButton";
             this.regButton.Size = new System.Drawing.Size(194, 44);

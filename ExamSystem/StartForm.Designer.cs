@@ -38,6 +38,7 @@
             // 
             // LearnButton
             // 
+            this.LearnButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LearnButton.Location = new System.Drawing.Point(48, 110);
             this.LearnButton.Name = "LearnButton";
             this.LearnButton.Size = new System.Drawing.Size(214, 87);
@@ -48,6 +49,7 @@
             // 
             // examButton
             // 
+            this.examButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.examButton.Location = new System.Drawing.Point(270, 110);
             this.examButton.Name = "examButton";
             this.examButton.Size = new System.Drawing.Size(214, 87);
@@ -58,6 +60,7 @@
             // 
             // adminButton
             // 
+            this.adminButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.adminButton.Location = new System.Drawing.Point(412, 250);
             this.adminButton.Name = "adminButton";
             this.adminButton.Size = new System.Drawing.Size(103, 23);

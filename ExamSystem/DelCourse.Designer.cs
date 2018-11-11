@@ -98,6 +98,7 @@
             // 
             // UpdButton
             // 
+            this.UpdButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdButton.Location = new System.Drawing.Point(126, 145);
             this.UpdButton.Name = "UpdButton";
             this.UpdButton.Size = new System.Drawing.Size(94, 61);
@@ -108,6 +109,7 @@
             // 
             // DelButton
             // 
+            this.DelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelButton.Location = new System.Drawing.Point(231, 145);
             this.DelButton.Name = "DelButton";
             this.DelButton.Size = new System.Drawing.Size(94, 61);

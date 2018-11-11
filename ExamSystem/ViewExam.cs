@@ -85,7 +85,7 @@ namespace ExamSystem
 
             PartComboBox.SelectedIndex = 0;
 
-            ResultLabel.Text = ResultLabel.Text + " " + calculate.percentage(examid) + "%";
+            ResultLabel.Text = ResultLabel.Text + " " + calculate.percentage(examid, false)[0] + "%";
         }
 
         private void PartComboBox_SelectedValueChanged(object sender, EventArgs e)

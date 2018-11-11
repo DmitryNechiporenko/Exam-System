@@ -75,6 +75,7 @@
             // 
             // AddButton
             // 
+            this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Location = new System.Drawing.Point(23, 128);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(221, 52);

@@ -89,6 +89,7 @@
             // A4Radio
             // 
             this.A4Radio.AutoSize = true;
+            this.A4Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A4Radio.Location = new System.Drawing.Point(398, 447);
             this.A4Radio.Name = "A4Radio";
             this.A4Radio.Size = new System.Drawing.Size(26, 15);
@@ -99,6 +100,7 @@
             // A3Radio
             // 
             this.A3Radio.AutoSize = true;
+            this.A3Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A3Radio.Location = new System.Drawing.Point(398, 418);
             this.A3Radio.Name = "A3Radio";
             this.A3Radio.Size = new System.Drawing.Size(26, 15);
@@ -109,6 +111,7 @@
             // A2Radio
             // 
             this.A2Radio.AutoSize = true;
+            this.A2Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A2Radio.Location = new System.Drawing.Point(398, 389);
             this.A2Radio.Name = "A2Radio";
             this.A2Radio.Size = new System.Drawing.Size(26, 15);
@@ -119,6 +122,7 @@
             // A1Radio
             // 
             this.A1Radio.AutoSize = true;
+            this.A1Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.A1Radio.Location = new System.Drawing.Point(398, 360);
             this.A1Radio.Name = "A1Radio";
             this.A1Radio.Size = new System.Drawing.Size(26, 15);
@@ -397,6 +401,7 @@
             // 
             // UpdButton
             // 
+            this.UpdButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdButton.Location = new System.Drawing.Point(115, 565);
             this.UpdButton.Name = "UpdButton";
             this.UpdButton.Size = new System.Drawing.Size(126, 92);
@@ -407,6 +412,7 @@
             // 
             // DelButton
             // 
+            this.DelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DelButton.Location = new System.Drawing.Point(263, 565);
             this.DelButton.Name = "DelButton";
             this.DelButton.Size = new System.Drawing.Size(126, 92);

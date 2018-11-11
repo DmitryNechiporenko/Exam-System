@@ -59,6 +59,7 @@
             // 
             // AddBlockButton
             // 
+            this.AddBlockButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBlockButton.Location = new System.Drawing.Point(219, 106);
             this.AddBlockButton.Name = "AddBlockButton";
             this.AddBlockButton.Size = new System.Drawing.Size(200, 45);
@@ -69,6 +70,7 @@
             // 
             // DeleteBlockButton
             // 
+            this.DeleteBlockButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteBlockButton.Location = new System.Drawing.Point(219, 157);
             this.DeleteBlockButton.Name = "DeleteBlockButton";
             this.DeleteBlockButton.Size = new System.Drawing.Size(200, 45);
@@ -79,6 +81,7 @@
             // 
             // StartButton
             // 
+            this.StartButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StartButton.Location = new System.Drawing.Point(219, 364);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(200, 45);

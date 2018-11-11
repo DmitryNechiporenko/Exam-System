@@ -97,13 +97,13 @@ namespace ExamSystem
 
     class calculate
     {
-        public static double percentage(int examid)
+        public static double[] percentage(int examid, Boolean by_parts)
         {
             string[] examinfo = new string[18];
             string[] questioninfo;
             string questions;
             string answers;
-            
+
 
             FbConnection fb = new FbConnection(connection.conString());
             fb.Open();
@@ -112,7 +112,7 @@ namespace ExamSystem
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
-            for(int i = 0; i < 18; i++)
+            for (int i = 0; i < 18; i++)
             {
                 examinfo[i] = reader[i].ToString();
             }
@@ -120,6 +120,8 @@ namespace ExamSystem
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
+
+
 
             questions = examinfo[3] + ',' + examinfo[5] + ',' + examinfo[7] + ',' + examinfo[9] + ',' + examinfo[11];
             string[] q_array = questions.Split(',');
@@ -135,7 +137,7 @@ namespace ExamSystem
             for (int i = 0; i < questioninfo.Length; i++)
             {
                 reader1.Read();
-                    string foo = "";
+                string foo = "";
                 for (int z = 0; z < 8; z++)
                 {
                     foo = foo + reader1[z].ToString() + "|";
@@ -147,16 +149,53 @@ namespace ExamSystem
             fbt1.Commit();
             fb.Close();
 
-            Dictionary<int, string> user_qa = new Dictionary<int, string>(q_array.Length);
             Dictionary<int, string> curr_qa = new Dictionary<int, string>(q_array.Length);
-            for (int i = 0; i < q_array.Length; i++)
+            
+            for (int i = 0; i < questioninfo.Length; i++)
             {
-                user_qa.Add(int.Parse(q_array[i]), a_array[i]);
                 string[] foo = questioninfo[i].Split('|');
                 curr_qa.Add(int.Parse(foo[0]), foo[7]);
             }
 
-            return Math.Round(100*(q_array.Length - (double)user_qa.Except(curr_qa).Count())/((double)q_array.Length),2);
+            double[] return_result = new double[5];
+            
+
+            if (by_parts)
+            {
+
+                int cnt = 0;
+                double result;
+                for (int i = 3; i < 12; i = i + 2)
+                {
+                    Dictionary<int, string> user_qa = new Dictionary<int, string>(examinfo[i].Length);
+
+                    for (int z = 0; z < examinfo[i].Split(',').Length; z++)
+                    {
+                        user_qa.Add(int.Parse(examinfo[i].Split(',')[z]), examinfo[i + 1].Split(',')[z]);
+                    }
+
+                    result = Math.Round(100 * (examinfo[i].Split(',').Length - (double)user_qa.Except(curr_qa).Count()) / (examinfo[i].Split(',').Length), 2);
+                    return_result[cnt] = result;
+                    cnt++;
+                }
+                
+            }
+            else
+            {
+                Dictionary<int, string> user_qa = new Dictionary<int, string>(q_array.Length);
+                double result;
+                for (int i = 0; i < q_array.Length; i++)
+                {
+                    user_qa.Add(int.Parse(q_array[i]), a_array[i]);
+                }
+
+                result = Math.Round(100 * (q_array.Length - (double)user_qa.Except(curr_qa).Count()) / (q_array.Length), 2);
+                for(int i = 0; i < return_result.Length; i++)
+                {
+                    return_result[i] = result;
+                }
+            }
+            return return_result;
         }
     }
 

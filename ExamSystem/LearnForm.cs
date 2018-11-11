@@ -63,14 +63,14 @@ namespace ExamSystem
         {
             if (ChoosedBlocksListBox.Items.Count > 0)
             {
-                string[] foo = new string[ChoosedBlocksListBox.Items.Count];
+                string[] blocklist = new string[ChoosedBlocksListBox.Items.Count];
                 for (int i = 0; i < ChoosedBlocksListBox.Items.Count; i++)
                 {
-                    foo[i] = ChoosedBlocksListBox.Items[i].ToString();
+                    blocklist[i] = ChoosedBlocksListBox.Items[i].ToString();
                 }
 
                 this.Hide();
-                LearnQuiz lq = new LearnQuiz(foo);
+                LearnQuiz lq = new LearnQuiz(blocklist);
                 lq.Closed += (s, args) => this.Close();
                 lq.Show();
             }

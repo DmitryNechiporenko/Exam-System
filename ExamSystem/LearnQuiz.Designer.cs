@@ -126,6 +126,7 @@
             // 
             // CommentButton
             // 
+            this.CommentButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CommentButton.Location = new System.Drawing.Point(370, 447);
             this.CommentButton.Name = "CommentButton";
             this.CommentButton.Size = new System.Drawing.Size(136, 42);
@@ -138,6 +139,7 @@
             // 
             // AnswerButton
             // 
+            this.AnswerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnswerButton.Location = new System.Drawing.Point(512, 447);
             this.AnswerButton.Name = "AnswerButton";
             this.AnswerButton.Size = new System.Drawing.Size(136, 42);
@@ -150,6 +152,7 @@
             // 
             // NextQuestionButton
             // 
+            this.NextQuestionButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextQuestionButton.Location = new System.Drawing.Point(654, 447);
             this.NextQuestionButton.Name = "NextQuestionButton";
             this.NextQuestionButton.Size = new System.Drawing.Size(136, 42);
@@ -162,6 +165,7 @@
             // 
             // randomButton
             // 
+            this.randomButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.randomButton.Location = new System.Drawing.Point(75, 191);
             this.randomButton.Name = "randomButton";
             this.randomButton.Size = new System.Drawing.Size(333, 153);
@@ -173,6 +177,7 @@
             // 
             // orderButton
             // 
+            this.orderButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.orderButton.Location = new System.Drawing.Point(414, 191);
             this.orderButton.Name = "orderButton";
             this.orderButton.Size = new System.Drawing.Size(333, 153);

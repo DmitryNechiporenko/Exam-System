@@ -45,6 +45,7 @@
             this.RefreshExamButton = new MetroFramework.Controls.MetroButton();
             this.ReportButton = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GoToLearnButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +101,7 @@
             // 
             // part1Button
             // 
+            this.part1Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.part1Button.Location = new System.Drawing.Point(331, 143);
             this.part1Button.Name = "part1Button";
             this.part1Button.Size = new System.Drawing.Size(62, 62);
@@ -110,6 +112,7 @@
             // 
             // part5Button
             // 
+            this.part5Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.part5Button.Location = new System.Drawing.Point(603, 144);
             this.part5Button.Name = "part5Button";
             this.part5Button.Size = new System.Drawing.Size(62, 62);
@@ -120,6 +123,7 @@
             // 
             // part4Button
             // 
+            this.part4Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.part4Button.Location = new System.Drawing.Point(535, 143);
             this.part4Button.Name = "part4Button";
             this.part4Button.Size = new System.Drawing.Size(62, 62);
@@ -130,6 +134,7 @@
             // 
             // part3Button
             // 
+            this.part3Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.part3Button.Location = new System.Drawing.Point(467, 143);
             this.part3Button.Name = "part3Button";
             this.part3Button.Size = new System.Drawing.Size(62, 62);
@@ -140,6 +145,7 @@
             // 
             // part2Button
             // 
+            this.part2Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.part2Button.Location = new System.Drawing.Point(399, 143);
             this.part2Button.Name = "part2Button";
             this.part2Button.Size = new System.Drawing.Size(62, 62);
@@ -159,6 +165,7 @@
             // 
             // CreateExamButton
             // 
+            this.CreateExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CreateExamButton.Location = new System.Drawing.Point(435, 158);
             this.CreateExamButton.Name = "CreateExamButton";
             this.CreateExamButton.Size = new System.Drawing.Size(107, 28);
@@ -180,6 +187,7 @@
             // 
             // RefreshExamButton
             // 
+            this.RefreshExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RefreshExamButton.Location = new System.Drawing.Point(331, 261);
             this.RefreshExamButton.Name = "RefreshExamButton";
             this.RefreshExamButton.Size = new System.Drawing.Size(133, 49);
@@ -190,6 +198,7 @@
             // 
             // ReportButton
             // 
+            this.ReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReportButton.Location = new System.Drawing.Point(532, 261);
             this.ReportButton.Name = "ReportButton";
             this.ReportButton.Size = new System.Drawing.Size(133, 49);
@@ -208,11 +217,23 @@
             this.pictureBox1.TabIndex = 10033;
             this.pictureBox1.TabStop = false;
             // 
+            // GoToLearnButton
+            // 
+            this.GoToLearnButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GoToLearnButton.Location = new System.Drawing.Point(470, 261);
+            this.GoToLearnButton.Name = "GoToLearnButton";
+            this.GoToLearnButton.Size = new System.Drawing.Size(133, 49);
+            this.GoToLearnButton.TabIndex = 10034;
+            this.GoToLearnButton.Text = "Пройти обучение";
+            this.GoToLearnButton.UseSelectable = true;
+            this.GoToLearnButton.Click += new System.EventHandler(this.GoToLearnButton_Click);
+            // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 354);
+            this.Controls.Add(this.GoToLearnButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ReportButton);
             this.Controls.Add(this.RefreshExamButton);
@@ -256,5 +277,6 @@
         private MetroFramework.Controls.MetroButton RefreshExamButton;
         private MetroFramework.Controls.MetroButton ReportButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton GoToLearnButton;
     }
 }

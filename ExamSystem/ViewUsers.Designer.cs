@@ -92,6 +92,7 @@
             // 
             // ViewExamButton
             // 
+            this.ViewExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ViewExamButton.Location = new System.Drawing.Point(906, 149);
             this.ViewExamButton.Name = "ViewExamButton";
             this.ViewExamButton.Size = new System.Drawing.Size(145, 58);
@@ -102,6 +103,7 @@
             // 
             // DeleteButton
             // 
+            this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteButton.Location = new System.Drawing.Point(909, 469);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(142, 58);

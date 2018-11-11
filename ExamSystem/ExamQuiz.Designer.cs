@@ -74,6 +74,7 @@
             // 
             // q1Button
             // 
+            this.q1Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q1Button.Location = new System.Drawing.Point(24, 85);
             this.q1Button.Name = "q1Button";
             this.q1Button.Size = new System.Drawing.Size(28, 28);
@@ -84,6 +85,7 @@
             // 
             // q2Button
             // 
+            this.q2Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q2Button.Location = new System.Drawing.Point(58, 85);
             this.q2Button.Name = "q2Button";
             this.q2Button.Size = new System.Drawing.Size(28, 28);
@@ -94,6 +96,7 @@
             // 
             // q3Button
             // 
+            this.q3Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q3Button.Location = new System.Drawing.Point(92, 85);
             this.q3Button.Name = "q3Button";
             this.q3Button.Size = new System.Drawing.Size(28, 28);
@@ -104,6 +107,7 @@
             // 
             // q4Button
             // 
+            this.q4Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q4Button.Location = new System.Drawing.Point(126, 85);
             this.q4Button.Name = "q4Button";
             this.q4Button.Size = new System.Drawing.Size(28, 28);
@@ -114,6 +118,7 @@
             // 
             // q5Button
             // 
+            this.q5Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q5Button.Location = new System.Drawing.Point(160, 85);
             this.q5Button.Name = "q5Button";
             this.q5Button.Size = new System.Drawing.Size(28, 28);
@@ -124,6 +129,7 @@
             // 
             // q6Button
             // 
+            this.q6Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q6Button.Location = new System.Drawing.Point(194, 85);
             this.q6Button.Name = "q6Button";
             this.q6Button.Size = new System.Drawing.Size(28, 28);
@@ -134,6 +140,7 @@
             // 
             // q7Button
             // 
+            this.q7Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q7Button.Location = new System.Drawing.Point(228, 85);
             this.q7Button.Name = "q7Button";
             this.q7Button.Size = new System.Drawing.Size(28, 28);
@@ -144,6 +151,7 @@
             // 
             // q8Button
             // 
+            this.q8Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q8Button.Location = new System.Drawing.Point(262, 85);
             this.q8Button.Name = "q8Button";
             this.q8Button.Size = new System.Drawing.Size(28, 28);
@@ -154,6 +162,7 @@
             // 
             // q9Button
             // 
+            this.q9Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q9Button.Location = new System.Drawing.Point(296, 85);
             this.q9Button.Name = "q9Button";
             this.q9Button.Size = new System.Drawing.Size(28, 28);
@@ -164,6 +173,7 @@
             // 
             // q10Button
             // 
+            this.q10Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q10Button.Location = new System.Drawing.Point(330, 85);
             this.q10Button.Name = "q10Button";
             this.q10Button.Size = new System.Drawing.Size(28, 28);
@@ -174,6 +184,7 @@
             // 
             // q11Button
             // 
+            this.q11Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q11Button.Location = new System.Drawing.Point(364, 85);
             this.q11Button.Name = "q11Button";
             this.q11Button.Size = new System.Drawing.Size(28, 28);
@@ -184,6 +195,7 @@
             // 
             // q12Button
             // 
+            this.q12Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q12Button.Location = new System.Drawing.Point(398, 85);
             this.q12Button.Name = "q12Button";
             this.q12Button.Size = new System.Drawing.Size(28, 28);
@@ -194,6 +206,7 @@
             // 
             // q13Button
             // 
+            this.q13Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q13Button.Location = new System.Drawing.Point(432, 85);
             this.q13Button.Name = "q13Button";
             this.q13Button.Size = new System.Drawing.Size(28, 28);
@@ -204,6 +217,7 @@
             // 
             // q14Button
             // 
+            this.q14Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q14Button.Location = new System.Drawing.Point(466, 85);
             this.q14Button.Name = "q14Button";
             this.q14Button.Size = new System.Drawing.Size(28, 28);
@@ -214,6 +228,7 @@
             // 
             // q20Button
             // 
+            this.q20Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q20Button.Location = new System.Drawing.Point(670, 85);
             this.q20Button.Name = "q20Button";
             this.q20Button.Size = new System.Drawing.Size(28, 28);
@@ -224,6 +239,7 @@
             // 
             // q19Button
             // 
+            this.q19Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q19Button.Location = new System.Drawing.Point(636, 85);
             this.q19Button.Name = "q19Button";
             this.q19Button.Size = new System.Drawing.Size(28, 28);
@@ -234,6 +250,7 @@
             // 
             // q18Button
             // 
+            this.q18Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q18Button.Location = new System.Drawing.Point(602, 85);
             this.q18Button.Name = "q18Button";
             this.q18Button.Size = new System.Drawing.Size(28, 28);
@@ -244,6 +261,7 @@
             // 
             // q17Button
             // 
+            this.q17Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q17Button.Location = new System.Drawing.Point(568, 85);
             this.q17Button.Name = "q17Button";
             this.q17Button.Size = new System.Drawing.Size(28, 28);
@@ -254,6 +272,7 @@
             // 
             // q16Button
             // 
+            this.q16Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q16Button.Location = new System.Drawing.Point(534, 85);
             this.q16Button.Name = "q16Button";
             this.q16Button.Size = new System.Drawing.Size(28, 28);
@@ -264,6 +283,7 @@
             // 
             // q15Button
             // 
+            this.q15Button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q15Button.Location = new System.Drawing.Point(500, 85);
             this.q15Button.Name = "q15Button";
             this.q15Button.Size = new System.Drawing.Size(28, 28);
@@ -307,6 +327,7 @@
             // Answer1Radio
             // 
             this.Answer1Radio.AutoSize = true;
+            this.Answer1Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Answer1Radio.Location = new System.Drawing.Point(23, 294);
             this.Answer1Radio.Name = "Answer1Radio";
             this.Answer1Radio.Size = new System.Drawing.Size(71, 15);
@@ -317,6 +338,7 @@
             // Answer2Radio
             // 
             this.Answer2Radio.AutoSize = true;
+            this.Answer2Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Answer2Radio.Location = new System.Drawing.Point(23, 325);
             this.Answer2Radio.Name = "Answer2Radio";
             this.Answer2Radio.Size = new System.Drawing.Size(71, 15);
@@ -327,6 +349,7 @@
             // Answer3Radio
             // 
             this.Answer3Radio.AutoSize = true;
+            this.Answer3Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Answer3Radio.Location = new System.Drawing.Point(23, 358);
             this.Answer3Radio.Name = "Answer3Radio";
             this.Answer3Radio.Size = new System.Drawing.Size(71, 15);
@@ -337,6 +360,7 @@
             // Answer4Radio
             // 
             this.Answer4Radio.AutoSize = true;
+            this.Answer4Radio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Answer4Radio.Location = new System.Drawing.Point(23, 391);
             this.Answer4Radio.Name = "Answer4Radio";
             this.Answer4Radio.Size = new System.Drawing.Size(71, 15);
@@ -346,6 +370,7 @@
             // 
             // prevButton
             // 
+            this.prevButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.prevButton.Location = new System.Drawing.Point(23, 501);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(59, 32);
@@ -356,6 +381,7 @@
             // 
             // NextButton
             // 
+            this.NextButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextButton.Location = new System.Drawing.Point(89, 501);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(59, 32);
@@ -366,6 +392,7 @@
             // 
             // AnswerButton
             // 
+            this.AnswerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnswerButton.Location = new System.Drawing.Point(417, 475);
             this.AnswerButton.Name = "AnswerButton";
             this.AnswerButton.Size = new System.Drawing.Size(124, 58);
@@ -376,6 +403,7 @@
             // 
             // FinishButton
             // 
+            this.FinishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FinishButton.Location = new System.Drawing.Point(578, 475);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(124, 58);
