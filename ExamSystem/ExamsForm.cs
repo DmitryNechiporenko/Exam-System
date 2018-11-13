@@ -362,10 +362,11 @@ namespace ExamSystem
         private void ReportButton_Click(object sender, EventArgs e)
         {
             double[] fullExamResult = calculate.percentage(examid, true);
-            Word.Application application = new Word.Application();
+            Word._Application application = new Word.Application();
+            Word._Document document;
             Object filename = Path.Combine(Application.StartupPath, "report.dot");
             Object missing = Type.Missing;
-            application.Documents.Open(ref filename);
+            document = application.Documents.Add(ref filename);
             Word.Find find = application.Selection.Find;
 
             Dictionary<string, string> replacements = new Dictionary<string, string>(3);
