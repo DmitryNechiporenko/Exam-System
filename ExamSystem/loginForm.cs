@@ -65,5 +65,10 @@ namespace ExamSystem
             regForm f = new regForm();
             f.ShowDialog();
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

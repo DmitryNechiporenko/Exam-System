@@ -79,5 +79,10 @@ namespace ExamSystem
                 MessageBox.Show("Выберите блок!");
             }
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

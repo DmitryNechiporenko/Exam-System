@@ -41,6 +41,7 @@
             this.ExamTimeLabel = new MetroFramework.Controls.MetroLabel();
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,18 +228,33 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(720, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(724, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10036;
             this.pictureBox1.TabStop = false;
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(237, 30);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10037;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // ViewExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 604);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.ExamTimeLabel);
@@ -252,7 +268,9 @@
             this.Controls.Add(this.PartComboBox);
             this.Controls.Add(this.QuestionsListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ViewExam";
+            this.Resizable = false;
             this.Text = "Просмотр экзамена";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -273,5 +291,6 @@
         private MetroFramework.Controls.MetroLabel ExamTimeLabel;
         private MetroFramework.Controls.MetroLabel ResultLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }

@@ -67,9 +67,9 @@
             // contButton
             // 
             this.contButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.contButton.Location = new System.Drawing.Point(61, 109);
+            this.contButton.Location = new System.Drawing.Point(61, 97);
             this.contButton.Name = "contButton";
-            this.contButton.Size = new System.Drawing.Size(161, 23);
+            this.contButton.Size = new System.Drawing.Size(161, 35);
             this.contButton.TabIndex = 1;
             this.contButton.Text = "Продолжить";
             this.contButton.UseSelectable = true;
@@ -79,11 +79,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 155);
+            this.ClientSize = new System.Drawing.Size(277, 147);
             this.Controls.Add(this.contButton);
             this.Controls.Add(this.passTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "adminpassForm";
+            this.Resizable = false;
             this.Text = "Введите пароль";
             this.ResumeLayout(false);
 

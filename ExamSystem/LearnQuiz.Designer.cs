@@ -40,6 +40,7 @@
             this.randomButton = new MetroFramework.Controls.MetroButton();
             this.orderButton = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,18 +191,33 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(741, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(724, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10035;
             this.pictureBox1.TabStop = false;
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(134, 28);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10036;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // LearnQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 507);
+            this.ClientSize = new System.Drawing.Size(820, 507);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.orderButton);
             this.Controls.Add(this.randomButton);
@@ -214,7 +230,9 @@
             this.Controls.Add(this.Answer1Radio);
             this.Controls.Add(this.QuestionTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LearnQuiz";
+            this.Resizable = false;
             this.Text = "Обучение";
             this.Load += new System.EventHandler(this.LearnQuiz_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -235,5 +253,6 @@
         private MetroFramework.Controls.MetroButton randomButton;
         private MetroFramework.Controls.MetroButton orderButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }

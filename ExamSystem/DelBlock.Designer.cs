@@ -154,7 +154,9 @@
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DelBlock";
+            this.Resizable = false;
             this.Text = "Изменение блоков";
             this.Load += new System.EventHandler(this.DelBlock_Load);
             this.ResumeLayout(false);

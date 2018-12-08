@@ -412,7 +412,9 @@
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddQuestion";
+            this.Resizable = false;
             this.Text = "Добавление вопроса";
             this.Load += new System.EventHandler(this.AddQuestion_Load);
             this.ResumeLayout(false);

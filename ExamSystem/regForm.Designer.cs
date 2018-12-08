@@ -44,6 +44,7 @@
             this.posLabel = new MetroFramework.Controls.MetroLabel();
             this.passLabel = new MetroFramework.Controls.MetroLabel();
             this.regButton = new MetroFramework.Controls.MetroButton();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // surnameTextBox
@@ -331,11 +332,26 @@
             this.regButton.UseSelectable = true;
             this.regButton.Click += new System.EventHandler(this.regButton_Click);
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(162, 29);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10036;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // regForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 371);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.regButton);
             this.Controls.Add(this.passLabel);
             this.Controls.Add(this.posLabel);
@@ -352,7 +368,9 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "regForm";
+            this.Resizable = false;
             this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -375,5 +393,6 @@
         private MetroFramework.Controls.MetroLabel posLabel;
         private MetroFramework.Controls.MetroLabel passLabel;
         private MetroFramework.Controls.MetroButton regButton;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }

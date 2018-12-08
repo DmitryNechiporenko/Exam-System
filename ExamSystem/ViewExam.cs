@@ -166,5 +166,10 @@ namespace ExamSystem
             else
                 return 11;
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

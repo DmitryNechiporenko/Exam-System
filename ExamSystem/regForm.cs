@@ -83,5 +83,10 @@ namespace ExamSystem
                 this.Close();
             }
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

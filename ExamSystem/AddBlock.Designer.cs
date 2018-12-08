@@ -109,14 +109,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 227);
+            this.ClientSize = new System.Drawing.Size(335, 224);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.BlockTextBox);
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddBlock";
+            this.Resizable = false;
             this.Text = "Добавление блока";
             this.Load += new System.EventHandler(this.AddBlock_Load);
             this.ResumeLayout(false);

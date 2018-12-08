@@ -89,7 +89,12 @@
             this.Controls.Add(this.examButton);
             this.Controls.Add(this.LearnButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(538, 296);
+            this.MinimumSize = new System.Drawing.Size(538, 296);
             this.Name = "StartForm";
+            this.Resizable = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Система тестирования";
             this.Load += new System.EventHandler(this.StartForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

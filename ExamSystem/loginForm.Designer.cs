@@ -39,6 +39,7 @@
             this.passwordLabel = new MetroFramework.Controls.MetroLabel();
             this.regButton = new MetroFramework.Controls.MetroButton();
             this.loginButton = new MetroFramework.Controls.MetroButton();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // surnameTextBox
@@ -220,11 +221,26 @@
             this.loginButton.UseSelectable = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(84, 30);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10037;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 275);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.regButton);
             this.Controls.Add(this.passwordLabel);
@@ -236,7 +252,9 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "loginForm";
+            this.Resizable = false;
             this.Text = "Вход";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,5 +272,6 @@
         private MetroFramework.Controls.MetroLabel passwordLabel;
         private MetroFramework.Controls.MetroButton regButton;
         private MetroFramework.Controls.MetroButton loginButton;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }

@@ -70,5 +70,10 @@ namespace ExamSystem
             metroTabControl1.Style = MetroFramework.MetroColorStyle.Default;
             metroTabControl1.Refresh();
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

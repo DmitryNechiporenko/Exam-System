@@ -491,7 +491,9 @@
             this.Controls.Add(this.q2Button);
             this.Controls.Add(this.q1Button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ExamQuiz";
+            this.Resizable = false;
             this.Text = "Экзамен";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExamQuiz_FormClosing);
             this.Load += new System.EventHandler(this.ExamQuiz_Load);

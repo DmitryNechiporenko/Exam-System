@@ -37,6 +37,7 @@
             this.DeleteButton = new MetroFramework.Controls.MetroButton();
             this.ExamsComboBox = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -132,18 +133,35 @@
             this.pictureBox1.TabIndex = 10037;
             this.pictureBox1.TabStop = false;
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(294, 30);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10038;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 550);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExamsComboBox);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ViewExamButton);
             this.Controls.Add(this.usersGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ViewUsers";
+            this.Resizable = false;
             this.Text = "Просмотр пользователей";
             this.Load += new System.EventHandler(this.view_users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).EndInit();
@@ -158,5 +176,6 @@
         private MetroFramework.Controls.MetroButton DeleteButton;
         private MetroFramework.Controls.MetroComboBox ExamsComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }

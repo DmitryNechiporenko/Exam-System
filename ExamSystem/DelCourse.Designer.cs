@@ -130,7 +130,9 @@
             this.Controls.Add(this.TextLabel);
             this.Controls.Add(this.CourseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DelCourse";
+            this.Resizable = false;
             this.Text = "Изменение курсов";
             this.Load += new System.EventHandler(this.DelCourse_Load);
             this.ResumeLayout(false);

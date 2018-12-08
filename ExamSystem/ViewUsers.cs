@@ -181,5 +181,10 @@ namespace ExamSystem
             ViewExam f = new ViewExam(int.Parse(ExamsComboBox.SelectedValue.ToString()));
             f.Show();
         }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

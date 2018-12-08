@@ -359,6 +359,11 @@ namespace ExamSystem
             lq.Show();
         }
 
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void ReportButton_Click(object sender, EventArgs e)
         {
             double[] fullExamResult = calculate.percentage(examid, true);

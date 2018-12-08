@@ -451,7 +451,9 @@
             this.Controls.Add(this.BlockLabel);
             this.Controls.Add(this.CourseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "DelQuestion";
+            this.Resizable = false;
             this.Text = "Изменение вопросов";
             this.Load += new System.EventHandler(this.DelQuestion_Load);
             this.ResumeLayout(false);

@@ -46,6 +46,7 @@
             this.ReportButton = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GoToLearnButton = new MetroFramework.Controls.MetroButton();
+            this.goBackButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,11 +229,26 @@
             this.GoToLearnButton.UseSelectable = true;
             this.GoToLearnButton.Click += new System.EventHandler(this.GoToLearnButton_Click);
             // 
+            // goBackButton
+            // 
+            this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.Location = new System.Drawing.Point(200, 30);
+            this.goBackButton.Name = "goBackButton";
+            this.goBackButton.Size = new System.Drawing.Size(37, 21);
+            this.goBackButton.Style = MetroFramework.MetroColorStyle.White;
+            this.goBackButton.TabIndex = 10035;
+            this.goBackButton.Text = "<<";
+            this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.goBackButton.UseCustomBackColor = true;
+            this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
+            // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 354);
+            this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GoToLearnButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ReportButton);
@@ -251,7 +267,9 @@
             this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.UserNameLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ExamsForm";
+            this.Resizable = false;
             this.Text = "Выбор экзамена";
             this.Load += new System.EventHandler(this.ExamsFormcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -278,5 +296,6 @@
         private MetroFramework.Controls.MetroButton ReportButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton GoToLearnButton;
+        private MetroFramework.Controls.MetroButton goBackButton;
     }
 }
