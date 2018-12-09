@@ -64,7 +64,7 @@
             // BlockLabel
             // 
             this.BlockLabel.AutoSize = true;
-            this.BlockLabel.Location = new System.Drawing.Point(65, 104);
+            this.BlockLabel.Location = new System.Drawing.Point(65, 101);
             this.BlockLabel.Name = "BlockLabel";
             this.BlockLabel.Size = new System.Drawing.Size(38, 19);
             this.BlockLabel.TabIndex = 22;
@@ -73,7 +73,7 @@
             // QuestionLabel
             // 
             this.QuestionLabel.AutoSize = true;
-            this.QuestionLabel.Location = new System.Drawing.Point(48, 155);
+            this.QuestionLabel.Location = new System.Drawing.Point(48, 135);
             this.QuestionLabel.Name = "QuestionLabel";
             this.QuestionLabel.Size = new System.Drawing.Size(55, 19);
             this.QuestionLabel.TabIndex = 23;
@@ -82,7 +82,7 @@
             // a1Label
             // 
             this.a1Label.AutoSize = true;
-            this.a1Label.Location = new System.Drawing.Point(50, 328);
+            this.a1Label.Location = new System.Drawing.Point(50, 300);
             this.a1Label.Name = "a1Label";
             this.a1Label.Size = new System.Drawing.Size(53, 19);
             this.a1Label.TabIndex = 24;
@@ -91,7 +91,7 @@
             // a2Label
             // 
             this.a2Label.AutoSize = true;
-            this.a2Label.Location = new System.Drawing.Point(48, 357);
+            this.a2Label.Location = new System.Drawing.Point(48, 371);
             this.a2Label.Name = "a2Label";
             this.a2Label.Size = new System.Drawing.Size(55, 19);
             this.a2Label.TabIndex = 25;
@@ -100,7 +100,7 @@
             // a3Label
             // 
             this.a3Label.AutoSize = true;
-            this.a3Label.Location = new System.Drawing.Point(48, 386);
+            this.a3Label.Location = new System.Drawing.Point(48, 441);
             this.a3Label.Name = "a3Label";
             this.a3Label.Size = new System.Drawing.Size(55, 19);
             this.a3Label.TabIndex = 26;
@@ -109,7 +109,7 @@
             // a4Label
             // 
             this.a4Label.AutoSize = true;
-            this.a4Label.Location = new System.Drawing.Point(48, 415);
+            this.a4Label.Location = new System.Drawing.Point(48, 511);
             this.a4Label.Name = "a4Label";
             this.a4Label.Size = new System.Drawing.Size(55, 19);
             this.a4Label.TabIndex = 27;
@@ -118,7 +118,7 @@
             // commentLabel
             // 
             this.commentLabel.AutoSize = true;
-            this.commentLabel.Location = new System.Drawing.Point(10, 444);
+            this.commentLabel.Location = new System.Drawing.Point(10, 581);
             this.commentLabel.Name = "commentLabel";
             this.commentLabel.Size = new System.Drawing.Size(93, 19);
             this.commentLabel.TabIndex = 28;
@@ -126,24 +126,27 @@
             // 
             // CourseComboBox
             // 
+            this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.ItemHeight = 19;
             this.CourseComboBox.Location = new System.Drawing.Point(109, 66);
             this.CourseComboBox.MaxDropDownItems = 10;
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(274, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 25);
             this.CourseComboBox.TabIndex = 29;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
             // BlockComboBox
             // 
+            this.BlockComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.BlockComboBox.FormattingEnabled = true;
+            this.BlockComboBox.IntegralHeight = false;
             this.BlockComboBox.ItemHeight = 23;
-            this.BlockComboBox.Location = new System.Drawing.Point(109, 104);
+            this.BlockComboBox.Location = new System.Drawing.Point(109, 101);
             this.BlockComboBox.MaxDropDownItems = 10;
             this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(274, 29);
+            this.BlockComboBox.Size = new System.Drawing.Size(400, 29);
             this.BlockComboBox.TabIndex = 30;
             this.BlockComboBox.UseSelectable = true;
             // 
@@ -153,7 +156,7 @@
             // 
             // 
             this.QuestionTextBox.CustomButton.Image = null;
-            this.QuestionTextBox.CustomButton.Location = new System.Drawing.Point(119, 1);
+            this.QuestionTextBox.CustomButton.Location = new System.Drawing.Point(242, 1);
             this.QuestionTextBox.CustomButton.Name = "";
             this.QuestionTextBox.CustomButton.Size = new System.Drawing.Size(157, 157);
             this.QuestionTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -162,18 +165,18 @@
             this.QuestionTextBox.CustomButton.UseSelectable = true;
             this.QuestionTextBox.CustomButton.Visible = false;
             this.QuestionTextBox.Lines = new string[0];
-            this.QuestionTextBox.Location = new System.Drawing.Point(109, 156);
+            this.QuestionTextBox.Location = new System.Drawing.Point(109, 136);
             this.QuestionTextBox.MaxLength = 32767;
             this.QuestionTextBox.Multiline = true;
             this.QuestionTextBox.Name = "QuestionTextBox";
             this.QuestionTextBox.PasswordChar = '\0';
-            this.QuestionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.QuestionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.QuestionTextBox.SelectedText = "";
             this.QuestionTextBox.SelectionLength = 0;
             this.QuestionTextBox.SelectionStart = 0;
             this.QuestionTextBox.ShortcutsEnabled = true;
             this.QuestionTextBox.ShowClearButton = true;
-            this.QuestionTextBox.Size = new System.Drawing.Size(277, 159);
+            this.QuestionTextBox.Size = new System.Drawing.Size(400, 159);
             this.QuestionTextBox.TabIndex = 31;
             this.QuestionTextBox.UseSelectable = true;
             this.QuestionTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -185,25 +188,26 @@
             // 
             // 
             this.A1TextBox.CustomButton.Image = null;
-            this.A1TextBox.CustomButton.Location = new System.Drawing.Point(255, 1);
+            this.A1TextBox.CustomButton.Location = new System.Drawing.Point(338, 2);
             this.A1TextBox.CustomButton.Name = "";
-            this.A1TextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.A1TextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.A1TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.A1TextBox.CustomButton.TabIndex = 1;
             this.A1TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.A1TextBox.CustomButton.UseSelectable = true;
             this.A1TextBox.CustomButton.Visible = false;
             this.A1TextBox.Lines = new string[0];
-            this.A1TextBox.Location = new System.Drawing.Point(109, 328);
+            this.A1TextBox.Location = new System.Drawing.Point(109, 301);
             this.A1TextBox.MaxLength = 32767;
+            this.A1TextBox.Multiline = true;
             this.A1TextBox.Name = "A1TextBox";
             this.A1TextBox.PasswordChar = '\0';
-            this.A1TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.A1TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.A1TextBox.SelectedText = "";
             this.A1TextBox.SelectionLength = 0;
             this.A1TextBox.SelectionStart = 0;
             this.A1TextBox.ShortcutsEnabled = true;
-            this.A1TextBox.Size = new System.Drawing.Size(277, 23);
+            this.A1TextBox.Size = new System.Drawing.Size(400, 64);
             this.A1TextBox.TabIndex = 32;
             this.A1TextBox.UseSelectable = true;
             this.A1TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -215,25 +219,26 @@
             // 
             // 
             this.A2TextBox.CustomButton.Image = null;
-            this.A2TextBox.CustomButton.Location = new System.Drawing.Point(255, 1);
+            this.A2TextBox.CustomButton.Location = new System.Drawing.Point(338, 2);
             this.A2TextBox.CustomButton.Name = "";
-            this.A2TextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.A2TextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.A2TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.A2TextBox.CustomButton.TabIndex = 1;
             this.A2TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.A2TextBox.CustomButton.UseSelectable = true;
             this.A2TextBox.CustomButton.Visible = false;
             this.A2TextBox.Lines = new string[0];
-            this.A2TextBox.Location = new System.Drawing.Point(109, 357);
+            this.A2TextBox.Location = new System.Drawing.Point(109, 371);
             this.A2TextBox.MaxLength = 32767;
+            this.A2TextBox.Multiline = true;
             this.A2TextBox.Name = "A2TextBox";
             this.A2TextBox.PasswordChar = '\0';
-            this.A2TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.A2TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.A2TextBox.SelectedText = "";
             this.A2TextBox.SelectionLength = 0;
             this.A2TextBox.SelectionStart = 0;
             this.A2TextBox.ShortcutsEnabled = true;
-            this.A2TextBox.Size = new System.Drawing.Size(277, 23);
+            this.A2TextBox.Size = new System.Drawing.Size(400, 64);
             this.A2TextBox.TabIndex = 33;
             this.A2TextBox.UseSelectable = true;
             this.A2TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -245,25 +250,26 @@
             // 
             // 
             this.A3TextBox.CustomButton.Image = null;
-            this.A3TextBox.CustomButton.Location = new System.Drawing.Point(255, 1);
+            this.A3TextBox.CustomButton.Location = new System.Drawing.Point(338, 2);
             this.A3TextBox.CustomButton.Name = "";
-            this.A3TextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.A3TextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.A3TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.A3TextBox.CustomButton.TabIndex = 1;
             this.A3TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.A3TextBox.CustomButton.UseSelectable = true;
             this.A3TextBox.CustomButton.Visible = false;
             this.A3TextBox.Lines = new string[0];
-            this.A3TextBox.Location = new System.Drawing.Point(109, 386);
+            this.A3TextBox.Location = new System.Drawing.Point(109, 441);
             this.A3TextBox.MaxLength = 32767;
+            this.A3TextBox.Multiline = true;
             this.A3TextBox.Name = "A3TextBox";
             this.A3TextBox.PasswordChar = '\0';
-            this.A3TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.A3TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.A3TextBox.SelectedText = "";
             this.A3TextBox.SelectionLength = 0;
             this.A3TextBox.SelectionStart = 0;
             this.A3TextBox.ShortcutsEnabled = true;
-            this.A3TextBox.Size = new System.Drawing.Size(277, 23);
+            this.A3TextBox.Size = new System.Drawing.Size(400, 64);
             this.A3TextBox.TabIndex = 34;
             this.A3TextBox.UseSelectable = true;
             this.A3TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -275,25 +281,26 @@
             // 
             // 
             this.A4TextBox.CustomButton.Image = null;
-            this.A4TextBox.CustomButton.Location = new System.Drawing.Point(255, 1);
+            this.A4TextBox.CustomButton.Location = new System.Drawing.Point(338, 2);
             this.A4TextBox.CustomButton.Name = "";
-            this.A4TextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.A4TextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.A4TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.A4TextBox.CustomButton.TabIndex = 1;
             this.A4TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.A4TextBox.CustomButton.UseSelectable = true;
             this.A4TextBox.CustomButton.Visible = false;
             this.A4TextBox.Lines = new string[0];
-            this.A4TextBox.Location = new System.Drawing.Point(109, 415);
+            this.A4TextBox.Location = new System.Drawing.Point(109, 511);
             this.A4TextBox.MaxLength = 32767;
+            this.A4TextBox.Multiline = true;
             this.A4TextBox.Name = "A4TextBox";
             this.A4TextBox.PasswordChar = '\0';
-            this.A4TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.A4TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.A4TextBox.SelectedText = "";
             this.A4TextBox.SelectionLength = 0;
             this.A4TextBox.SelectionStart = 0;
             this.A4TextBox.ShortcutsEnabled = true;
-            this.A4TextBox.Size = new System.Drawing.Size(277, 23);
+            this.A4TextBox.Size = new System.Drawing.Size(400, 64);
             this.A4TextBox.TabIndex = 35;
             this.A4TextBox.UseSelectable = true;
             this.A4TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -303,7 +310,7 @@
             // 
             this.A1Radio.AutoSize = true;
             this.A1Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.A1Radio.Location = new System.Drawing.Point(392, 332);
+            this.A1Radio.Location = new System.Drawing.Point(515, 327);
             this.A1Radio.Name = "A1Radio";
             this.A1Radio.Size = new System.Drawing.Size(26, 15);
             this.A1Radio.TabIndex = 36;
@@ -314,7 +321,7 @@
             // 
             this.A2Radio.AutoSize = true;
             this.A2Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.A2Radio.Location = new System.Drawing.Point(392, 361);
+            this.A2Radio.Location = new System.Drawing.Point(515, 396);
             this.A2Radio.Name = "A2Radio";
             this.A2Radio.Size = new System.Drawing.Size(26, 15);
             this.A2Radio.TabIndex = 37;
@@ -325,7 +332,7 @@
             // 
             this.A3Radio.AutoSize = true;
             this.A3Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.A3Radio.Location = new System.Drawing.Point(392, 390);
+            this.A3Radio.Location = new System.Drawing.Point(515, 467);
             this.A3Radio.Name = "A3Radio";
             this.A3Radio.Size = new System.Drawing.Size(26, 15);
             this.A3Radio.TabIndex = 38;
@@ -336,7 +343,7 @@
             // 
             this.A4Radio.AutoSize = true;
             this.A4Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.A4Radio.Location = new System.Drawing.Point(392, 419);
+            this.A4Radio.Location = new System.Drawing.Point(515, 536);
             this.A4Radio.Name = "A4Radio";
             this.A4Radio.Size = new System.Drawing.Size(26, 15);
             this.A4Radio.TabIndex = 39;
@@ -349,26 +356,26 @@
             // 
             // 
             this.commentTextBox.CustomButton.Image = null;
-            this.commentTextBox.CustomButton.Location = new System.Drawing.Point(191, 1);
+            this.commentTextBox.CustomButton.Location = new System.Drawing.Point(212, 2);
             this.commentTextBox.CustomButton.Name = "";
-            this.commentTextBox.CustomButton.Size = new System.Drawing.Size(85, 85);
+            this.commentTextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.commentTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.commentTextBox.CustomButton.TabIndex = 1;
             this.commentTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.commentTextBox.CustomButton.UseSelectable = true;
             this.commentTextBox.CustomButton.Visible = false;
             this.commentTextBox.Lines = new string[0];
-            this.commentTextBox.Location = new System.Drawing.Point(109, 444);
+            this.commentTextBox.Location = new System.Drawing.Point(109, 581);
             this.commentTextBox.MaxLength = 32767;
             this.commentTextBox.Multiline = true;
             this.commentTextBox.Name = "commentTextBox";
             this.commentTextBox.PasswordChar = '\0';
-            this.commentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.commentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.commentTextBox.SelectedText = "";
             this.commentTextBox.SelectionLength = 0;
             this.commentTextBox.SelectionStart = 0;
             this.commentTextBox.ShortcutsEnabled = true;
-            this.commentTextBox.Size = new System.Drawing.Size(277, 87);
+            this.commentTextBox.Size = new System.Drawing.Size(274, 64);
             this.commentTextBox.TabIndex = 40;
             this.commentTextBox.UseSelectable = true;
             this.commentTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -377,9 +384,9 @@
             // AddButton
             // 
             this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddButton.Location = new System.Drawing.Point(109, 549);
+            this.AddButton.Location = new System.Drawing.Point(389, 581);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(277, 85);
+            this.AddButton.Size = new System.Drawing.Size(120, 64);
             this.AddButton.TabIndex = 41;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseSelectable = true;
@@ -389,7 +396,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 657);
+            this.ClientSize = new System.Drawing.Size(560, 659);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.commentTextBox);
             this.Controls.Add(this.A4Radio);

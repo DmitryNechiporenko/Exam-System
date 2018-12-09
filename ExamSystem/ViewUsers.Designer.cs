@@ -94,9 +94,9 @@
             // ViewExamButton
             // 
             this.ViewExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ViewExamButton.Location = new System.Drawing.Point(906, 149);
+            this.ViewExamButton.Location = new System.Drawing.Point(909, 146);
             this.ViewExamButton.Name = "ViewExamButton";
-            this.ViewExamButton.Size = new System.Drawing.Size(145, 58);
+            this.ViewExamButton.Size = new System.Drawing.Size(270, 58);
             this.ViewExamButton.TabIndex = 5;
             this.ViewExamButton.Text = "Посмотреть экзамен";
             this.ViewExamButton.UseSelectable = true;
@@ -105,9 +105,9 @@
             // DeleteButton
             // 
             this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DeleteButton.Location = new System.Drawing.Point(909, 469);
+            this.DeleteButton.Location = new System.Drawing.Point(909, 472);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(142, 58);
+            this.DeleteButton.Size = new System.Drawing.Size(270, 58);
             this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = "Удалить пользователя";
             this.DeleteButton.UseSelectable = true;
@@ -115,18 +115,19 @@
             // 
             // ExamsComboBox
             // 
+            this.ExamsComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.ExamsComboBox.FormattingEnabled = true;
             this.ExamsComboBox.ItemHeight = 23;
             this.ExamsComboBox.Location = new System.Drawing.Point(909, 111);
             this.ExamsComboBox.Name = "ExamsComboBox";
-            this.ExamsComboBox.Size = new System.Drawing.Size(142, 29);
+            this.ExamsComboBox.Size = new System.Drawing.Size(270, 29);
             this.ExamsComboBox.TabIndex = 7;
             this.ExamsComboBox.UseSelectable = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(970, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(1095, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 550);
+            this.ClientSize = new System.Drawing.Size(1193, 550);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExamsComboBox);

@@ -80,22 +80,24 @@
             // 
             // CourseComboBox
             // 
+            this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
             this.CourseComboBox.ItemHeight = 23;
             this.CourseComboBox.Location = new System.Drawing.Point(23, 119);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(271, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 29);
             this.CourseComboBox.TabIndex = 10021;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
             // BlockComboBox
             // 
+            this.BlockComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.BlockComboBox.FormattingEnabled = true;
             this.BlockComboBox.ItemHeight = 23;
             this.BlockComboBox.Location = new System.Drawing.Point(23, 209);
             this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(271, 29);
+            this.BlockComboBox.Size = new System.Drawing.Size(400, 29);
             this.BlockComboBox.TabIndex = 10022;
             this.BlockComboBox.UseSelectable = true;
             this.BlockComboBox.SelectedValueChanged += new System.EventHandler(this.BlockComboBox_SelectedValueChanged);
@@ -103,7 +105,7 @@
             // part1Button
             // 
             this.part1Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.part1Button.Location = new System.Drawing.Point(331, 143);
+            this.part1Button.Location = new System.Drawing.Point(487, 123);
             this.part1Button.Name = "part1Button";
             this.part1Button.Size = new System.Drawing.Size(62, 62);
             this.part1Button.TabIndex = 10023;
@@ -114,7 +116,7 @@
             // part5Button
             // 
             this.part5Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.part5Button.Location = new System.Drawing.Point(603, 144);
+            this.part5Button.Location = new System.Drawing.Point(759, 124);
             this.part5Button.Name = "part5Button";
             this.part5Button.Size = new System.Drawing.Size(62, 62);
             this.part5Button.TabIndex = 10024;
@@ -125,7 +127,7 @@
             // part4Button
             // 
             this.part4Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.part4Button.Location = new System.Drawing.Point(535, 143);
+            this.part4Button.Location = new System.Drawing.Point(691, 123);
             this.part4Button.Name = "part4Button";
             this.part4Button.Size = new System.Drawing.Size(62, 62);
             this.part4Button.TabIndex = 10025;
@@ -136,7 +138,7 @@
             // part3Button
             // 
             this.part3Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.part3Button.Location = new System.Drawing.Point(467, 143);
+            this.part3Button.Location = new System.Drawing.Point(623, 123);
             this.part3Button.Name = "part3Button";
             this.part3Button.Size = new System.Drawing.Size(62, 62);
             this.part3Button.TabIndex = 10026;
@@ -147,7 +149,7 @@
             // part2Button
             // 
             this.part2Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.part2Button.Location = new System.Drawing.Point(399, 143);
+            this.part2Button.Location = new System.Drawing.Point(555, 123);
             this.part2Button.Name = "part2Button";
             this.part2Button.Size = new System.Drawing.Size(62, 62);
             this.part2Button.TabIndex = 10027;
@@ -158,7 +160,7 @@
             // ExamLabel
             // 
             this.ExamLabel.AutoSize = true;
-            this.ExamLabel.Location = new System.Drawing.Point(418, 126);
+            this.ExamLabel.Location = new System.Drawing.Point(574, 106);
             this.ExamLabel.Name = "ExamLabel";
             this.ExamLabel.Size = new System.Drawing.Size(144, 19);
             this.ExamLabel.TabIndex = 10028;
@@ -167,7 +169,7 @@
             // CreateExamButton
             // 
             this.CreateExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreateExamButton.Location = new System.Drawing.Point(435, 158);
+            this.CreateExamButton.Location = new System.Drawing.Point(591, 138);
             this.CreateExamButton.Name = "CreateExamButton";
             this.CreateExamButton.Size = new System.Drawing.Size(107, 28);
             this.CreateExamButton.TabIndex = 10029;
@@ -180,7 +182,7 @@
             this.ResultLabel.AutoSize = true;
             this.ResultLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ResultLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.ResultLabel.Location = new System.Drawing.Point(331, 213);
+            this.ResultLabel.Location = new System.Drawing.Point(487, 193);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Size = new System.Drawing.Size(98, 25);
             this.ResultLabel.TabIndex = 10030;
@@ -189,7 +191,7 @@
             // RefreshExamButton
             // 
             this.RefreshExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RefreshExamButton.Location = new System.Drawing.Point(331, 261);
+            this.RefreshExamButton.Location = new System.Drawing.Point(487, 241);
             this.RefreshExamButton.Name = "RefreshExamButton";
             this.RefreshExamButton.Size = new System.Drawing.Size(133, 49);
             this.RefreshExamButton.TabIndex = 10031;
@@ -200,7 +202,7 @@
             // ReportButton
             // 
             this.ReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReportButton.Location = new System.Drawing.Point(532, 261);
+            this.ReportButton.Location = new System.Drawing.Point(688, 241);
             this.ReportButton.Name = "ReportButton";
             this.ReportButton.Size = new System.Drawing.Size(133, 49);
             this.ReportButton.TabIndex = 10032;
@@ -221,7 +223,7 @@
             // GoToLearnButton
             // 
             this.GoToLearnButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GoToLearnButton.Location = new System.Drawing.Point(470, 261);
+            this.GoToLearnButton.Location = new System.Drawing.Point(626, 241);
             this.GoToLearnButton.Name = "GoToLearnButton";
             this.GoToLearnButton.Size = new System.Drawing.Size(133, 49);
             this.GoToLearnButton.TabIndex = 10034;
@@ -247,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 354);
+            this.ClientSize = new System.Drawing.Size(845, 309);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GoToLearnButton);
             this.Controls.Add(this.pictureBox1);

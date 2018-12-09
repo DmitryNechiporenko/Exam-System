@@ -49,9 +49,9 @@
             // 
             // 
             this.CourseTextBox.CustomButton.Image = null;
-            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(157, 1);
+            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(302, 2);
             this.CourseTextBox.CustomButton.Name = "";
-            this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(95, 95);
             this.CourseTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.CourseTextBox.CustomButton.TabIndex = 1;
             this.CourseTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -60,14 +60,15 @@
             this.CourseTextBox.Lines = new string[0];
             this.CourseTextBox.Location = new System.Drawing.Point(65, 80);
             this.CourseTextBox.MaxLength = 32767;
+            this.CourseTextBox.Multiline = true;
             this.CourseTextBox.Name = "CourseTextBox";
             this.CourseTextBox.PasswordChar = '\0';
-            this.CourseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CourseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CourseTextBox.SelectedText = "";
             this.CourseTextBox.SelectionLength = 0;
             this.CourseTextBox.SelectionStart = 0;
             this.CourseTextBox.ShortcutsEnabled = true;
-            this.CourseTextBox.Size = new System.Drawing.Size(179, 23);
+            this.CourseTextBox.Size = new System.Drawing.Size(400, 100);
             this.CourseTextBox.TabIndex = 4;
             this.CourseTextBox.UseSelectable = true;
             this.CourseTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -76,9 +77,9 @@
             // AddButton
             // 
             this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddButton.Location = new System.Drawing.Point(23, 128);
+            this.AddButton.Location = new System.Drawing.Point(65, 186);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(221, 52);
+            this.AddButton.Size = new System.Drawing.Size(398, 52);
             this.AddButton.TabIndex = 5;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseSelectable = true;
@@ -88,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 200);
+            this.ClientSize = new System.Drawing.Size(486, 258);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.CourseTextBox);
             this.Controls.Add(this.CourseLabel);

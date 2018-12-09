@@ -102,11 +102,12 @@
             // 
             // CourseComboBox
             // 
+            this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
             this.CourseComboBox.ItemHeight = 23;
-            this.CourseComboBox.Location = new System.Drawing.Point(219, 69);
+            this.CourseComboBox.Location = new System.Drawing.Point(116, 69);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(200, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 29);
             this.CourseComboBox.TabIndex = 12;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);

@@ -69,9 +69,9 @@
             // UpdButton
             // 
             this.UpdButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdButton.Location = new System.Drawing.Point(113, 162);
+            this.UpdButton.Location = new System.Drawing.Point(276, 203);
             this.UpdButton.Name = "UpdButton";
-            this.UpdButton.Size = new System.Drawing.Size(99, 68);
+            this.UpdButton.Size = new System.Drawing.Size(113, 68);
             this.UpdButton.TabIndex = 4;
             this.UpdButton.Text = "Изменить";
             this.UpdButton.UseSelectable = true;
@@ -80,9 +80,9 @@
             // DelButton
             // 
             this.DelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DelButton.Location = new System.Drawing.Point(223, 162);
+            this.DelButton.Location = new System.Drawing.Point(395, 203);
             this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(99, 68);
+            this.DelButton.Size = new System.Drawing.Size(113, 68);
             this.DelButton.TabIndex = 5;
             this.DelButton.Text = "Удалить";
             this.DelButton.UseSelectable = true;
@@ -90,22 +90,24 @@
             // 
             // CourseComboBox
             // 
+            this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.ItemHeight = 19;
             this.CourseComboBox.Location = new System.Drawing.Point(113, 63);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(209, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 25);
             this.CourseComboBox.TabIndex = 1;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
             // 
             // BlockComboBox
             // 
+            this.BlockComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.BlockComboBox.FormattingEnabled = true;
-            this.BlockComboBox.ItemHeight = 23;
+            this.BlockComboBox.ItemHeight = 19;
             this.BlockComboBox.Location = new System.Drawing.Point(113, 98);
             this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(209, 29);
+            this.BlockComboBox.Size = new System.Drawing.Size(400, 25);
             this.BlockComboBox.TabIndex = 2;
             this.BlockComboBox.UseSelectable = true;
             this.BlockComboBox.SelectedValueChanged += new System.EventHandler(this.BlockComboBox_SelectedValueChanged);
@@ -116,9 +118,9 @@
             // 
             // 
             this.BlockTextBox.CustomButton.Image = null;
-            this.BlockTextBox.CustomButton.Location = new System.Drawing.Point(187, 1);
+            this.BlockTextBox.CustomButton.Location = new System.Drawing.Point(338, 2);
             this.BlockTextBox.CustomButton.Name = "";
-            this.BlockTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.BlockTextBox.CustomButton.Size = new System.Drawing.Size(59, 59);
             this.BlockTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.BlockTextBox.CustomButton.TabIndex = 1;
             this.BlockTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -127,14 +129,15 @@
             this.BlockTextBox.Lines = new string[0];
             this.BlockTextBox.Location = new System.Drawing.Point(113, 133);
             this.BlockTextBox.MaxLength = 32767;
+            this.BlockTextBox.Multiline = true;
             this.BlockTextBox.Name = "BlockTextBox";
             this.BlockTextBox.PasswordChar = '\0';
-            this.BlockTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BlockTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.BlockTextBox.SelectedText = "";
             this.BlockTextBox.SelectionLength = 0;
             this.BlockTextBox.SelectionStart = 0;
             this.BlockTextBox.ShortcutsEnabled = true;
-            this.BlockTextBox.Size = new System.Drawing.Size(209, 23);
+            this.BlockTextBox.Size = new System.Drawing.Size(400, 64);
             this.BlockTextBox.TabIndex = 3;
             this.BlockTextBox.UseSelectable = true;
             this.BlockTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -144,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 254);
+            this.ClientSize = new System.Drawing.Size(531, 284);
             this.Controls.Add(this.BlockTextBox);
             this.Controls.Add(this.BlockComboBox);
             this.Controls.Add(this.CourseComboBox);

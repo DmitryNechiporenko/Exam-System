@@ -57,11 +57,14 @@
             // 
             // CourseComboBox
             // 
+            this.CourseComboBox.DropDownWidth = 500;
+            this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.ItemHeight = 19;
             this.CourseComboBox.Location = new System.Drawing.Point(126, 63);
+            this.CourseComboBox.MaxDropDownItems = 12;
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(199, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 25);
             this.CourseComboBox.TabIndex = 8;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
@@ -72,9 +75,9 @@
             // 
             // 
             this.CourseTextBox.CustomButton.Image = null;
-            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(177, 1);
+            this.CourseTextBox.CustomButton.Location = new System.Drawing.Point(336, 1);
             this.CourseTextBox.CustomButton.Name = "";
-            this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.CourseTextBox.CustomButton.Size = new System.Drawing.Size(63, 63);
             this.CourseTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.CourseTextBox.CustomButton.TabIndex = 1;
             this.CourseTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -83,14 +86,15 @@
             this.CourseTextBox.Lines = new string[0];
             this.CourseTextBox.Location = new System.Drawing.Point(126, 98);
             this.CourseTextBox.MaxLength = 32767;
+            this.CourseTextBox.Multiline = true;
             this.CourseTextBox.Name = "CourseTextBox";
             this.CourseTextBox.PasswordChar = '\0';
-            this.CourseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.CourseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CourseTextBox.SelectedText = "";
             this.CourseTextBox.SelectionLength = 0;
             this.CourseTextBox.SelectionStart = 0;
             this.CourseTextBox.ShortcutsEnabled = true;
-            this.CourseTextBox.Size = new System.Drawing.Size(199, 23);
+            this.CourseTextBox.Size = new System.Drawing.Size(400, 65);
             this.CourseTextBox.TabIndex = 9;
             this.CourseTextBox.UseSelectable = true;
             this.CourseTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -99,9 +103,9 @@
             // UpdButton
             // 
             this.UpdButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdButton.Location = new System.Drawing.Point(126, 145);
+            this.UpdButton.Location = new System.Drawing.Point(296, 169);
             this.UpdButton.Name = "UpdButton";
-            this.UpdButton.Size = new System.Drawing.Size(94, 61);
+            this.UpdButton.Size = new System.Drawing.Size(112, 61);
             this.UpdButton.TabIndex = 10;
             this.UpdButton.Text = "Изменить";
             this.UpdButton.UseSelectable = true;
@@ -110,9 +114,9 @@
             // DelButton
             // 
             this.DelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DelButton.Location = new System.Drawing.Point(231, 145);
+            this.DelButton.Location = new System.Drawing.Point(414, 169);
             this.DelButton.Name = "DelButton";
-            this.DelButton.Size = new System.Drawing.Size(94, 61);
+            this.DelButton.Size = new System.Drawing.Size(112, 61);
             this.DelButton.TabIndex = 11;
             this.DelButton.Text = "Удалить";
             this.DelButton.UseSelectable = true;
@@ -122,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 232);
+            this.ClientSize = new System.Drawing.Size(544, 249);
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.UpdButton);
             this.Controls.Add(this.CourseTextBox);

@@ -63,10 +63,9 @@ namespace ExamSystem
             InsertSQL.Transaction = fbt;
 
 
-
             try
             {
-                int res = InsertSQL.ExecuteNonQuery();
+                InsertSQL.ExecuteNonQuery();
                 MessageBox.Show("Добавлено!");
                 fbt.Commit();
             }
