@@ -24,9 +24,10 @@ namespace ExamSystem
                     fb_con.UserID = cfg[1];
                 else if (cfg[0] == "Password")
                     fb_con.Password = cfg[1];
+                else if (cfg[0] == "Database")
+                    fb_con.Database = Path.Combine(Application.StartupPath, cfg[1]);
             }
-            fb_con.Database = Path.Combine(Application.StartupPath, "DB.FDB");
-            fb_con.ServerType = 0; //тип сервера (0 - "полноценный Firebird" (classic или super server), 1 - встроенный (embedded))
+            fb_con.ServerType = 0;
 
             return fb_con.ToString();
         }
@@ -38,10 +39,8 @@ namespace ExamSystem
         public static void combobox(ComboBox box, string query)
         {
             FbConnection fb = new FbConnection(connection.conString());
-
             fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-
             FbCommand SelectSQL = new FbCommand(query, fb);
             SelectSQL.Transaction = fbt;
 
@@ -57,13 +56,13 @@ namespace ExamSystem
                 };
                 data1.Add(mc);
             }
+            
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
 
-
-            box.DataSource = data1;
+            box.DataSource = data1.OrderBy(o=>o.Name).ToList();
             box.DisplayMember = "Name";
             box.ValueMember = "Id";
         }
@@ -72,17 +71,12 @@ namespace ExamSystem
         {
             FbConnection fb = new FbConnection(connection.conString());
             fb.Open();
-
-
             FbTransaction fbt = fb.BeginTransaction();
-
             FbCommand SelectSQL = new FbCommand(query, fb);
             SelectSQL.Transaction = fbt;
-
             FbDataReader reader = SelectSQL.ExecuteReader();
 
             box.Items.Clear();
-
             while (reader.Read())
             {
                 box.Items.Add(reader[0].ToString());
@@ -91,6 +85,7 @@ namespace ExamSystem
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
+            box.Sorted = true;
         }
     }
 
@@ -103,7 +98,6 @@ namespace ExamSystem
             string[] questioninfo;
             string questions;
             string answers;
-
 
             FbConnection fb = new FbConnection(connection.conString());
             fb.Open();
@@ -120,8 +114,6 @@ namespace ExamSystem
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
-
-
 
             questions = examinfo[3] + ',' + examinfo[5] + ',' + examinfo[7] + ',' + examinfo[9] + ',' + examinfo[11];
             string[] q_array = questions.Split(',');
@@ -159,7 +151,6 @@ namespace ExamSystem
 
             double[] return_result = new double[5];
             
-
             if (by_parts)
             {
 
@@ -204,8 +195,7 @@ namespace ExamSystem
         public static void record(string query)
         {
             FbConnection fb = new FbConnection(connection.conString());
-            if (fb.State == ConnectionState.Closed)
-                fb.Open();
+            fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
             FbCommand DeleteSQL = new FbCommand(query, fb);
             DeleteSQL.Transaction = fbt;

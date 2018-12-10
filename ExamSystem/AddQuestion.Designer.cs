@@ -142,11 +142,11 @@
             this.BlockComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.BlockComboBox.FormattingEnabled = true;
             this.BlockComboBox.IntegralHeight = false;
-            this.BlockComboBox.ItemHeight = 23;
+            this.BlockComboBox.ItemHeight = 19;
             this.BlockComboBox.Location = new System.Drawing.Point(109, 101);
             this.BlockComboBox.MaxDropDownItems = 10;
             this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(400, 29);
+            this.BlockComboBox.Size = new System.Drawing.Size(400, 25);
             this.BlockComboBox.TabIndex = 30;
             this.BlockComboBox.UseSelectable = true;
             // 

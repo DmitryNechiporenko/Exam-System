@@ -29,9 +29,8 @@ namespace ExamSystem
 
             FbDataReader reader = SelectSQL.ExecuteReader();
             if (reader.Read())
-            {
                 UserNameLabel.Text = reader[2].ToString() + " " + reader[1].ToString() + " " + reader[3].ToString();
-            }
+
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();

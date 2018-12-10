@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace ExamSystem
 {
@@ -15,7 +17,7 @@ namespace ExamSystem
     {
         FbConnection fb = new FbConnection(connection.conString());
 
-        string[] examinfo = new string[18];
+        string[] examinfo = new string[23];
         string[][] questionlist;
         int examid;
         DataTable questions = new DataTable();
@@ -30,11 +32,11 @@ namespace ExamSystem
             if (fb.State == ConnectionState.Closed) //SELECT CURRENT EXAM
                 fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-            FbCommand SelectSQL = new FbCommand("SELECT * FROM exams WHERE id = " + examid, fb);
+            FbCommand SelectSQL = new FbCommand("SELECT exams.*, users.name, users.surname, users.patronymic, course.name, block.name FROM exams, users, course, block WHERE exams.id = " + examid + " AND users.id = exams.user_id AND course.id = block.course_id AND block.id = exams.block_id  ", fb);
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
-            for (int i = 0; i < 18; i++)
+            for (int i = 0; i < 23; i++)
             {
                 examinfo[i] = reader[i].ToString();
             }
@@ -86,6 +88,7 @@ namespace ExamSystem
             PartComboBox.SelectedIndex = 0;
 
             ResultLabel.Text = ResultLabel.Text + " " + calculate.percentage(examid, false)[0] + "%";
+            UserNameLabel.Text = examinfo[18] + " " + examinfo[19] + " " + examinfo[20];
         }
 
         private void PartComboBox_SelectedValueChanged(object sender, EventArgs e)
@@ -170,6 +173,48 @@ namespace ExamSystem
         private void goBackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            double[] fullExamResult = calculate.percentage(examid, true);
+            Word._Application application = new Word.Application();
+            Word._Document document;
+            Object filename = Path.Combine(Application.StartupPath, "report.dot");
+            Object missing = Type.Missing;
+            document = application.Documents.Add(ref filename);
+            Word.Find find = application.Selection.Find;
+
+            Dictionary<string, string> replacements = new Dictionary<string, string>(3);
+            replacements.Add("<username>", UserNameLabel.Text);
+            replacements.Add("<nowdate>", DateTime.Now.ToString("dd.MM.yyy"));
+            replacements.Add("<spec>", examinfo[21] + "/" + examinfo[22]);
+            replacements.Add("<part1>", fullExamResult[0] + "%");
+            replacements.Add("<part2>", fullExamResult[1] + "%");
+            replacements.Add("<part3>", fullExamResult[2] + "%");
+            replacements.Add("<part4>", fullExamResult[3] + "%");
+            replacements.Add("<part5>", fullExamResult[4] + "%");
+            replacements.Add("<result>", ResultLabel.Text + "%");
+
+
+            foreach (KeyValuePair<string, string> keyValue in replacements)
+            {
+                find.Text = keyValue.Key;
+                find.Replacement.Text = keyValue.Value;
+                Object wrap = Word.WdFindWrap.wdFindContinue;
+                Object replace = Word.WdReplace.wdReplaceAll;
+                find.Execute(FindText: Type.Missing,
+                    MatchCase: false,
+                    MatchWholeWord: false,
+                    MatchWildcards: false,
+                    MatchSoundsLike: missing,
+                    MatchAllWordForms: false,
+                    Forward: true,
+                    Wrap: wrap,
+                    Format: false,
+                    ReplaceWith: missing, Replace: replace);
+            }
+            application.Visible = true;
         }
     }
 }

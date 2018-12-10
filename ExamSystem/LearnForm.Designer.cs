@@ -44,6 +44,7 @@
             // ChoosedBlocksListBox
             // 
             this.ChoosedBlocksListBox.FormattingEnabled = true;
+            this.ChoosedBlocksListBox.HorizontalScrollbar = true;
             this.ChoosedBlocksListBox.Location = new System.Drawing.Point(425, 106);
             this.ChoosedBlocksListBox.Name = "ChoosedBlocksListBox";
             this.ChoosedBlocksListBox.Size = new System.Drawing.Size(191, 303);
@@ -53,6 +54,7 @@
             // CourseBlocksListBox
             // 
             this.CourseBlocksListBox.FormattingEnabled = true;
+            this.CourseBlocksListBox.HorizontalScrollbar = true;
             this.CourseBlocksListBox.Location = new System.Drawing.Point(22, 106);
             this.CourseBlocksListBox.Name = "CourseBlocksListBox";
             this.CourseBlocksListBox.Size = new System.Drawing.Size(191, 303);
@@ -104,10 +106,10 @@
             // 
             this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.ItemHeight = 19;
             this.CourseComboBox.Location = new System.Drawing.Point(116, 69);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(400, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 25);
             this.CourseComboBox.TabIndex = 12;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);

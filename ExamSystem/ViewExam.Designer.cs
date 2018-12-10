@@ -42,6 +42,8 @@
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
+            this.reportButton = new MetroFramework.Controls.MetroButton();
+            this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,11 +251,33 @@
             this.goBackButton.UseSelectable = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // reportButton
+            // 
+            this.reportButton.Location = new System.Drawing.Point(707, 538);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(88, 43);
+            this.reportButton.TabIndex = 10038;
+            this.reportButton.Text = "Отчет";
+            this.reportButton.UseSelectable = true;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.UserNameLabel.Location = new System.Drawing.Point(280, 30);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(33, 15);
+            this.UserNameLabel.TabIndex = 10039;
+            this.UserNameLabel.Text = "ФИО";
+            // 
             // ViewExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 604);
+            this.Controls.Add(this.UserNameLabel);
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ResultLabel);
@@ -292,5 +316,7 @@
         private MetroFramework.Controls.MetroLabel ResultLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton goBackButton;
+        private MetroFramework.Controls.MetroButton reportButton;
+        private MetroFramework.Controls.MetroLabel UserNameLabel;
     }
 }
