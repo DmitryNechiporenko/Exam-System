@@ -82,13 +82,13 @@ namespace ExamSystem
 
             InsertSQL.Parameters.Add("ID", FbDbType.Integer).Value = (int.Parse(newid) + 1);
             InsertSQL.Parameters.Add("BLOCK_ID", FbDbType.Integer).Value = int.Parse(BlockComboBox.SelectedValue.ToString());
-            InsertSQL.Parameters.Add("QUES", FbDbType.Text).Value = QuestionTextBox.Text.Trim();
-            InsertSQL.Parameters.Add("A1", FbDbType.Text).Value = A1TextBox.Text.Trim();
-            InsertSQL.Parameters.Add("A2", FbDbType.Text).Value = A2TextBox.Text.Trim();
-            InsertSQL.Parameters.Add("A3", FbDbType.Text).Value = A3TextBox.Text.Trim();
-            InsertSQL.Parameters.Add("A4", FbDbType.Text).Value = A4TextBox.Text.Trim();
+            InsertSQL.Parameters.Add("QUES", FbDbType.Text).Value = QuestionTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            InsertSQL.Parameters.Add("A1", FbDbType.Text).Value = A1TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            InsertSQL.Parameters.Add("A2", FbDbType.Text).Value = A2TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            InsertSQL.Parameters.Add("A3", FbDbType.Text).Value = A3TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            InsertSQL.Parameters.Add("A4", FbDbType.Text).Value = A4TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
             InsertSQL.Parameters.Add("A_CURR", FbDbType.Integer).Value = a_curr;
-            InsertSQL.Parameters.Add("COMMENT", FbDbType.Text).Value = commentTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("COMMENT", FbDbType.Text).Value = commentTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
 
             InsertSQL.Transaction = fbt;
 

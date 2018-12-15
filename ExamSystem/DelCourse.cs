@@ -51,7 +51,7 @@ namespace ExamSystem
             int cID = int.Parse(CourseComboBox.SelectedValue.ToString());
 
             FbCommand UpdateSQL = new FbCommand("UPDATE course SET name = @NAME WHERE id = " + cID, fb);
-            UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = CourseTextBox.Text.Trim();
+            UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = CourseTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
 
             UpdateSQL.Transaction = fbt;
 

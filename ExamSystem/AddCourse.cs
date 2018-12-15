@@ -58,7 +58,7 @@ namespace ExamSystem
             FbCommand InsertSQL = new FbCommand("INSERT INTO course VALUES (@ID, @NAME)", fb);
 
             InsertSQL.Parameters.Add("ID", FbDbType.Integer).Value = (int.Parse(newid) + 1);
-            InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = CourseTextBox.Text;
+            InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = CourseTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
 
             InsertSQL.Transaction = fbt;
 

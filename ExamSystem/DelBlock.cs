@@ -57,7 +57,7 @@ namespace ExamSystem
             int bID = int.Parse(BlockComboBox.SelectedValue.ToString());
 
             FbCommand UpdateSQL = new FbCommand("UPDATE block SET name = @NAME WHERE id = " + bID, fb);
-            UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = BlockTextBox.Text.Trim();
+            UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = BlockTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
 
             UpdateSQL.Transaction = fbt;
 

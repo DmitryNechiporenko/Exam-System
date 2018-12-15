@@ -64,6 +64,10 @@
             this.splitLabel = new MetroFramework.Controls.MetroLabel();
             this.secLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Answer4TextBox = new MetroFramework.Controls.MetroTextBox();
+            this.Answer3TextBox = new MetroFramework.Controls.MetroTextBox();
+            this.Answer2TextBox = new MetroFramework.Controls.MetroTextBox();
+            this.Answer1TextBox = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -298,7 +302,7 @@
             // 
             // 
             this.QuestionTextBox.CustomButton.Image = null;
-            this.QuestionTextBox.CustomButton.Location = new System.Drawing.Point(529, 2);
+            this.QuestionTextBox.CustomButton.Location = new System.Drawing.Point(558, 2);
             this.QuestionTextBox.CustomButton.Name = "";
             this.QuestionTextBox.CustomButton.Size = new System.Drawing.Size(143, 143);
             this.QuestionTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -318,7 +322,7 @@
             this.QuestionTextBox.SelectionLength = 0;
             this.QuestionTextBox.SelectionStart = 0;
             this.QuestionTextBox.ShortcutsEnabled = true;
-            this.QuestionTextBox.Size = new System.Drawing.Size(675, 148);
+            this.QuestionTextBox.Size = new System.Drawing.Size(704, 148);
             this.QuestionTextBox.TabIndex = 73;
             this.QuestionTextBox.UseSelectable = true;
             this.QuestionTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -328,50 +332,50 @@
             // 
             this.Answer1Radio.AutoSize = true;
             this.Answer1Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Answer1Radio.Location = new System.Drawing.Point(23, 294);
+            this.Answer1Radio.Location = new System.Drawing.Point(15, 275);
             this.Answer1Radio.Name = "Answer1Radio";
-            this.Answer1Radio.Size = new System.Drawing.Size(71, 15);
+            this.Answer1Radio.Size = new System.Drawing.Size(26, 15);
             this.Answer1Radio.TabIndex = 78;
-            this.Answer1Radio.Text = "Answer 1";
+            this.Answer1Radio.Text = " ";
             this.Answer1Radio.UseSelectable = true;
             // 
             // Answer2Radio
             // 
             this.Answer2Radio.AutoSize = true;
             this.Answer2Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Answer2Radio.Location = new System.Drawing.Point(23, 325);
+            this.Answer2Radio.Location = new System.Drawing.Point(15, 332);
             this.Answer2Radio.Name = "Answer2Radio";
-            this.Answer2Radio.Size = new System.Drawing.Size(71, 15);
+            this.Answer2Radio.Size = new System.Drawing.Size(26, 15);
             this.Answer2Radio.TabIndex = 79;
-            this.Answer2Radio.Text = "Answer 2";
+            this.Answer2Radio.Text = " ";
             this.Answer2Radio.UseSelectable = true;
             // 
             // Answer3Radio
             // 
             this.Answer3Radio.AutoSize = true;
             this.Answer3Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Answer3Radio.Location = new System.Drawing.Point(23, 358);
+            this.Answer3Radio.Location = new System.Drawing.Point(15, 389);
             this.Answer3Radio.Name = "Answer3Radio";
-            this.Answer3Radio.Size = new System.Drawing.Size(71, 15);
+            this.Answer3Radio.Size = new System.Drawing.Size(26, 15);
             this.Answer3Radio.TabIndex = 80;
-            this.Answer3Radio.Text = "Answer 3";
+            this.Answer3Radio.Text = " ";
             this.Answer3Radio.UseSelectable = true;
             // 
             // Answer4Radio
             // 
             this.Answer4Radio.AutoSize = true;
             this.Answer4Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Answer4Radio.Location = new System.Drawing.Point(23, 391);
+            this.Answer4Radio.Location = new System.Drawing.Point(15, 446);
             this.Answer4Radio.Name = "Answer4Radio";
-            this.Answer4Radio.Size = new System.Drawing.Size(71, 15);
+            this.Answer4Radio.Size = new System.Drawing.Size(26, 15);
             this.Answer4Radio.TabIndex = 81;
-            this.Answer4Radio.Text = "Answer 4";
+            this.Answer4Radio.Text = " ";
             this.Answer4Radio.UseSelectable = true;
             // 
             // prevButton
             // 
             this.prevButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.prevButton.Location = new System.Drawing.Point(23, 501);
+            this.prevButton.Location = new System.Drawing.Point(23, 549);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(59, 32);
             this.prevButton.TabIndex = 82;
@@ -382,7 +386,7 @@
             // NextButton
             // 
             this.NextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextButton.Location = new System.Drawing.Point(89, 501);
+            this.NextButton.Location = new System.Drawing.Point(89, 549);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(59, 32);
             this.NextButton.TabIndex = 83;
@@ -393,7 +397,7 @@
             // AnswerButton
             // 
             this.AnswerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AnswerButton.Location = new System.Drawing.Point(417, 475);
+            this.AnswerButton.Location = new System.Drawing.Point(466, 523);
             this.AnswerButton.Name = "AnswerButton";
             this.AnswerButton.Size = new System.Drawing.Size(124, 58);
             this.AnswerButton.TabIndex = 84;
@@ -404,7 +408,7 @@
             // FinishButton
             // 
             this.FinishButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FinishButton.Location = new System.Drawing.Point(578, 475);
+            this.FinishButton.Location = new System.Drawing.Point(603, 523);
             this.FinishButton.Name = "FinishButton";
             this.FinishButton.Size = new System.Drawing.Size(124, 58);
             this.FinishButton.TabIndex = 85;
@@ -416,31 +420,34 @@
             // 
             this.minLabel.AutoSize = true;
             this.minLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.minLabel.Location = new System.Drawing.Point(24, 463);
+            this.minLabel.Location = new System.Drawing.Point(24, 511);
             this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(30, 25);
+            this.minLabel.Size = new System.Drawing.Size(27, 25);
             this.minLabel.TabIndex = 86;
-            this.minLabel.Text = "20";
+            this.minLabel.Text = "01";
+            this.minLabel.UseCustomBackColor = true;
             // 
             // splitLabel
             // 
             this.splitLabel.AutoSize = true;
             this.splitLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.splitLabel.Location = new System.Drawing.Point(47, 463);
+            this.splitLabel.Location = new System.Drawing.Point(47, 511);
             this.splitLabel.Name = "splitLabel";
             this.splitLabel.Size = new System.Drawing.Size(16, 25);
             this.splitLabel.TabIndex = 87;
             this.splitLabel.Text = ":";
+            this.splitLabel.UseCustomBackColor = true;
             // 
             // secLabel
             // 
             this.secLabel.AutoSize = true;
             this.secLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.secLabel.Location = new System.Drawing.Point(54, 463);
+            this.secLabel.Location = new System.Drawing.Point(54, 511);
             this.secLabel.Name = "secLabel";
             this.secLabel.Size = new System.Drawing.Size(30, 25);
             this.secLabel.TabIndex = 88;
             this.secLabel.Text = "00";
+            this.secLabel.UseCustomBackColor = true;
             // 
             // pictureBox1
             // 
@@ -452,11 +459,147 @@
             this.pictureBox1.TabIndex = 89;
             this.pictureBox1.TabStop = false;
             // 
+            // Answer4TextBox
+            // 
+            // 
+            // 
+            // 
+            this.Answer4TextBox.CustomButton.Image = null;
+            this.Answer4TextBox.CustomButton.Location = new System.Drawing.Point(597, 1);
+            this.Answer4TextBox.CustomButton.Name = "";
+            this.Answer4TextBox.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.Answer4TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Answer4TextBox.CustomButton.TabIndex = 1;
+            this.Answer4TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Answer4TextBox.CustomButton.UseSelectable = true;
+            this.Answer4TextBox.CustomButton.Visible = false;
+            this.Answer4TextBox.Lines = new string[0];
+            this.Answer4TextBox.Location = new System.Drawing.Point(47, 446);
+            this.Answer4TextBox.MaxLength = 32767;
+            this.Answer4TextBox.Multiline = true;
+            this.Answer4TextBox.Name = "Answer4TextBox";
+            this.Answer4TextBox.PasswordChar = '\0';
+            this.Answer4TextBox.ReadOnly = true;
+            this.Answer4TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Answer4TextBox.SelectedText = "";
+            this.Answer4TextBox.SelectionLength = 0;
+            this.Answer4TextBox.SelectionStart = 0;
+            this.Answer4TextBox.ShortcutsEnabled = true;
+            this.Answer4TextBox.Size = new System.Drawing.Size(647, 51);
+            this.Answer4TextBox.TabIndex = 10044;
+            this.Answer4TextBox.UseSelectable = true;
+            this.Answer4TextBox.Visible = false;
+            this.Answer4TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Answer4TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Answer3TextBox
+            // 
+            // 
+            // 
+            // 
+            this.Answer3TextBox.CustomButton.Image = null;
+            this.Answer3TextBox.CustomButton.Location = new System.Drawing.Point(597, 1);
+            this.Answer3TextBox.CustomButton.Name = "";
+            this.Answer3TextBox.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.Answer3TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Answer3TextBox.CustomButton.TabIndex = 1;
+            this.Answer3TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Answer3TextBox.CustomButton.UseSelectable = true;
+            this.Answer3TextBox.CustomButton.Visible = false;
+            this.Answer3TextBox.Lines = new string[0];
+            this.Answer3TextBox.Location = new System.Drawing.Point(47, 389);
+            this.Answer3TextBox.MaxLength = 32767;
+            this.Answer3TextBox.Multiline = true;
+            this.Answer3TextBox.Name = "Answer3TextBox";
+            this.Answer3TextBox.PasswordChar = '\0';
+            this.Answer3TextBox.ReadOnly = true;
+            this.Answer3TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Answer3TextBox.SelectedText = "";
+            this.Answer3TextBox.SelectionLength = 0;
+            this.Answer3TextBox.SelectionStart = 0;
+            this.Answer3TextBox.ShortcutsEnabled = true;
+            this.Answer3TextBox.Size = new System.Drawing.Size(647, 51);
+            this.Answer3TextBox.TabIndex = 10043;
+            this.Answer3TextBox.UseSelectable = true;
+            this.Answer3TextBox.Visible = false;
+            this.Answer3TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Answer3TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Answer2TextBox
+            // 
+            // 
+            // 
+            // 
+            this.Answer2TextBox.CustomButton.Image = null;
+            this.Answer2TextBox.CustomButton.Location = new System.Drawing.Point(597, 1);
+            this.Answer2TextBox.CustomButton.Name = "";
+            this.Answer2TextBox.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.Answer2TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Answer2TextBox.CustomButton.TabIndex = 1;
+            this.Answer2TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Answer2TextBox.CustomButton.UseSelectable = true;
+            this.Answer2TextBox.CustomButton.Visible = false;
+            this.Answer2TextBox.Lines = new string[0];
+            this.Answer2TextBox.Location = new System.Drawing.Point(47, 332);
+            this.Answer2TextBox.MaxLength = 32767;
+            this.Answer2TextBox.Multiline = true;
+            this.Answer2TextBox.Name = "Answer2TextBox";
+            this.Answer2TextBox.PasswordChar = '\0';
+            this.Answer2TextBox.ReadOnly = true;
+            this.Answer2TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Answer2TextBox.SelectedText = "";
+            this.Answer2TextBox.SelectionLength = 0;
+            this.Answer2TextBox.SelectionStart = 0;
+            this.Answer2TextBox.ShortcutsEnabled = true;
+            this.Answer2TextBox.Size = new System.Drawing.Size(647, 51);
+            this.Answer2TextBox.TabIndex = 10042;
+            this.Answer2TextBox.UseSelectable = true;
+            this.Answer2TextBox.Visible = false;
+            this.Answer2TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Answer2TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Answer1TextBox
+            // 
+            // 
+            // 
+            // 
+            this.Answer1TextBox.CustomButton.Image = null;
+            this.Answer1TextBox.CustomButton.Location = new System.Drawing.Point(597, 1);
+            this.Answer1TextBox.CustomButton.Name = "";
+            this.Answer1TextBox.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.Answer1TextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Answer1TextBox.CustomButton.TabIndex = 1;
+            this.Answer1TextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Answer1TextBox.CustomButton.UseSelectable = true;
+            this.Answer1TextBox.CustomButton.Visible = false;
+            this.Answer1TextBox.Lines = new string[0];
+            this.Answer1TextBox.Location = new System.Drawing.Point(47, 275);
+            this.Answer1TextBox.MaxLength = 32767;
+            this.Answer1TextBox.Multiline = true;
+            this.Answer1TextBox.Name = "Answer1TextBox";
+            this.Answer1TextBox.PasswordChar = '\0';
+            this.Answer1TextBox.ReadOnly = true;
+            this.Answer1TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Answer1TextBox.SelectedText = "";
+            this.Answer1TextBox.SelectionLength = 0;
+            this.Answer1TextBox.SelectionStart = 0;
+            this.Answer1TextBox.ShortcutsEnabled = true;
+            this.Answer1TextBox.Size = new System.Drawing.Size(647, 51);
+            this.Answer1TextBox.TabIndex = 10041;
+            this.Answer1TextBox.UseSelectable = true;
+            this.Answer1TextBox.Visible = false;
+            this.Answer1TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Answer1TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // ExamQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 556);
+            this.ClientSize = new System.Drawing.Size(750, 604);
+            this.Controls.Add(this.Answer4TextBox);
+            this.Controls.Add(this.Answer3TextBox);
+            this.Controls.Add(this.Answer2TextBox);
+            this.Controls.Add(this.Answer1TextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.secLabel);
             this.Controls.Add(this.splitLabel);
@@ -538,5 +681,9 @@
         private MetroFramework.Controls.MetroLabel splitLabel;
         private MetroFramework.Controls.MetroLabel secLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroTextBox Answer4TextBox;
+        private MetroFramework.Controls.MetroTextBox Answer3TextBox;
+        private MetroFramework.Controls.MetroTextBox Answer2TextBox;
+        private MetroFramework.Controls.MetroTextBox Answer1TextBox;
     }
 }

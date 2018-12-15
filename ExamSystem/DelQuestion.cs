@@ -126,13 +126,13 @@ namespace ExamSystem
             FbCommand UpdateSQL = new FbCommand("UPDATE question SET block_id = @BLOCK_ID, ques = @QUES, a1 = @A1, a2 = @A2, a3 = @A3, a4 = @A4, a_curr = @A_CURR, comment = @COMMENT WHERE id = " + qID, fb);
 
             UpdateSQL.Parameters.Add("BLOCK_ID", FbDbType.Integer).Value = int.Parse(BlockComboBox.SelectedValue.ToString());
-            UpdateSQL.Parameters.Add("QUES", FbDbType.Text).Value = QuestionTextBox.Text.Trim();
-            UpdateSQL.Parameters.Add("A1", FbDbType.Text).Value = A1TextBox.Text.Trim();
-            UpdateSQL.Parameters.Add("A2", FbDbType.Text).Value = A2TextBox.Text.Trim();
-            UpdateSQL.Parameters.Add("A3", FbDbType.Text).Value = A3TextBox.Text.Trim();
-            UpdateSQL.Parameters.Add("A4", FbDbType.Text).Value = A4TextBox.Text.Trim();
+            UpdateSQL.Parameters.Add("QUES", FbDbType.Text).Value = QuestionTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            UpdateSQL.Parameters.Add("A1", FbDbType.Text).Value = A1TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            UpdateSQL.Parameters.Add("A2", FbDbType.Text).Value = A2TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            UpdateSQL.Parameters.Add("A3", FbDbType.Text).Value = A3TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
+            UpdateSQL.Parameters.Add("A4", FbDbType.Text).Value = A4TextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
             UpdateSQL.Parameters.Add("A_CURR", FbDbType.Integer).Value = a_curr;
-            UpdateSQL.Parameters.Add("COMMENT", FbDbType.Text).Value = commentTextBox.Text.Trim();
+            UpdateSQL.Parameters.Add("COMMENT", FbDbType.Text).Value = commentTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
 
             UpdateSQL.Transaction = fbt;
 

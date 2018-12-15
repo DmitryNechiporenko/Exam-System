@@ -62,7 +62,7 @@ namespace ExamSystem
 
             InsertSQL.Parameters.Add("ID", FbDbType.Integer).Value = (int.Parse(newid) + 1);
             InsertSQL.Parameters.Add("COURSE_ID", FbDbType.Integer).Value = int.Parse(CourseComboBox.SelectedValue.ToString());
-            InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = BlockTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = BlockTextBox.Text.Replace("\n"," ").Replace("\r","").Trim();
 
             InsertSQL.Transaction = fbt;
 

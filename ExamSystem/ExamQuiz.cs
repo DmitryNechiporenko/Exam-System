@@ -76,10 +76,12 @@ namespace ExamSystem
             Answer2Radio.Visible = true;
             Answer3Radio.Visible = true;
             Answer4Radio.Visible = true;
+            Answer1TextBox.Visible = true;
+            Answer2TextBox.Visible = true;
+            Answer3TextBox.Visible = true;
+            Answer4TextBox.Visible = true;
             if (fb.State == ConnectionState.Closed)
-            {
                 fb.Open();
-            }
             FbTransaction fbt = fb.BeginTransaction();
 
             FbCommand SelectSQL = new FbCommand("SELECT " + part + " FROM exams WHERE id = " + examid, fb);
@@ -105,9 +107,7 @@ namespace ExamSystem
         private void get_questions(string query)
         {
             if (fb.State == ConnectionState.Closed)
-            {
                 fb.Open();
-            }
             FbTransaction fbt = fb.BeginTransaction();
 
             FbCommand SelectSQL = new FbCommand(query, fb);
@@ -127,56 +127,50 @@ namespace ExamSystem
         private void ShowQuestion()
         {
             QuestionTextBox.Text = questions.Rows[rownum][1].ToString();
-            Answer1Radio.Text = questions.Rows[rownum][2].ToString();
-            Answer2Radio.Text = questions.Rows[rownum][3].ToString();
-            Answer3Radio.Text = questions.Rows[rownum][4].ToString();
-            Answer4Radio.Text = questions.Rows[rownum][5].ToString();
+            Answer1TextBox.Text = questions.Rows[rownum][2].ToString();
+            Answer2TextBox.Text = questions.Rows[rownum][3].ToString();
+            Answer3TextBox.Text = questions.Rows[rownum][4].ToString();
+            Answer4TextBox.Text = questions.Rows[rownum][5].ToString();
 
             Answer1Radio.Enabled = true;
             Answer2Radio.Enabled = true;
             Answer3Radio.Enabled = true;
             Answer4Radio.Enabled = true;
+            Answer1TextBox.Enabled = true;
+            Answer2TextBox.Enabled = true;
+            Answer3TextBox.Enabled = true;
+            Answer4TextBox.Enabled = true;
             Answer1Radio.Checked = false;
             Answer2Radio.Checked = false;
             Answer3Radio.Checked = false;
             Answer4Radio.Checked = false;
 
             if (answers[rownum] == 1)
-            {
                 Answer1Radio.Checked = true;
-            }
             else if (answers[rownum] == 2)
-            {
                 Answer2Radio.Checked = true;
-            }
             else if (answers[rownum] == 3)
-            {
                 Answer3Radio.Checked = true;
-            }
             else if (answers[rownum] == 4)
-            {
                 Answer4Radio.Checked = true;
-            }
         }
 
         private void AnswerButton_Click(object sender, EventArgs e)
         {
             if (Answer1Radio.Checked)
-            {
                 answers[rownum] = 1;
-            }
             else if (Answer2Radio.Checked)
-            {
                 answers[rownum] = 2;
-            }
             else if (Answer3Radio.Checked)
-            {
                 answers[rownum] = 3;
-            }
             else if (Answer4Radio.Checked)
-            {
                 answers[rownum] = 4;
+            else
+            {
+                MessageBox.Show("Выберите ответ");
+                return;
             }
+
             if (rownum == 0)
             {
                 q1Button.Highlight = true;
@@ -293,30 +287,20 @@ namespace ExamSystem
                 for (int i = 0; i < questions.Rows.Count; i++)
                 {
                     if ((int)questions.Rows[i][6] == answers[i])
-                    {
                         answers_count++;
-                    }
                 }
                 string timeSpend = "";
                 if (minLabel.BackColor == Color.OrangeRed)
-                {
                     timeSpend = (20 + int.Parse(minLabel.Text)).ToString() + ":" + secLabel.Text;
-                }
                 else
-                {
                     timeSpend = (19 - int.Parse(minLabel.Text)).ToString() + ":" + (60 - int.Parse(secLabel.Text)).ToString();
-                }
                 string out_a = "";
                 for (int i = 0; i < questions.Rows.Count; i++)
                 {
                     if (answers[i] != -1)
-                    {
                         out_a = out_a + answers[i] + ",";
-                    }
                     else
-                    {
                         out_a = out_a + ",";
-                    }
                 }
                 out_a = out_a.Substring(0, out_a.Length - 1);
 
@@ -498,85 +482,45 @@ namespace ExamSystem
         private void disable_buttons()
         {
             if (questions.Rows.Count < 20)
-            {
                 q20Button.Visible = false;
-            }
             if (questions.Rows.Count < 19)
-            {
                 q19Button.Visible = false;
-            }
             if (questions.Rows.Count < 18)
-            {
                 q18Button.Visible = false;
-            }
             if (questions.Rows.Count < 17)
-            {
                 q17Button.Visible = false;
-            }
             if (questions.Rows.Count < 16)
-            {
                 q16Button.Visible = false;
-            }
             if (questions.Rows.Count < 15)
-            {
                 q15Button.Visible = false;
-            }
             if (questions.Rows.Count < 14)
-            {
                 q14Button.Visible = false;
-            }
             if (questions.Rows.Count < 13)
-            {
                 q13Button.Visible = false;
-            }
             if (questions.Rows.Count < 12)
-            {
                 q12Button.Visible = false;
-            }
             if (questions.Rows.Count < 11)
-            {
                 q11Button.Visible = false;
-            }
             if (questions.Rows.Count < 10)
-            {
                 q10Button.Visible = false;
-            }
             if (questions.Rows.Count < 9)
-            {
                 q9Button.Visible = false;
-            }
             if (questions.Rows.Count < 8)
-            {
                 q8Button.Visible = false;
-            }
             if (questions.Rows.Count < 7)
-            {
                 q7Button.Visible = false;
-            }
             if (questions.Rows.Count < 6)
-            {
                 q6Button.Visible = false;
-            }
             if (questions.Rows.Count < 5)
-            {
                 q5Button.Visible = false;
-            }
             if (questions.Rows.Count < 4)
-            {
                 q4Button.Visible = false;
-            }
             if (questions.Rows.Count < 3)
-            {
                 q3Button.Visible = false;
-            }
             if (questions.Rows.Count < 2)
-            {
                 q2Button.Visible = false;
-            }
             if (questions.Rows.Count < 1)
-            {
                 q1Button.Visible = false;
-            }
         }
 
 
@@ -596,24 +540,16 @@ namespace ExamSystem
                 {
                     secLabel.Text = "00";
                     if (int.Parse(minLabel.Text) < 9)
-                    {
                         minLabel.Text = "0" + (int.Parse(minLabel.Text) + 1);
-                    }
                     else
-                    {
                         minLabel.Text = (int.Parse(minLabel.Text) + 1).ToString();
-                    }
                 }
                 else
                 {
                     if (int.Parse(secLabel.Text) < 9)
-                    {
                         secLabel.Text = "0" + (int.Parse(secLabel.Text) + 1);
-                    }
                     else
-                    {
                         secLabel.Text = (int.Parse(secLabel.Text) + 1).ToString();
-                    }
                 }
             }
             else
@@ -623,24 +559,16 @@ namespace ExamSystem
                     secLabel.Text = "59";
 
                     if (int.Parse(minLabel.Text) <= 10)
-                    {
                         minLabel.Text = "0" + (int.Parse(minLabel.Text) - 1);
-                    }
                     else
-                    {
                         minLabel.Text = (int.Parse(minLabel.Text) - 1).ToString();
-                    }
                 }
                 else
                 {
                     if (int.Parse(secLabel.Text) <= 10)
-                    {
                         secLabel.Text = "0" + (int.Parse(secLabel.Text) - 1);
-                    }
                     else
-                    {
                         secLabel.Text = (int.Parse(secLabel.Text) - 1).ToString();
-                    }
                 }
             }
         }

@@ -67,6 +67,10 @@ namespace ExamSystem
             Answer2Radio.Visible = true;
             Answer3Radio.Visible = true;
             Answer4Radio.Visible = true;
+            Answer1TextBox.Visible = true;
+            Answer2TextBox.Visible = true;
+            Answer3TextBox.Visible = true;
+            Answer4TextBox.Visible = true;
             AnswerButton.Visible = true;
             CommentButton.Visible = true;
 
@@ -74,7 +78,7 @@ namespace ExamSystem
 
         private void orderButton_Click(object sender, EventArgs e)
         {
-            get_questions("SELECT question.id, question.ques, question.a1, question.a2, question.a3, question.a4, question.a_curr, question.comment FROM question, block WHERE question.block_id = block.id AND block.name in (" + all_blocks + ")");
+            get_questions("SELECT question.id, question.ques, question.a1, question.a2, question.a3, question.a4, question.a_curr, question.comment FROM question, block WHERE question.block_id = block.id AND block.name in (" + all_blocks + ") ORDER BY question.ques");
         }
 
         private void randomButton_Click(object sender, EventArgs e)
@@ -85,17 +89,20 @@ namespace ExamSystem
         private void ShowQuestion(int rownum)
         {
             QuestionTextBox.Text = questions.Rows[rownum][1].ToString();
-            Answer1Radio.Text = questions.Rows[rownum][2].ToString();
-            Answer2Radio.Text = questions.Rows[rownum][3].ToString();
-            Answer3Radio.Text = questions.Rows[rownum][4].ToString();
-            Answer4Radio.Text = questions.Rows[rownum][5].ToString();
+            Answer1TextBox.Text = questions.Rows[rownum][2].ToString();
+            Answer2TextBox.Text = questions.Rows[rownum][3].ToString();
+            Answer3TextBox.Text = questions.Rows[rownum][4].ToString();
+            Answer4TextBox.Text = questions.Rows[rownum][5].ToString();
             
             NextQuestionButton.Text = "Пропустить";
-            AnswerButton.BackColor = Color.WhiteSmoke;
             Answer1Radio.Enabled = true;
             Answer2Radio.Enabled = true;
             Answer3Radio.Enabled = true;
             Answer4Radio.Enabled = true;
+            Answer1TextBox.Enabled = true;
+            Answer2TextBox.Enabled = true;
+            Answer3TextBox.Enabled = true;
+            Answer4TextBox.Enabled = true;
             Answer1Radio.Checked = false;
             Answer2Radio.Checked = false;
             Answer3Radio.Checked = false;
@@ -105,68 +112,56 @@ namespace ExamSystem
         private int UserAnswer()
         {
             if (Answer1Radio.Checked == true)
-            {
                 return 1;
-            }
             else if (Answer2Radio.Checked == true)
-            {
                 return 2;
-            }
             else if (Answer3Radio.Checked == true)
-            {
                 return 3;
-            }
             else if (Answer4Radio.Checked == true)
-            {
                 return 4;
-            }
             else
-            {
                 return -1;
-            }
         }
 
         private void AnswerButton_Click(object sender, EventArgs e)
         {
-            
+            if (UserAnswer() < 0)
+            {
+                MessageBox.Show("Выберите ответ");
+                return;
+            }
             if ((int)questions.Rows[num][6] == UserAnswer())
-            {
                 currentcount++;
-                AnswerButton.BackColor = Color.LightGreen;
-                NextQuestionButton.Text = "Продолжить";
-                Answer1Radio.Enabled = false;
-                Answer2Radio.Enabled = false;
-                Answer3Radio.Enabled = false;
-                Answer4Radio.Enabled = false;
-            }
             else
-            {
-                
-                AnswerButton.BackColor = Color.OrangeRed;
-                NextQuestionButton.Text = "Продолжить";
-                Answer1Radio.Enabled = false;
-                Answer2Radio.Enabled = false;
-                Answer3Radio.Enabled = false;
-                Answer4Radio.Enabled = false;
                 MessageBox.Show("ОТВЕТ НЕПРАВИЛЬНЫЙ! \n" + questions.Rows[num][7].ToString());
-                
-            }
+
+            NextQuestionButton.Text = "Продолжить";
+            Answer1Radio.Enabled = false;
+            Answer2Radio.Enabled = false;
+            Answer3Radio.Enabled = false;
+            Answer4Radio.Enabled = false;
+            Answer1TextBox.Enabled = false;
+            Answer2TextBox.Enabled = false;
+            Answer3TextBox.Enabled = false;
+            Answer4TextBox.Enabled = false;
+
             randomButton.Select();
+
+            num++;
+            if (num == questions.Rows.Count)
+                NextQuestionButton.Text = "Завершить";
         }
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            if (num < questions.Rows.Count)
+            if (NextQuestionButton.Text == "Продолжить")
+            {
+                ShowQuestion(num);
+            }
+            else if (NextQuestionButton.Text == "Пропустить")
             {
                 num++;
-                if (num < questions.Rows.Count)
-                {
-                    ShowQuestion(num);
-                }
-                else
-                {
-                    NextQuestionButton.Text = "Завершить";
-                }
+                ShowQuestion(num);
             }
             else
             {
@@ -192,6 +187,26 @@ namespace ExamSystem
         private void goBackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Answer1Radio_VisibleChanged(object sender, EventArgs e)
+        {
+            Answer1TextBox.Visible = Answer1Radio.Visible;
+        }
+
+        private void Answer2Radio_VisibleChanged(object sender, EventArgs e)
+        {
+            Answer2TextBox.Visible = Answer2Radio.Visible;
+        }
+
+        private void Answer3Radio_VisibleChanged(object sender, EventArgs e)
+        {
+            Answer3TextBox.Visible = Answer3Radio.Visible;
+        }
+
+        private void Answer4Radio_VisibleChanged(object sender, EventArgs e)
+        {
+            Answer4TextBox.Visible = Answer4Radio.Visible;
         }
     }
 }
