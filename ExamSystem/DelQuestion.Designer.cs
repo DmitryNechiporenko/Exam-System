@@ -53,6 +53,7 @@
             this.QuestionLabel = new MetroFramework.Controls.MetroLabel();
             this.UpdButton = new MetroFramework.Controls.MetroButton();
             this.DelButton = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // commentTextBox
@@ -428,11 +429,22 @@
             this.DelButton.UseSelectable = true;
             this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(13, 631);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(58, 56);
+            this.metroButton1.TabIndex = 10048;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Visible = false;
+            // 
             // DelQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 701);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.DelButton);
             this.Controls.Add(this.UpdButton);
             this.Controls.Add(this.QuesComboBox);
@@ -493,5 +505,6 @@
         private MetroFramework.Controls.MetroLabel QuestionLabel;
         private MetroFramework.Controls.MetroButton UpdButton;
         private MetroFramework.Controls.MetroButton DelButton;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

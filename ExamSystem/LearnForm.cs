@@ -45,6 +45,7 @@ namespace ExamSystem
                     ChoosedBlocksListBox.Items.Add(CourseBlocksListBox.SelectedItem.ToString());
                     ChoosedBlocksListBox.SelectedIndex = int.Parse(ChoosedBlocksListBox.Items.Count.ToString()) - 1;
                 }
+                metroButton1.Select();
             }
             catch { }
         }
@@ -55,12 +56,14 @@ namespace ExamSystem
             {
                 ChoosedBlocksListBox.Items.RemoveAt(ChoosedBlocksListBox.SelectedIndex);
                 ChoosedBlocksListBox.SelectedIndex = int.Parse(ChoosedBlocksListBox.Items.Count.ToString()) - 1;
+                metroButton1.Select();
             }
             catch { }
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             if (ChoosedBlocksListBox.Items.Count > 0)
             {
                 string[] blocklist = new string[ChoosedBlocksListBox.Items.Count];

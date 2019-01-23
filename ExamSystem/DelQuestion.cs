@@ -151,6 +151,7 @@ namespace ExamSystem
 
             UpdateSQL.Dispose();
             fb.Close();
+            metroButton1.Select();
         }
 
         private void DelButton_Click(object sender, EventArgs e)
@@ -181,6 +182,7 @@ namespace ExamSystem
             DeleteSQL.Dispose();
             fb.Close();
             BlockComboBox_SelectedValueChanged(sender, e);
+            metroButton1.Select();
         }
     }
 }

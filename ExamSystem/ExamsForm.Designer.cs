@@ -82,10 +82,10 @@
             // 
             this.CourseComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.CourseComboBox.FormattingEnabled = true;
-            this.CourseComboBox.ItemHeight = 23;
+            this.CourseComboBox.ItemHeight = 19;
             this.CourseComboBox.Location = new System.Drawing.Point(23, 119);
             this.CourseComboBox.Name = "CourseComboBox";
-            this.CourseComboBox.Size = new System.Drawing.Size(400, 29);
+            this.CourseComboBox.Size = new System.Drawing.Size(400, 25);
             this.CourseComboBox.TabIndex = 10021;
             this.CourseComboBox.UseSelectable = true;
             this.CourseComboBox.SelectedValueChanged += new System.EventHandler(this.CourseComboBox_SelectedValueChanged);
@@ -94,10 +94,10 @@
             // 
             this.BlockComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.BlockComboBox.FormattingEnabled = true;
-            this.BlockComboBox.ItemHeight = 23;
+            this.BlockComboBox.ItemHeight = 19;
             this.BlockComboBox.Location = new System.Drawing.Point(23, 209);
             this.BlockComboBox.Name = "BlockComboBox";
-            this.BlockComboBox.Size = new System.Drawing.Size(400, 29);
+            this.BlockComboBox.Size = new System.Drawing.Size(400, 25);
             this.BlockComboBox.TabIndex = 10022;
             this.BlockComboBox.UseSelectable = true;
             this.BlockComboBox.SelectedValueChanged += new System.EventHandler(this.BlockComboBox_SelectedValueChanged);

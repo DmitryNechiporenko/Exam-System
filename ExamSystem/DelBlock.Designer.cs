@@ -37,6 +37,7 @@
             this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
             this.BlockComboBox = new MetroFramework.Controls.MetroComboBox();
             this.BlockTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // CourseLabel
@@ -143,11 +144,22 @@
             this.BlockTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BlockTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(23, 215);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(58, 56);
+            this.metroButton1.TabIndex = 10046;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Visible = false;
+            // 
             // DelBlock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 284);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.BlockTextBox);
             this.Controls.Add(this.BlockComboBox);
             this.Controls.Add(this.CourseComboBox);
@@ -176,5 +188,6 @@
         private MetroFramework.Controls.MetroComboBox CourseComboBox;
         private MetroFramework.Controls.MetroComboBox BlockComboBox;
         private MetroFramework.Controls.MetroTextBox BlockTextBox;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

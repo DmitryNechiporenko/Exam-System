@@ -68,6 +68,7 @@ namespace ExamSystem
 
             UpdateSQL.Dispose();
             fb.Close();
+            metroButton1.Select();
         }
 
         private void DelButton_Click(object sender, EventArgs e)
@@ -96,6 +97,7 @@ namespace ExamSystem
             DeleteSQL.Dispose();
             fb.Close();
             DelCourse_Load(sender, e);
+            metroButton1.Select();
         }
     }
 }

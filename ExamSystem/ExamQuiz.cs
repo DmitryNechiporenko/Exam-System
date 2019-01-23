@@ -153,6 +153,8 @@ namespace ExamSystem
                 Answer3Radio.Checked = true;
             else if (answers[rownum] == 4)
                 Answer4Radio.Checked = true;
+
+            QuesNumLabel.Text = "Вы на вопросе №" + (rownum + 1);
         }
 
         private void AnswerButton_Click(object sender, EventArgs e)
@@ -271,6 +273,7 @@ namespace ExamSystem
                 q20Button.Highlight = true;
                 q20Button.Refresh();
             }
+            metroButton1.Select();
         }
 
         private void FinishButton_Click(object sender, EventArgs e)
@@ -343,120 +346,140 @@ namespace ExamSystem
         {
             rownum = 0;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q2Button_Click(object sender, EventArgs e)
         {
             rownum = 1;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q3Button_Click(object sender, EventArgs e)
         {
             rownum = 2;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q4Button_Click(object sender, EventArgs e)
         {
             rownum = 3;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q5Button_Click(object sender, EventArgs e)
         {
             rownum = 4;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q6Button_Click(object sender, EventArgs e)
         {
             rownum = 5;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q7Button_Click(object sender, EventArgs e)
         {
             rownum = 6;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q8Button_Click(object sender, EventArgs e)
         {
             rownum = 7;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q9Button_Click(object sender, EventArgs e)
         {
             rownum = 8;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q10Button_Click(object sender, EventArgs e)
         {
             rownum = 9;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q11Button_Click(object sender, EventArgs e)
         {
             rownum = 10;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q12Button_Click(object sender, EventArgs e)
         {
             rownum = 11;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q13Button_Click(object sender, EventArgs e)
         {
             rownum = 12;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q14Button_Click(object sender, EventArgs e)
         {
             rownum = 13;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q15Button_Click(object sender, EventArgs e)
         {
             rownum = 14;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q16Button_Click(object sender, EventArgs e)
         {
             rownum = 15;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q17Button_Click(object sender, EventArgs e)
         {
             rownum = 16;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q18Button_Click(object sender, EventArgs e)
         {
             rownum = 17;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q19Button_Click(object sender, EventArgs e)
         {
             rownum = 18;
             ShowQuestion();
+            metroButton1.Select();
         }
 
         private void q20Button_Click(object sender, EventArgs e)
         {
             rownum = 19;
             ShowQuestion();
+            metroButton1.Select();
         }
 
 
@@ -468,6 +491,7 @@ namespace ExamSystem
                 rownum++;
                 ShowQuestion();
             }
+            metroButton1.Select();
         }
 
         private void prevButton_Click(object sender, EventArgs e)
@@ -477,6 +501,7 @@ namespace ExamSystem
                 rownum--;
                 ShowQuestion();
             }
+            metroButton1.Select();
         }
 
         private void disable_buttons()

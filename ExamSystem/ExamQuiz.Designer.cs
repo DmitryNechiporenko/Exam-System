@@ -68,6 +68,8 @@
             this.Answer3TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer2TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer1TextBox = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.QuesNumLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -422,9 +424,9 @@
             this.minLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.minLabel.Location = new System.Drawing.Point(24, 511);
             this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(27, 25);
+            this.minLabel.Size = new System.Drawing.Size(30, 25);
             this.minLabel.TabIndex = 86;
-            this.minLabel.Text = "01";
+            this.minLabel.Text = "20";
             this.minLabel.UseCustomBackColor = true;
             // 
             // splitLabel
@@ -591,11 +593,32 @@
             this.Answer1TextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Answer1TextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(330, 539);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(58, 56);
+            this.metroButton1.TabIndex = 10045;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Visible = false;
+            // 
+            // QuesNumLabel
+            // 
+            this.QuesNumLabel.AutoSize = true;
+            this.QuesNumLabel.Location = new System.Drawing.Point(23, 60);
+            this.QuesNumLabel.Name = "QuesNumLabel";
+            this.QuesNumLabel.Size = new System.Drawing.Size(121, 19);
+            this.QuesNumLabel.TabIndex = 10046;
+            this.QuesNumLabel.Text = "Вы на вопросе №";
+            // 
             // ExamQuiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 604);
+            this.Controls.Add(this.QuesNumLabel);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.Answer4TextBox);
             this.Controls.Add(this.Answer3TextBox);
             this.Controls.Add(this.Answer2TextBox);
@@ -685,5 +708,7 @@
         private MetroFramework.Controls.MetroTextBox Answer3TextBox;
         private MetroFramework.Controls.MetroTextBox Answer2TextBox;
         private MetroFramework.Controls.MetroTextBox Answer1TextBox;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroLabel QuesNumLabel;
     }
 }

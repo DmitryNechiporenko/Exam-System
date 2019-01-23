@@ -38,6 +38,7 @@
             this.CourseComboBox = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,11 +139,22 @@
             this.goBackButton.UseSelectable = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(229, 287);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(58, 56);
+            this.metroButton1.TabIndex = 10049;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Visible = false;
+            // 
             // LearnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 433);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CourseComboBox);
@@ -174,5 +186,6 @@
         private MetroFramework.Controls.MetroComboBox CourseComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton goBackButton;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

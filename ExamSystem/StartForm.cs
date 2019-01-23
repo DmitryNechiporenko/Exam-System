@@ -25,6 +25,7 @@ namespace ExamSystem
 
         private void LearnButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             this.Hide();       
             LearnForm lf = new LearnForm();
             lf.Closed += (s, args) => this.Show();
@@ -33,6 +34,7 @@ namespace ExamSystem
 
         private void examButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             this.Hide();
             loginForm ef = new loginForm();
             ef.Closed += (s, args) => this.Show();
@@ -42,6 +44,7 @@ namespace ExamSystem
 
         private void adminButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             adminpassForm frm = new adminpassForm();
 
             if (frm.ShowDialog() == DialogResult.OK)

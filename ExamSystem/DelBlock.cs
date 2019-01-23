@@ -77,6 +77,7 @@ namespace ExamSystem
             UpdateSQL.Dispose();
             fb.Close();
             CourseComboBox_SelectedValueChanged(sender, e);
+            metroButton1.Select();
         }
 
         private void DelButton_Click(object sender, EventArgs e)
@@ -105,6 +106,7 @@ namespace ExamSystem
             DeleteSQL.Dispose();
             fb.Close();
             CourseComboBox_SelectedValueChanged(sender, e);
+            metroButton1.Select();
         }
     }
 }
