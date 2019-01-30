@@ -66,9 +66,7 @@ namespace ExamSystem
                 int partsCount = 0;
                 int BlockID = int.Parse(BlockComboBox.SelectedValue.ToString());
                 if (fb.State == ConnectionState.Closed)
-                {
                     fb.Open();
-                }
 
                 FbTransaction fbt = fb.BeginTransaction();
 
@@ -303,7 +301,7 @@ namespace ExamSystem
             fb.Close();
             CreateExamButton.Visible = false;
 
-            ExamsFormcs_Load(sender, e);
+            updateParts();
         }
 
         private void goToExam(int part)
@@ -318,29 +316,19 @@ namespace ExamSystem
             }
         }
 
-        private void part1Button_Click(object sender, EventArgs e)
+        private void partButton_Click(object sender, EventArgs e)
         {
-            goToExam(1);
-        }
-
-        private void part2Button_Click(object sender, EventArgs e)
-        {
-            goToExam(2);
-        }
-
-        private void part3Button_Click(object sender, EventArgs e)
-        {
-            goToExam(3);
-        }
-
-        private void part4Button_Click(object sender, EventArgs e)
-        {
-            goToExam(4);
-        }
-
-        private void part5Button_Click(object sender, EventArgs e)
-        {
-            goToExam(5);
+            if ((Button)sender == part1Button)
+                goToExam(1);
+            else if ((Button)sender == part2Button)
+                goToExam(2);
+            else if ((Button)sender == part3Button)
+                goToExam(3);
+            else if ((Button)sender == part4Button)
+                goToExam(4);
+            else if ((Button)sender == part5Button)
+                goToExam(5);
+            metroButton1.Select();
         }
 
         private void RefreshExamButton_Click(object sender, EventArgs e)
@@ -403,6 +391,7 @@ namespace ExamSystem
                     ReplaceWith: missing, Replace: replace);
             }
             application.Visible = true;
+            metroButton1.Select();
         }
     }
 }

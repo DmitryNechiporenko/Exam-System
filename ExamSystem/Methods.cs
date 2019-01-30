@@ -92,6 +92,11 @@ namespace ExamSystem
 
     class calculate
     {
+       // public static double FinalExam(int examid)
+       // {
+
+      //  }
+
         public static double[] percentage(int examid, Boolean by_parts)
         {
             string[] examinfo = new string[18];
@@ -161,9 +166,7 @@ namespace ExamSystem
                     Dictionary<int, string> user_qa = new Dictionary<int, string>(examinfo[i].Length);
 
                     for (int z = 0; z < examinfo[i].Split(',').Length; z++)
-                    {
                         user_qa.Add(int.Parse(examinfo[i].Split(',')[z]), examinfo[i + 1].Split(',')[z]);
-                    }
 
                     result = Math.Round(100 * (examinfo[i].Split(',').Length - (double)user_qa.Except(curr_qa).Count()) / (examinfo[i].Split(',').Length), 2);
                     return_result[cnt] = result;

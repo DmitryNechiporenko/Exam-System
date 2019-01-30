@@ -63,13 +63,13 @@
             this.minLabel = new MetroFramework.Controls.MetroLabel();
             this.splitLabel = new MetroFramework.Controls.MetroLabel();
             this.secLabel = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Answer4TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer3TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer2TextBox = new MetroFramework.Controls.MetroTextBox();
             this.Answer1TextBox = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.QuesNumLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +87,7 @@
             this.q1Button.TabIndex = 53;
             this.q1Button.Text = "1";
             this.q1Button.UseSelectable = true;
-            this.q1Button.Click += new System.EventHandler(this.q1Button_Click);
+            this.q1Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q2Button
             // 
@@ -98,7 +98,7 @@
             this.q2Button.TabIndex = 54;
             this.q2Button.Text = "2";
             this.q2Button.UseSelectable = true;
-            this.q2Button.Click += new System.EventHandler(this.q2Button_Click);
+            this.q2Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q3Button
             // 
@@ -109,7 +109,7 @@
             this.q3Button.TabIndex = 55;
             this.q3Button.Text = "3";
             this.q3Button.UseSelectable = true;
-            this.q3Button.Click += new System.EventHandler(this.q3Button_Click);
+            this.q3Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q4Button
             // 
@@ -120,7 +120,7 @@
             this.q4Button.TabIndex = 56;
             this.q4Button.Text = "4";
             this.q4Button.UseSelectable = true;
-            this.q4Button.Click += new System.EventHandler(this.q4Button_Click);
+            this.q4Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q5Button
             // 
@@ -131,7 +131,7 @@
             this.q5Button.TabIndex = 57;
             this.q5Button.Text = "5";
             this.q5Button.UseSelectable = true;
-            this.q5Button.Click += new System.EventHandler(this.q5Button_Click);
+            this.q5Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q6Button
             // 
@@ -142,7 +142,7 @@
             this.q6Button.TabIndex = 58;
             this.q6Button.Text = "6";
             this.q6Button.UseSelectable = true;
-            this.q6Button.Click += new System.EventHandler(this.q6Button_Click);
+            this.q6Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q7Button
             // 
@@ -153,7 +153,7 @@
             this.q7Button.TabIndex = 59;
             this.q7Button.Text = "7";
             this.q7Button.UseSelectable = true;
-            this.q7Button.Click += new System.EventHandler(this.q7Button_Click);
+            this.q7Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q8Button
             // 
@@ -164,7 +164,7 @@
             this.q8Button.TabIndex = 60;
             this.q8Button.Text = "8";
             this.q8Button.UseSelectable = true;
-            this.q8Button.Click += new System.EventHandler(this.q8Button_Click);
+            this.q8Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q9Button
             // 
@@ -175,7 +175,7 @@
             this.q9Button.TabIndex = 61;
             this.q9Button.Text = "9";
             this.q9Button.UseSelectable = true;
-            this.q9Button.Click += new System.EventHandler(this.q9Button_Click);
+            this.q9Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q10Button
             // 
@@ -186,7 +186,7 @@
             this.q10Button.TabIndex = 62;
             this.q10Button.Text = "10";
             this.q10Button.UseSelectable = true;
-            this.q10Button.Click += new System.EventHandler(this.q10Button_Click);
+            this.q10Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q11Button
             // 
@@ -197,7 +197,7 @@
             this.q11Button.TabIndex = 63;
             this.q11Button.Text = "11";
             this.q11Button.UseSelectable = true;
-            this.q11Button.Click += new System.EventHandler(this.q11Button_Click);
+            this.q11Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q12Button
             // 
@@ -208,7 +208,7 @@
             this.q12Button.TabIndex = 64;
             this.q12Button.Text = "12";
             this.q12Button.UseSelectable = true;
-            this.q12Button.Click += new System.EventHandler(this.q12Button_Click);
+            this.q12Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q13Button
             // 
@@ -219,7 +219,7 @@
             this.q13Button.TabIndex = 65;
             this.q13Button.Text = "13";
             this.q13Button.UseSelectable = true;
-            this.q13Button.Click += new System.EventHandler(this.q13Button_Click);
+            this.q13Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q14Button
             // 
@@ -230,7 +230,7 @@
             this.q14Button.TabIndex = 66;
             this.q14Button.Text = "14";
             this.q14Button.UseSelectable = true;
-            this.q14Button.Click += new System.EventHandler(this.q14Button_Click);
+            this.q14Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q20Button
             // 
@@ -241,7 +241,7 @@
             this.q20Button.TabIndex = 72;
             this.q20Button.Text = "20";
             this.q20Button.UseSelectable = true;
-            this.q20Button.Click += new System.EventHandler(this.q20Button_Click);
+            this.q20Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q19Button
             // 
@@ -252,7 +252,7 @@
             this.q19Button.TabIndex = 71;
             this.q19Button.Text = "19";
             this.q19Button.UseSelectable = true;
-            this.q19Button.Click += new System.EventHandler(this.q19Button_Click);
+            this.q19Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q18Button
             // 
@@ -263,7 +263,7 @@
             this.q18Button.TabIndex = 70;
             this.q18Button.Text = "18";
             this.q18Button.UseSelectable = true;
-            this.q18Button.Click += new System.EventHandler(this.q18Button_Click);
+            this.q18Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q17Button
             // 
@@ -274,7 +274,7 @@
             this.q17Button.TabIndex = 69;
             this.q17Button.Text = "17";
             this.q17Button.UseSelectable = true;
-            this.q17Button.Click += new System.EventHandler(this.q17Button_Click);
+            this.q17Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q16Button
             // 
@@ -285,7 +285,7 @@
             this.q16Button.TabIndex = 68;
             this.q16Button.Text = "16";
             this.q16Button.UseSelectable = true;
-            this.q16Button.Click += new System.EventHandler(this.q16Button_Click);
+            this.q16Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // q15Button
             // 
@@ -296,7 +296,7 @@
             this.q15Button.TabIndex = 67;
             this.q15Button.Text = "15";
             this.q15Button.UseSelectable = true;
-            this.q15Button.Click += new System.EventHandler(this.q15Button_Click);
+            this.q15Button.Click += new System.EventHandler(this.qButton_Click);
             // 
             // QuestionTextBox
             // 
@@ -319,7 +319,7 @@
             this.QuestionTextBox.Name = "QuestionTextBox";
             this.QuestionTextBox.PasswordChar = '\0';
             this.QuestionTextBox.ReadOnly = true;
-            this.QuestionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.QuestionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.QuestionTextBox.SelectedText = "";
             this.QuestionTextBox.SelectionLength = 0;
             this.QuestionTextBox.SelectionStart = 0;
@@ -450,16 +450,6 @@
             this.secLabel.TabIndex = 88;
             this.secLabel.Text = "00";
             this.secLabel.UseCustomBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
             // 
             // Answer4TextBox
             // 
@@ -611,6 +601,16 @@
             this.QuesNumLabel.Size = new System.Drawing.Size(121, 19);
             this.QuesNumLabel.TabIndex = 10046;
             this.QuesNumLabel.Text = "Вы на вопросе №";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(627, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
             // 
             // ExamQuiz
             // 

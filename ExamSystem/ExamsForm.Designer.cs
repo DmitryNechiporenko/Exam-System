@@ -44,9 +44,10 @@
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
             this.RefreshExamButton = new MetroFramework.Controls.MetroButton();
             this.ReportButton = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GoToLearnButton = new MetroFramework.Controls.MetroButton();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             this.part1Button.TabIndex = 10023;
             this.part1Button.Text = "1 \r\nЧасть";
             this.part1Button.UseSelectable = true;
-            this.part1Button.Click += new System.EventHandler(this.part1Button_Click);
+            this.part1Button.Click += new System.EventHandler(this.partButton_Click);
             // 
             // part5Button
             // 
@@ -122,7 +123,7 @@
             this.part5Button.TabIndex = 10024;
             this.part5Button.Text = "5 \r\nЧасть";
             this.part5Button.UseSelectable = true;
-            this.part5Button.Click += new System.EventHandler(this.part5Button_Click);
+            this.part5Button.Click += new System.EventHandler(this.partButton_Click);
             // 
             // part4Button
             // 
@@ -133,7 +134,7 @@
             this.part4Button.TabIndex = 10025;
             this.part4Button.Text = "4 \r\nЧасть";
             this.part4Button.UseSelectable = true;
-            this.part4Button.Click += new System.EventHandler(this.part4Button_Click);
+            this.part4Button.Click += new System.EventHandler(this.partButton_Click);
             // 
             // part3Button
             // 
@@ -144,7 +145,7 @@
             this.part3Button.TabIndex = 10026;
             this.part3Button.Text = "3 \r\nЧасть";
             this.part3Button.UseSelectable = true;
-            this.part3Button.Click += new System.EventHandler(this.part3Button_Click);
+            this.part3Button.Click += new System.EventHandler(this.partButton_Click);
             // 
             // part2Button
             // 
@@ -155,7 +156,7 @@
             this.part2Button.TabIndex = 10027;
             this.part2Button.Text = "2 \r\nЧасть";
             this.part2Button.UseSelectable = true;
-            this.part2Button.Click += new System.EventHandler(this.part2Button_Click);
+            this.part2Button.Click += new System.EventHandler(this.partButton_Click);
             // 
             // ExamLabel
             // 
@@ -210,16 +211,6 @@
             this.ReportButton.UseSelectable = true;
             this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(606, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10033;
-            this.pictureBox1.TabStop = false;
-            // 
             // GoToLearnButton
             // 
             this.GoToLearnButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -245,11 +236,32 @@
             this.goBackButton.UseSelectable = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(9, 267);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 10036;
+            this.metroButton1.Text = "metroButton1";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(606, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10033;
+            this.pictureBox1.TabStop = false;
+            // 
             // ExamsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 309);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GoToLearnButton);
             this.Controls.Add(this.pictureBox1);
@@ -299,5 +311,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton GoToLearnButton;
         private MetroFramework.Controls.MetroButton goBackButton;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
