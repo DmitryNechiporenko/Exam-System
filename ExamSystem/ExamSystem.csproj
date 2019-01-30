@@ -134,11 +134,29 @@
     <Compile Include="ExamQuiz.Designer.cs">
       <DependentUpon>ExamQuiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExamSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamSelectForm.Designer.cs">
+      <DependentUpon>ExamSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExamsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExamsForm.Designer.cs">
       <DependentUpon>ExamsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalExamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalExamForm.Designer.cs">
+      <DependentUpon>FinalExamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalExamQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalExamQuiz.Designer.cs">
+      <DependentUpon>FinalExamQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="LearnForm.cs">
       <SubType>Form</SubType>
@@ -212,8 +230,17 @@
     <EmbeddedResource Include="ExamQuiz.resx">
       <DependentUpon>ExamQuiz.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExamSelectForm.resx">
+      <DependentUpon>ExamSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExamsForm.resx">
       <DependentUpon>ExamsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalExamForm.resx">
+      <DependentUpon>FinalExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalExamQuiz.resx">
+      <DependentUpon>FinalExamQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LearnForm.resx">
       <DependentUpon>LearnForm.cs</DependentUpon>

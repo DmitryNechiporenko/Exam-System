@@ -224,6 +224,7 @@
             // goBackButton
             // 
             this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.goBackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.goBackButton.Location = new System.Drawing.Point(84, 30);
             this.goBackButton.Name = "goBackButton";
             this.goBackButton.Size = new System.Drawing.Size(37, 21);
@@ -237,8 +238,10 @@
             // 
             // loginForm
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.goBackButton;
             this.ClientSize = new System.Drawing.Size(368, 275);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.loginButton);

@@ -50,9 +50,9 @@ namespace ExamSystem
             if (userid >= 0)
             {
                 this.Hide();
-                ExamsForm ef = new ExamsForm(userid);
-                ef.Closed += (s, args) => this.Close();
-                ef.Show();
+                ExamSelectForm ExamSelect = new ExamSelectForm(userid);
+                ExamSelect.Closed += (s, args) => this.Close();
+                ExamSelect.Show();
             }
             else
             {

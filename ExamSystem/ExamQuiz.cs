@@ -16,10 +16,9 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
         int examid;
         string part, partTime = "";
-        int[] answers = new int[20];
-        string[] q;
+        int[] answers = Enumerable.Repeat<int>(-1, 20).ToArray();
+        MetroFramework.Controls.MetroButton[] qButtons = new MetroFramework.Controls.MetroButton[40];
         int rownum = 0;
-
         DataTable questions = new DataTable();
 
         public ExamQuiz(int examid, int part)
@@ -36,41 +35,20 @@ namespace ExamSystem
             questions.Columns.Add("COMMENT", typeof(string));
 
             this.examid = examid;
-            if (part == 1)
-            {
-                this.part = "PART1";
-                this.partTime = "P1_TIME";
-            }
-            else if (part == 2)
-            {
-                this.part = "PART2";
-                this.partTime = "P2_TIME";
-            }
-            else if (part == 3)
-            {
-                this.part = "PART3";
-                this.partTime = "P3_TIME";
-            }
-            else if (part == 4)
-            {
-                this.part = "PART4";
-                this.partTime = "P4_TIME";
-            }
-            else
-            {
-                this.part = "PART5";
-                this.partTime = "P5_TIME";
-            }
-
-            for (int i = 0; i < 20; i++)
-            {
-                answers[i] = -1;
-            }
+            this.part = "PART" + part;
+            this.partTime = "P" + part + "_TIME";
             timer1.Start();
         }
 
         private void ExamQuiz_Load(object sender, EventArgs e)
         {
+            foreach (var button in this.Controls.OfType<MetroFramework.Controls.MetroButton>())
+            {
+                int foo;
+                if (int.TryParse(button.Text, out foo))
+                    qButtons[int.Parse(button.Text) - 1] = button;
+            }
+
             QuestionTextBox.Visible = true;
             Answer1Radio.Visible = true;
             Answer2Radio.Visible = true;
@@ -80,27 +58,12 @@ namespace ExamSystem
             Answer2TextBox.Visible = true;
             Answer3TextBox.Visible = true;
             Answer4TextBox.Visible = true;
-            if (fb.State == ConnectionState.Closed)
-                fb.Open();
-            FbTransaction fbt = fb.BeginTransaction();
 
-            FbCommand SelectSQL = new FbCommand("SELECT " + part + " FROM exams WHERE id = " + examid, fb);
-            SelectSQL.Transaction = fbt;
+            get_questions("SELECT * FROM question WHERE question.id IN (SELECT id FROM GetIntegerList((SELECT " + part +  " FROM exams WHERE id = " + examid + ")))");
 
-            FbDataReader reader = SelectSQL.ExecuteReader();
-            reader.Read();
-            q = reader[0].ToString().Split(',');
-            reader.Close();
-            SelectSQL.Dispose();
-            fbt.Commit();
-            fb.Close();
+            for (int i = questions.Rows.Count; i < 40; i++)
+                qButtons[i].Visible = false;
 
-            foreach (var foo in q)
-            {
-                get_questions("SELECT * FROM question WHERE id = " + int.Parse(foo) + "");
-            }
-
-            disable_buttons();
             ShowQuestion();
         }
 
@@ -109,15 +72,13 @@ namespace ExamSystem
             if (fb.State == ConnectionState.Closed)
                 fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-
             FbCommand SelectSQL = new FbCommand(query, fb);
             SelectSQL.Transaction = fbt;
-
             FbDataReader reader = SelectSQL.ExecuteReader();
+
             while (reader.Read())
-            {
                 questions.Rows.Add(int.Parse(reader[0].ToString()), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), reader[6].ToString(), int.Parse(reader[7].ToString()), reader[8].ToString());
-            }
+
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
@@ -173,106 +134,8 @@ namespace ExamSystem
                 return;
             }
 
-            if (rownum == 0)
-            {
-                q1Button.Highlight = true;
-                q1Button.Refresh();
-            }
-            if (rownum == 1)
-            {
-                q2Button.Highlight = true;
-                q2Button.Refresh();
-            }
-            if (rownum == 2)
-            {
-                q3Button.Highlight = true;
-                q3Button.Refresh();
-            }
-            if (rownum == 3)
-            {
-                q4Button.Highlight = true;
-                q4Button.Refresh();
-            }
-            if (rownum == 4)
-            {
-                q5Button.Highlight = true;
-                q5Button.Refresh();
-            }
-            if (rownum == 5)
-            {
-                q6Button.Highlight = true;
-                q6Button.Refresh();
-            }
-            if (rownum == 6)
-            {
-                q7Button.Highlight = true;
-                q7Button.Refresh();
-            }
-            if (rownum == 7)
-            {
-                q8Button.Highlight = true;
-                q8Button.Refresh();
-            }
-            if (rownum == 8)
-            {
-                q9Button.Highlight = true;
-                q9Button.Refresh();
-            }
-            if (rownum == 9)
-            {
-                q10Button.Highlight = true;
-                q10Button.Refresh();
-            }
-            if (rownum == 10)
-            {
-                q11Button.Highlight = true;
-                q11Button.Refresh();
-            }
-            if (rownum == 11)
-            {
-                q12Button.Highlight = true;
-                q12Button.Refresh();
-            }
-            if (rownum == 12)
-            {
-                q13Button.Highlight = true;
-                q13Button.Refresh();
-            }
-            if (rownum == 13)
-            {
-                q14Button.Highlight = true;
-                q14Button.Refresh();
-            }
-            if (rownum == 14)
-            {
-                q15Button.Highlight = true;
-                q15Button.Refresh();
-            }
-            if (rownum == 15)
-            {
-                q16Button.Highlight = true;
-                q16Button.Refresh();
-            }
-            if (rownum == 16)
-            {
-                q17Button.Highlight = true;
-                q17Button.Refresh();
-            }
-            if (rownum == 17)
-            {
-                q18Button.Highlight = true;
-                q18Button.Refresh();
-            }
-            if (rownum == 18)
-            {
-                q19Button.Highlight = true;
-                q19Button.Refresh();
-            }
-            if (rownum == 19)
-            {
-                q20Button.Highlight = true;
-                q20Button.Refresh();
-            }
+            qButtons[rownum].Highlight = true;
+            qButtons[rownum].Refresh();
             metroButton1.Select();
         }
 
@@ -318,7 +181,6 @@ namespace ExamSystem
                 UpdateSQL.Transaction = fbt;
 
 
-
                 try
                 {
                     int res = UpdateSQL.ExecuteNonQuery();
@@ -336,153 +198,15 @@ namespace ExamSystem
                 e.Cancel = false;
             }
             else
-            {
                 e.Cancel = true;
-            }
-
         }
 
-        private void q1Button_Click(object sender, EventArgs e)
+        private void qButton_Click(object sender, EventArgs e)
         {
-            rownum = 0;
+            rownum = int.Parse((sender as Button).Text) - 1;
             ShowQuestion();
             metroButton1.Select();
         }
-
-        private void q2Button_Click(object sender, EventArgs e)
-        {
-            rownum = 1;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q3Button_Click(object sender, EventArgs e)
-        {
-            rownum = 2;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q4Button_Click(object sender, EventArgs e)
-        {
-            rownum = 3;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q5Button_Click(object sender, EventArgs e)
-        {
-            rownum = 4;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q6Button_Click(object sender, EventArgs e)
-        {
-            rownum = 5;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q7Button_Click(object sender, EventArgs e)
-        {
-            rownum = 6;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q8Button_Click(object sender, EventArgs e)
-        {
-            rownum = 7;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q9Button_Click(object sender, EventArgs e)
-        {
-            rownum = 8;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q10Button_Click(object sender, EventArgs e)
-        {
-            rownum = 9;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q11Button_Click(object sender, EventArgs e)
-        {
-            rownum = 10;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q12Button_Click(object sender, EventArgs e)
-        {
-            rownum = 11;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q13Button_Click(object sender, EventArgs e)
-        {
-            rownum = 12;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q14Button_Click(object sender, EventArgs e)
-        {
-            rownum = 13;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q15Button_Click(object sender, EventArgs e)
-        {
-            rownum = 14;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q16Button_Click(object sender, EventArgs e)
-        {
-            rownum = 15;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q17Button_Click(object sender, EventArgs e)
-        {
-            rownum = 16;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q18Button_Click(object sender, EventArgs e)
-        {
-            rownum = 17;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q19Button_Click(object sender, EventArgs e)
-        {
-            rownum = 18;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-        private void q20Button_Click(object sender, EventArgs e)
-        {
-            rownum = 19;
-            ShowQuestion();
-            metroButton1.Select();
-        }
-
-
 
         private void NextButton_Click(object sender, EventArgs e)
         {
@@ -503,52 +227,6 @@ namespace ExamSystem
             }
             metroButton1.Select();
         }
-
-        private void disable_buttons()
-        {
-            if (questions.Rows.Count < 20)
-                q20Button.Visible = false;
-            if (questions.Rows.Count < 19)
-                q19Button.Visible = false;
-            if (questions.Rows.Count < 18)
-                q18Button.Visible = false;
-            if (questions.Rows.Count < 17)
-                q17Button.Visible = false;
-            if (questions.Rows.Count < 16)
-                q16Button.Visible = false;
-            if (questions.Rows.Count < 15)
-                q15Button.Visible = false;
-            if (questions.Rows.Count < 14)
-                q14Button.Visible = false;
-            if (questions.Rows.Count < 13)
-                q13Button.Visible = false;
-            if (questions.Rows.Count < 12)
-                q12Button.Visible = false;
-            if (questions.Rows.Count < 11)
-                q11Button.Visible = false;
-            if (questions.Rows.Count < 10)
-                q10Button.Visible = false;
-            if (questions.Rows.Count < 9)
-                q9Button.Visible = false;
-            if (questions.Rows.Count < 8)
-                q8Button.Visible = false;
-            if (questions.Rows.Count < 7)
-                q7Button.Visible = false;
-            if (questions.Rows.Count < 6)
-                q6Button.Visible = false;
-            if (questions.Rows.Count < 5)
-                q5Button.Visible = false;
-            if (questions.Rows.Count < 4)
-                q4Button.Visible = false;
-            if (questions.Rows.Count < 3)
-                q3Button.Visible = false;
-            if (questions.Rows.Count < 2)
-                q2Button.Visible = false;
-            if (questions.Rows.Count < 1)
-                q1Button.Visible = false;
-        }
-
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {

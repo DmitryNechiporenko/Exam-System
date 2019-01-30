@@ -128,3 +128,6 @@ D:\git\Exam-System\ExamSystem\bin\Debug\MetroFramework.dll
 D:\git\Exam-System\ExamSystem\bin\Debug\MetroFramework.Fonts.dll
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.adminform.resources
 D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.adminpassForm.resources
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.ExamSelectForm.resources
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.FinalExamForm.resources
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.FinalExamQuiz.resources
