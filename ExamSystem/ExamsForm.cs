@@ -334,7 +334,7 @@ namespace ExamSystem
         private void RefreshExamButton_Click(object sender, EventArgs e)
         {
             delete.record("DELETE FROM exams WHERE id = " + examid);
-            ExamsFormcs_Load(sender, e);
+            updateParts();
         }
 
         private void GoToLearnButton_Click(object sender, EventArgs e)

@@ -66,6 +66,7 @@
             this.goBackButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.goBackButton.UseCustomBackColor = true;
             this.goBackButton.UseSelectable = true;
+            this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
             // GoToLearnButton
             // 
@@ -76,6 +77,7 @@
             this.GoToLearnButton.TabIndex = 10053;
             this.GoToLearnButton.Text = "Пройти обучение";
             this.GoToLearnButton.UseSelectable = true;
+            this.GoToLearnButton.Click += new System.EventHandler(this.GoToLearnButton_Click);
             // 
             // ReportButton
             // 
@@ -86,6 +88,7 @@
             this.ReportButton.TabIndex = 10051;
             this.ReportButton.Text = "Отчет";
             this.ReportButton.UseSelectable = true;
+            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
             // 
             // RefreshExamButton
             // 
@@ -96,6 +99,7 @@
             this.RefreshExamButton.TabIndex = 10050;
             this.RefreshExamButton.Text = "Начать заново";
             this.RefreshExamButton.UseSelectable = true;
+            this.RefreshExamButton.Click += new System.EventHandler(this.RefreshExamButton_Click);
             // 
             // ResultLabel
             // 

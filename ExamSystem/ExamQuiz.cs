@@ -59,7 +59,7 @@ namespace ExamSystem
             Answer3TextBox.Visible = true;
             Answer4TextBox.Visible = true;
 
-            get_questions("SELECT * FROM question WHERE question.id IN (SELECT id FROM GetIntegerList((SELECT " + part +  " FROM exams WHERE id = " + examid + ")))");
+            get_questions("SELECT question.* FROM question, (SELECT id FROM GetIntegerList((SELECT " + part + " FROM exams WHERE id = " + examid + "))) foo WHERE question.id = foo.id ");
 
             for (int i = questions.Rows.Count; i < 40; i++)
                 qButtons[i].Visible = false;

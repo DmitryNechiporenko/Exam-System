@@ -92,10 +92,22 @@ namespace ExamSystem
 
     class calculate
     {
-       // public static double FinalExam(int examid)
-       // {
-
-      //  }
+        public static double FinalExam(int examid)
+        {
+            FbConnection fb = new FbConnection(connection.conString());
+            fb.Open();
+            FbTransaction fbt = fb.BeginTransaction();
+            FbCommand SelectSQL = new FbCommand("SELECT result FROM(SELECT questions, answers FROM final_exams WHERE id = " + examid + ") foo, GetPercent(foo.questions, foo.answers)", fb);
+            SelectSQL.Transaction = fbt;
+            FbDataReader reader = SelectSQL.ExecuteReader();
+            reader.Read();
+            double result = double.Parse(reader[0].ToString());
+            reader.Close();
+            SelectSQL.Dispose();
+            fbt.Commit();
+            fb.Close();
+            return result;
+        }
 
         public static double[] percentage(int examid, Boolean by_parts)
         {

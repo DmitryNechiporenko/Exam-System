@@ -16,7 +16,6 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
 
         int userid, examid;
-        double[] examresult = { 0, 0, 0, 0, 0 };
 
         public FinalExamForm(int userid)
         {
@@ -162,6 +161,30 @@ namespace ExamSystem
             }
         }
 
+        private void RefreshExamButton_Click(object sender, EventArgs e)
+        {
+            delete.record("DELETE FROM final_exams WHERE id = " + examid);
+            updateExamResult();
+        }
+
+        private void GoToLearnButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LearnForm lf = new LearnForm();
+            lf.Closed += (s, args) => this.Show();
+            lf.Show();
+        }
+
+        private void ReportButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void goBackButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void updateExamResult()
         {
             try
@@ -209,10 +232,10 @@ namespace ExamSystem
 
                 if (!StartExamButton.Enabled)
                 {
-                    //examresult = calculate.percentage(this.examid, false);
-                    ResultLabel.Text = "Результат: " + examresult[0] + "%";
+                    double examresult = calculate.FinalExam(examid);
+                    ResultLabel.Text = "Результат: " + examresult.ToString() + "%";
 
-                    if (examresult[0] >= 75)
+                    if (examresult >= 75)
                     {
                         ReportButton.Visible = true;
                         RefreshExamButton.Visible = false;
@@ -230,10 +253,7 @@ namespace ExamSystem
                 else
                     ResultLabel.Text = "Экзамен не завершён";
             }
-            catch
-            {
-
-            }
+            catch { }
         }
 
     }
