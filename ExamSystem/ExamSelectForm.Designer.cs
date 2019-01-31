@@ -48,9 +48,9 @@
             // BlockButton
             // 
             this.BlockButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BlockButton.Location = new System.Drawing.Point(23, 72);
+            this.BlockButton.Location = new System.Drawing.Point(23, 68);
             this.BlockButton.Name = "BlockButton";
-            this.BlockButton.Size = new System.Drawing.Size(82, 49);
+            this.BlockButton.Size = new System.Drawing.Size(101, 68);
             this.BlockButton.TabIndex = 1;
             this.BlockButton.Text = "По блокам";
             this.BlockButton.UseSelectable = true;
@@ -59,9 +59,9 @@
             // FinalButton
             // 
             this.FinalButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FinalButton.Location = new System.Drawing.Point(144, 72);
+            this.FinalButton.Location = new System.Drawing.Point(148, 68);
             this.FinalButton.Name = "FinalButton";
-            this.FinalButton.Size = new System.Drawing.Size(82, 49);
+            this.FinalButton.Size = new System.Drawing.Size(101, 68);
             this.FinalButton.TabIndex = 2;
             this.FinalButton.Text = "Итоговый";
             this.FinalButton.UseSelectable = true;
@@ -69,7 +69,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(155, 127);
+            this.metroButton1.Location = new System.Drawing.Point(0, 142);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 10037;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 150);
+            this.ClientSize = new System.Drawing.Size(274, 166);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.FinalButton);
             this.Controls.Add(this.BlockButton);

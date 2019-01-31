@@ -47,6 +47,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -284,11 +285,22 @@
             this.goBackButton.UseSelectable = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(4, 404);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 14;
+            this.metroButton2.Text = "metroButton2";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Visible = false;
+            // 
             // adminform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 431);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroTabControl1);
@@ -331,5 +343,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton goBackButton;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

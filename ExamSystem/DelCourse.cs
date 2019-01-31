@@ -43,31 +43,25 @@ namespace ExamSystem
                 return;
             }
 
-
             if (fb.State == ConnectionState.Closed)
                 fb.Open();
-
             FbTransaction fbt = fb.BeginTransaction();
             int cID = int.Parse(CourseComboBox.SelectedValue.ToString());
-
             FbCommand UpdateSQL = new FbCommand("UPDATE course SET name = @NAME WHERE id = " + cID, fb);
             UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = CourseTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
-
             UpdateSQL.Transaction = fbt;
-
             try
             {
                 UpdateSQL.ExecuteNonQuery();
                 MessageBox.Show("Изменено!");
                 fbt.Commit();
+                UpdateSQL.Dispose();
+                fb.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            UpdateSQL.Dispose();
-            fb.Close();
             metroButton1.Select();
         }
 
@@ -78,24 +72,20 @@ namespace ExamSystem
 
             FbTransaction fbt = fb.BeginTransaction();
             int cID = int.Parse(CourseComboBox.SelectedValue.ToString());
-
             FbCommand DeleteSQL = new FbCommand("DELETE FROM course WHERE id = " + cID, fb);
-
             DeleteSQL.Transaction = fbt;
-
             try
             {
                 DeleteSQL.ExecuteNonQuery();
                 MessageBox.Show("Удалено!");
                 fbt.Commit();
+                DeleteSQL.Dispose();
+                fb.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            DeleteSQL.Dispose();
-            fb.Close();
             DelCourse_Load(sender, e);
             metroButton1.Select();
         }

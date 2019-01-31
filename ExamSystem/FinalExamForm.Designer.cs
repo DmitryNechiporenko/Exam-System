@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalExamForm));
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
             this.GoToLearnButton = new MetroFramework.Controls.MetroButton();
@@ -46,7 +47,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 364);
+            this.metroButton1.Location = new System.Drawing.Point(367, 192);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 10055;
@@ -71,7 +72,7 @@
             // GoToLearnButton
             // 
             this.GoToLearnButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GoToLearnButton.Location = new System.Drawing.Point(188, 280);
+            this.GoToLearnButton.Location = new System.Drawing.Point(248, 258);
             this.GoToLearnButton.Name = "GoToLearnButton";
             this.GoToLearnButton.Size = new System.Drawing.Size(133, 49);
             this.GoToLearnButton.TabIndex = 10053;
@@ -82,7 +83,7 @@
             // ReportButton
             // 
             this.ReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReportButton.Location = new System.Drawing.Point(250, 280);
+            this.ReportButton.Location = new System.Drawing.Point(153, 258);
             this.ReportButton.Name = "ReportButton";
             this.ReportButton.Size = new System.Drawing.Size(133, 49);
             this.ReportButton.TabIndex = 10051;
@@ -93,7 +94,7 @@
             // RefreshExamButton
             // 
             this.RefreshExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RefreshExamButton.Location = new System.Drawing.Point(49, 280);
+            this.RefreshExamButton.Location = new System.Drawing.Point(49, 258);
             this.RefreshExamButton.Name = "RefreshExamButton";
             this.RefreshExamButton.Size = new System.Drawing.Size(133, 49);
             this.RefreshExamButton.TabIndex = 10050;
@@ -106,7 +107,7 @@
             this.ResultLabel.AutoSize = true;
             this.ResultLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.ResultLabel.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.ResultLabel.Location = new System.Drawing.Point(49, 232);
+            this.ResultLabel.Location = new System.Drawing.Point(49, 230);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.Size = new System.Drawing.Size(98, 25);
             this.ResultLabel.TabIndex = 10049;
@@ -177,7 +178,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(350, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 412);
+            this.ClientSize = new System.Drawing.Size(451, 328);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.GoToLearnButton);
@@ -202,6 +203,7 @@
             this.Controls.Add(this.CourseComboBox);
             this.Controls.Add(this.CourseLabel);
             this.Controls.Add(this.UserNameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinalExamForm";
             this.Resizable = false;

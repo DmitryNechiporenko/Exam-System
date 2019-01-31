@@ -40,10 +40,10 @@
             this.CurrentAnswerLabel = new MetroFramework.Controls.MetroLabel();
             this.ExamTimeLabel = new MetroFramework.Controls.MetroLabel();
             this.ResultLabel = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
             this.reportButton = new MetroFramework.Controls.MetroButton();
             this.UserNameLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,9 +78,9 @@
             this.QuestionLabel.AutoSize = true;
             this.QuestionLabel.Location = new System.Drawing.Point(23, 108);
             this.QuestionLabel.Name = "QuestionLabel";
-            this.QuestionLabel.Size = new System.Drawing.Size(55, 19);
+            this.QuestionLabel.Size = new System.Drawing.Size(64, 19);
             this.QuestionLabel.TabIndex = 13;
-            this.QuestionLabel.Text = "Вопрос";
+            this.QuestionLabel.Text = "Вопросы";
             // 
             // QuestionTextBox
             // 
@@ -227,16 +227,6 @@
             this.ResultLabel.TabIndex = 21;
             this.ResultLabel.Text = "Результат";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
-            this.pictureBox1.Location = new System.Drawing.Point(724, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 10036;
-            this.pictureBox1.TabStop = false;
-            // 
             // goBackButton
             // 
             this.goBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -271,6 +261,16 @@
             this.UserNameLabel.TabIndex = 10039;
             this.UserNameLabel.Text = "ФИО";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
+            this.pictureBox1.Location = new System.Drawing.Point(724, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 10036;
+            this.pictureBox1.TabStop = false;
+            // 
             // ViewExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +296,7 @@
             this.Name = "ViewExam";
             this.Resizable = false;
             this.Text = "Просмотр экзамена";
+            this.Load += new System.EventHandler(this.ViewExam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

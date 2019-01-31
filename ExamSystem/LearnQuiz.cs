@@ -39,18 +39,16 @@ namespace ExamSystem
             questions.Columns.Add("COMMENT", typeof(string));
         }
 
-        private void get_questions(string query)
+        private void get_questions(string foo)
         {
             if (fb.State == ConnectionState.Closed)
                 fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-            FbCommand SelectSQL = new FbCommand(query, fb);
+            FbCommand SelectSQL = new FbCommand("SELECT question.id, question.ques, question.a1, question.a2, question.a3, question.a4, question.a_curr, question.comment FROM question, block WHERE question.block_id = block.id AND block.name in (" + all_blocks + ") order by " + foo, fb);
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
             while (reader.Read())
-            {
                 questions.Rows.Add(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString()), reader[7].ToString());
-            }
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
@@ -73,17 +71,16 @@ namespace ExamSystem
             Answer4TextBox.Visible = true;
             AnswerButton.Visible = true;
             CommentButton.Visible = true;
-
         }
 
         private void orderButton_Click(object sender, EventArgs e)
         {
-            get_questions("SELECT question.id, question.ques, question.a1, question.a2, question.a3, question.a4, question.a_curr, question.comment FROM question, block WHERE question.block_id = block.id AND block.name in (" + all_blocks + ") ORDER BY question.ques");
+            get_questions("question.ques");
         }
 
         private void randomButton_Click(object sender, EventArgs e)
         {
-            get_questions("SELECT question.id, question.ques, question.a1, question.a2, question.a3, question.a4, question.a_curr, question.comment FROM question, block WHERE question.block_id = block.id AND block.name in (" + all_blocks + ") order by rand()");
+            get_questions("rand()");
         }
 
         private void ShowQuestion(int rownum)
@@ -147,28 +144,25 @@ namespace ExamSystem
 
             randomButton.Select();
 
-            num++;
-            if (num == questions.Rows.Count)
-                NextQuestionButton.Text = "Завершить";
+            
         }
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            if (NextQuestionButton.Text == "Продолжить")
-            {
-                ShowQuestion(num);
-            }
-            else if (NextQuestionButton.Text == "Пропустить")
+            if (NextQuestionButton.Text != "Завершить")
             {
                 num++;
                 ShowQuestion(num);
+                if (num == questions.Rows.Count - 1)
+                    NextQuestionButton.Text = "Завершить";
+
             }
             else
             {
-                num = 0;
-                MessageBox.Show("Вы ответили правильно на " + currentcount + " из " + questions.Rows.Count + " вопросов! (" + (((double)currentcount / questions.Rows.Count)*100) + "%)");
+                MessageBox.Show("Вы ответили правильно на " + currentcount + " из " + questions.Rows.Count + " вопросов! (" + Math.Round((((double)currentcount / questions.Rows.Count) * 100), 2) + "%)");
                 Close();
             }
+            
             randomButton.Select();
         }
 

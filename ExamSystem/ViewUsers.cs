@@ -14,6 +14,7 @@ namespace ExamSystem
     public partial class ViewUsers : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
+        int FinalExamId = 0;
 
         public ViewUsers()
         {
@@ -22,16 +23,6 @@ namespace ExamSystem
 
         private void view_users_Load(object sender, EventArgs e)
         {
-            if (fb.State == ConnectionState.Closed)
-                fb.Open();
-
-
-            FbTransaction fbt = fb.BeginTransaction();
-            FbCommand SelectSQL = new FbCommand("SELECT id, surname, name, patronymic, city, org, posit, pass FROM users", fb);
-            SelectSQL.Transaction = fbt;
-            FbDataReader reader = SelectSQL.ExecuteReader();
-
-
             DataTable Table = new DataTable();
             Table.Columns.Add("ID");
             Table.Columns.Add("Фамилия");
@@ -42,12 +33,16 @@ namespace ExamSystem
             Table.Columns.Add("Должность");
             Table.Columns.Add("Пароль");
 
+            if (fb.State == ConnectionState.Closed)
+                fb.Open();
+            FbTransaction fbt = fb.BeginTransaction();
+            FbCommand SelectSQL = new FbCommand("SELECT id, surname, name, patronymic, city, org, posit, pass FROM users", fb);
+            SelectSQL.Transaction = fbt;
+            FbDataReader reader = SelectSQL.ExecuteReader();
             try
             {
                 while (reader.Read())
-                {
                     Table.Rows.Add(new object[] { reader.GetValue(0), reader.GetValue(1), reader.GetValue(2), reader.GetValue(3), reader.GetValue(4), reader.GetValue(5), reader.GetValue(6), reader.GetValue(7) });
-                }
                 reader.Close();
                 usersGridView.DataSource = Table;
             }
@@ -61,9 +56,7 @@ namespace ExamSystem
             fb.Close();
 
             foreach (DataGridViewColumn col in usersGridView.Columns)
-            {
                 col.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
 
             usersGridView_SelectionChanged(sender, e);
         }
@@ -78,28 +71,21 @@ namespace ExamSystem
                     fb.Open();
 
                 FbTransaction fbt = fb.BeginTransaction();
-
                 FbCommand InsertSQL = new FbCommand("DELETE FROM users WHERE id=@id", fb);
-
                 InsertSQL.Parameters.Add("id", FbDbType.Integer).Value = usersGridView.CurrentRow.Cells[0].Value;
-
                 InsertSQL.Transaction = fbt;
-
-
-
                 try
                 {
                     int res = InsertSQL.ExecuteNonQuery();
                     MessageBox.Show("Запись удалена!");
                     fbt.Commit();
+                    InsertSQL.Dispose();
+                    fb.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-
-                InsertSQL.Dispose();
-                fb.Close();
                 view_users_Load(sender, e);
             }
 
@@ -107,78 +93,64 @@ namespace ExamSystem
 
         private void usersGridView_SelectionChanged(object sender, EventArgs e)
         {
+            ExamsComboBox.Visible = false;
+            ViewExamButton.Visible = false;
+            ViewFinalExamButton.Visible = false;
             ExamsComboBox.DataSource = null;
             try
             {
-                int cnt = 0;
+                string uid = usersGridView.CurrentRow.Cells[0].Value.ToString();
                 if (fb.State == ConnectionState.Closed)
-                {
                     fb.Open();
-                }
                 FbTransaction fbt = fb.BeginTransaction();
-
-                FbCommand SelectSQL = new FbCommand("SELECT COUNT(*) FROM exams WHERE user_id = " + usersGridView.CurrentRow.Cells[0].Value.ToString(), fb);
+                FbCommand SelectSQL = new FbCommand("SELECT exams.id, block.name FROM exams, block WHERE exams.block_id = block.id AND exams.user_id = " + uid, fb);
                 SelectSQL.Transaction = fbt;
-
                 FbDataReader reader = SelectSQL.ExecuteReader();
-                reader.Read();
-                cnt = int.Parse(reader[0].ToString());
-                reader.Close();
-                SelectSQL.Dispose();
-                fbt.Commit();
-                fb.Close();
-
-                if (cnt > 0)
+                var data = new List<P1>();
+                while (reader.Read())
                 {
                     ExamsComboBox.Visible = true;
                     ViewExamButton.Visible = true;
-                }
-                else
-                {
-                    ExamsComboBox.Visible = false;
-                    ViewExamButton.Visible = false;
-                }
-
-                
-                if (fb.State == ConnectionState.Closed)
-                {
-                    fb.Open();
-                }
-                FbTransaction fbt1 = fb.BeginTransaction();
-
-                FbCommand SelectSQL1 = new FbCommand("SELECT exams.id, block.name FROM exams, block WHERE exams.block_id = block.id AND exams.user_id = " + usersGridView.CurrentRow.Cells[0].Value.ToString(), fb);
-                SelectSQL1.Transaction = fbt1;
-
-                FbDataReader reader1 = SelectSQL1.ExecuteReader();
-                var data1 = new List<P1>();
-
-                while (reader1.Read())
-                {
                     var mc = new P1
                     {
-                        Id = reader1[0].ToString().Trim(),
-                        Name = reader1[1].ToString().Trim()
+                        Id = reader[0].ToString().Trim(),
+                        Name = reader[1].ToString().Trim()
                     };
-                    data1.Add(mc);
+                    data.Add(mc);
+                }
+                reader.Close();
+                SelectSQL.Dispose();
+                fbt.Commit();
+                ExamsComboBox.DataSource = data;
+                ExamsComboBox.DisplayMember = "Name";
+                ExamsComboBox.ValueMember = "Id";
+
+                FbCommand SelectSQL1 = new FbCommand("SELECT id FROM final_exams WHERE user_id = " + uid, fb);
+                SelectSQL1.Transaction = fbt;
+                FbDataReader reader1 = SelectSQL1.ExecuteReader();
+                if (reader1.Read())
+                {
+                    FinalExamId = int.Parse(reader1[0].ToString());
+                    ViewFinalExamButton.Visible = true;
                 }
                 reader1.Close();
                 SelectSQL1.Dispose();
-                fbt1.Commit();
+                fbt.Commit();
                 fb.Close();
 
-                ExamsComboBox.DataSource = data1;
-                ExamsComboBox.DisplayMember = "Name";
-                ExamsComboBox.ValueMember = "Id";
             }
-            catch
-            {
-
-            }
+            catch { }
         }
 
         private void ViewExamButton_Click(object sender, EventArgs e)
         {
             ViewExam f = new ViewExam(int.Parse(ExamsComboBox.SelectedValue.ToString()));
+            f.Show();
+        }
+
+        private void ViewFinalExamButton_Click(object sender, EventArgs e)
+        {
+            ViewFinalExam f = new ViewFinalExam(FinalExamId);
             f.Show();
         }
 

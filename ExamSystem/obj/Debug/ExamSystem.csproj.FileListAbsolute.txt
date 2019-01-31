@@ -166,3 +166,4 @@ C:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cach
 C:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
 C:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.exe
 C:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.pdb
+D:\git\Exam-System\ExamSystem\obj\Debug\ExamSystem.ViewFinalExam.resources

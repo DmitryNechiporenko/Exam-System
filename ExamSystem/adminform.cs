@@ -15,46 +15,54 @@ namespace ExamSystem
         public adminform()
         {
             InitializeComponent();
+            metroButton1.Select();
         }
 
         private void AddCourseButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             AddCourse f = new AddCourse();
             f.ShowDialog();
         }
 
         private void DelCourseButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             DelCourse f = new DelCourse();
             f.ShowDialog();
         }
 
         private void AddBlockButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             AddBlock f = new AddBlock();
             f.ShowDialog();
         }
 
         private void DelBlockButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             DelBlock f = new DelBlock();
             f.ShowDialog();
         }
 
         private void AddQuesButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             AddQuestion f = new AddQuestion();
             f.ShowDialog();
         }
 
         private void DelQuesButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             DelQuestion f = new DelQuestion();
             f.ShowDialog();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             ViewUsers f = new ViewUsers();
             f.ShowDialog();
         }
@@ -73,6 +81,7 @@ namespace ExamSystem
 
         private void goBackButton_Click(object sender, EventArgs e)
         {
+            metroButton1.Select();
             this.Close();
         }
     }

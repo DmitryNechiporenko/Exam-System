@@ -25,7 +25,6 @@ namespace ExamSystem
             try
             {
                 int i = int.Parse(CourseComboBox.SelectedValue.ToString());
-
                 LoadTo.combobox(BlockComboBox, "SELECT id, name FROM block WHERE course_id=" + i);
             }
             catch { }
@@ -52,30 +51,23 @@ namespace ExamSystem
 
             if (fb.State == ConnectionState.Closed)
                 fb.Open();
-
             FbTransaction fbt = fb.BeginTransaction();
             int bID = int.Parse(BlockComboBox.SelectedValue.ToString());
-
             FbCommand UpdateSQL = new FbCommand("UPDATE block SET name = @NAME WHERE id = " + bID, fb);
             UpdateSQL.Parameters.Add("NAME", FbDbType.Text).Value = BlockTextBox.Text.Replace("\n", " ").Replace("\r", "").Trim();
-
             UpdateSQL.Transaction = fbt;
-
-
-
             try
             {
                 UpdateSQL.ExecuteNonQuery();
                 MessageBox.Show("Изменено!");
                 fbt.Commit();
+                UpdateSQL.Dispose();
+                fb.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            UpdateSQL.Dispose();
-            fb.Close();
             CourseComboBox_SelectedValueChanged(sender, e);
             metroButton1.Select();
         }
@@ -84,27 +76,22 @@ namespace ExamSystem
         {
             if (fb.State == ConnectionState.Closed)
                 fb.Open();
-
             FbTransaction fbt = fb.BeginTransaction();
             int bID = int.Parse(BlockComboBox.SelectedValue.ToString());
-
             FbCommand DeleteSQL = new FbCommand("DELETE FROM block WHERE id = " + bID, fb);
-
             DeleteSQL.Transaction = fbt;
-
             try
             {
                 DeleteSQL.ExecuteNonQuery();
                 MessageBox.Show("Удалено!");
                 fbt.Commit();
+                DeleteSQL.Dispose();
+                fb.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            DeleteSQL.Dispose();
-            fb.Close();
             CourseComboBox_SelectedValueChanged(sender, e);
             metroButton1.Select();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalExamQuiz));
             this.QuesNumLabel = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.Answer4TextBox = new MetroFramework.Controls.MetroTextBox();
@@ -915,6 +916,7 @@
             this.Controls.Add(this.q3Button);
             this.Controls.Add(this.q2Button);
             this.Controls.Add(this.q1Button);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FinalExamQuiz";
             this.Resizable = false;

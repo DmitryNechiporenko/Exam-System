@@ -90,14 +90,18 @@ namespace ExamSystem
     }
 
 
+
     class calculate
     {
-        public static double FinalExam(int examid)
+        public static double Percent(int examid, bool is_final = true)
         {
             FbConnection fb = new FbConnection(connection.conString());
             fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-            FbCommand SelectSQL = new FbCommand("SELECT result FROM(SELECT questions, answers FROM final_exams WHERE id = " + examid + ") foo, GetPercent(foo.questions, foo.answers)", fb);
+            string sql = "SELECT result FROM(SELECT questions, answers FROM final_exams WHERE id = " + examid + ") foo, GetPercent(foo.questions, foo.answers)";
+            if (!is_final)
+                sql = "SELECT result FROM(SELECT part1||','||part2||','||part3||','||part4||','||part5 as questions, part1_a||','||part2_a||','||part3_a||','||part4_a||','||part5_a as answers FROM exams WHERE id = " + examid + ") foo, GetPercent(foo.questions, foo.answers)";
+            FbCommand SelectSQL = new FbCommand(sql, fb);
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
@@ -106,102 +110,25 @@ namespace ExamSystem
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
-            return result;
+            return Math.Round(result, 2);
         }
 
-        public static double[] percentage(int examid, Boolean by_parts)
+        public static string PartPercent(int examid, string part)
         {
-            string[] examinfo = new string[18];
-            string[] questioninfo;
-            string questions;
-            string answers;
-
             FbConnection fb = new FbConnection(connection.conString());
             fb.Open();
             FbTransaction fbt = fb.BeginTransaction();
-            FbCommand SelectSQL = new FbCommand("SELECT * FROM exams WHERE id = " + examid, fb);
+            string sql = "SELECT result FROM(SELECT " + part + " as questions, " + part + "_a as answers FROM exams WHERE id = " + examid + ") foo, GetPercent(foo.questions, foo.answers)";
+            FbCommand SelectSQL = new FbCommand(sql, fb);
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
-            for (int i = 0; i < 18; i++)
-            {
-                examinfo[i] = reader[i].ToString();
-            }
+            double result = double.Parse(reader[0].ToString());
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
             fb.Close();
-
-            questions = examinfo[3] + ',' + examinfo[5] + ',' + examinfo[7] + ',' + examinfo[9] + ',' + examinfo[11];
-            string[] q_array = questions.Split(',');
-            answers = examinfo[4] + ',' + examinfo[6] + ',' + examinfo[8] + ',' + examinfo[10] + ',' + examinfo[12];
-            string[] a_array = answers.Split(',');
-            questioninfo = new string[questions.Split(',').Length];
-
-            fb.Open();
-            FbTransaction fbt1 = fb.BeginTransaction();
-            FbCommand SelectSQL1 = new FbCommand("SELECT * FROM question WHERE id IN (" + questions + ")", fb);
-            SelectSQL1.Transaction = fbt1;
-            FbDataReader reader1 = SelectSQL1.ExecuteReader();
-            for (int i = 0; i < questioninfo.Length; i++)
-            {
-                reader1.Read();
-                string foo = "";
-                for (int z = 0; z < 8; z++)
-                {
-                    foo = foo + reader1[z].ToString() + "|";
-                }
-                questioninfo[i] = foo.Substring(0, foo.Length - 1);
-            }
-            reader1.Close();
-            SelectSQL1.Dispose();
-            fbt1.Commit();
-            fb.Close();
-
-            Dictionary<int, string> curr_qa = new Dictionary<int, string>(q_array.Length);
-            
-            for (int i = 0; i < questioninfo.Length; i++)
-            {
-                string[] foo = questioninfo[i].Split('|');
-                curr_qa.Add(int.Parse(foo[0]), foo[7]);
-            }
-
-            double[] return_result = new double[5];
-            
-            if (by_parts)
-            {
-
-                int cnt = 0;
-                double result;
-                for (int i = 3; i < 12; i = i + 2)
-                {
-                    Dictionary<int, string> user_qa = new Dictionary<int, string>(examinfo[i].Length);
-
-                    for (int z = 0; z < examinfo[i].Split(',').Length; z++)
-                        user_qa.Add(int.Parse(examinfo[i].Split(',')[z]), examinfo[i + 1].Split(',')[z]);
-
-                    result = Math.Round(100 * (examinfo[i].Split(',').Length - (double)user_qa.Except(curr_qa).Count()) / (examinfo[i].Split(',').Length), 2);
-                    return_result[cnt] = result;
-                    cnt++;
-                }
-                
-            }
-            else
-            {
-                Dictionary<int, string> user_qa = new Dictionary<int, string>(q_array.Length);
-                double result;
-                for (int i = 0; i < q_array.Length; i++)
-                {
-                    user_qa.Add(int.Parse(q_array[i]), a_array[i]);
-                }
-
-                result = Math.Round(100 * (q_array.Length - (double)user_qa.Except(curr_qa).Count()) / (q_array.Length), 2);
-                for(int i = 0; i < return_result.Length; i++)
-                {
-                    return_result[i] = result;
-                }
-            }
-            return return_result;
+            return Math.Round(result, 2).ToString();
         }
     }
 

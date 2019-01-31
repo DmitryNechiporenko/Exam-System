@@ -16,8 +16,8 @@ namespace ExamSystem
         FbConnection fb = new FbConnection(connection.conString());
         int examid;
         string part, partTime = "";
-        int[] answers = Enumerable.Repeat<int>(-1, 20).ToArray();
-        MetroFramework.Controls.MetroButton[] qButtons = new MetroFramework.Controls.MetroButton[40];
+        int[] answers = Enumerable.Repeat<int>(0, 20).ToArray();
+        MetroFramework.Controls.MetroButton[] qButtons = new MetroFramework.Controls.MetroButton[20];
         int rownum = 0;
         DataTable questions = new DataTable();
 
@@ -61,7 +61,7 @@ namespace ExamSystem
 
             get_questions("SELECT question.* FROM question, (SELECT id FROM GetIntegerList((SELECT " + part + " FROM exams WHERE id = " + examid + "))) foo WHERE question.id = foo.id ");
 
-            for (int i = questions.Rows.Count; i < 40; i++)
+            for (int i = questions.Rows.Count; i < 20; i++)
                 qButtons[i].Visible = false;
 
             ShowQuestion();
@@ -162,13 +162,8 @@ namespace ExamSystem
                     timeSpend = (19 - int.Parse(minLabel.Text)).ToString() + ":" + (60 - int.Parse(secLabel.Text)).ToString();
                 string out_a = "";
                 for (int i = 0; i < questions.Rows.Count; i++)
-                {
-                    if (answers[i] != -1)
-                        out_a = out_a + answers[i] + ",";
-                    else
-                        out_a = out_a + ",";
-                }
-                out_a = out_a.Substring(0, out_a.Length - 1);
+                    out_a = out_a + "," + answers[i];
+                out_a = out_a.Substring(1);
 
                 if (fb.State == ConnectionState.Closed)
                     fb.Open();

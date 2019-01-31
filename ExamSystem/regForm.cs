@@ -13,8 +13,6 @@ namespace ExamSystem
 {
     public partial class regForm : MetroFramework.Forms.MetroForm
     {
-        FbConnection fb = new FbConnection(connection.conString());
-
         public regForm()
         {
             InitializeComponent();
@@ -25,63 +23,37 @@ namespace ExamSystem
             if ((surnameTextBox.Text.Length < 2) || (nameTextBox.Text.Length < 2) || (orgTextBox.Text.Length < 1))
             {
                 MessageBox.Show("Введите все данные");
+                return;
             }
-            else
+
+            FbConnection fb = new FbConnection(connection.conString());
+            if (fb.State == ConnectionState.Closed)
+                fb.Open();
+            FbTransaction fbt = fb.BeginTransaction();
+            FbCommand InsertSQL = new FbCommand("INSERT INTO users VALUES (0, @NAME, @SURNAME, @PATR, @CITY, @ORG, @POSIT, @PASS)", fb);
+            InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = nameTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("SURNAME", FbDbType.Text).Value = surnameTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("PATR", FbDbType.Text).Value = patrTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("CITY", FbDbType.Text).Value = cityTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("ORG", FbDbType.Text).Value = orgTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("POSIT", FbDbType.Text).Value = posTextBox.Text.Trim();
+            InsertSQL.Parameters.Add("PASS", FbDbType.Text).Value = passTextBox.Text.Trim();
+            InsertSQL.Transaction = fbt;
+
+            try
             {
-                if (fb.State == ConnectionState.Closed)
-                    fb.Open();
-
-                FbTransaction fbt = fb.BeginTransaction();
-                FbCommand newID = new FbCommand("SELECT MAX(ID) FROM users", fb);
-                newID.Transaction = fbt;
-                FbDataReader reader1 = newID.ExecuteReader();
-                reader1.Read();
-                string newid = reader1[0].ToString();
-                newID.Dispose();
-
-                reader1.Close();
-
-                try
-                {
-                    int chislo = int.Parse(newid);
-                }
-                catch
-                {
-                    newid = "1";
-                }
-
-
-
-                FbCommand InsertSQL = new FbCommand("INSERT INTO users VALUES (@ID, @NAME, @SURNAME, @PATR, @CITY, @ORG, @POSIT, @PASS)", fb);
-
-                InsertSQL.Parameters.Add("ID", FbDbType.Integer).Value = (int.Parse(newid) + 1);
-                InsertSQL.Parameters.Add("NAME", FbDbType.Text).Value = nameTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("SURNAME", FbDbType.Text).Value = surnameTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("PATR", FbDbType.Text).Value = patrTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("CITY", FbDbType.Text).Value = cityTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("ORG", FbDbType.Text).Value = orgTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("POSIT", FbDbType.Text).Value = posTextBox.Text.Trim();
-                InsertSQL.Parameters.Add("PASS", FbDbType.Text).Value = passTextBox.Text.Trim();
-
-                InsertSQL.Transaction = fbt;
-
-
-
-                try
-                {
-                    int res = InsertSQL.ExecuteNonQuery();
-                    MessageBox.Show("Успешно!");
-                    fbt.Commit();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
+                int res = InsertSQL.ExecuteNonQuery();
+                MessageBox.Show("Успешно!");
+                fbt.Commit();
                 InsertSQL.Dispose();
                 fb.Close();
-                this.Close();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            this.Close();
+
         }
 
         private void goBackButton_Click(object sender, EventArgs e)

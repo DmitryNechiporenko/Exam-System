@@ -38,6 +38,7 @@
             this.ExamsComboBox = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
+            this.ViewFinalExamButton = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.usersGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +99,7 @@
             this.ViewExamButton.Name = "ViewExamButton";
             this.ViewExamButton.Size = new System.Drawing.Size(270, 58);
             this.ViewExamButton.TabIndex = 5;
-            this.ViewExamButton.Text = "Посмотреть экзамен";
+            this.ViewExamButton.Text = "Посмотреть экзамен по блокам";
             this.ViewExamButton.UseSelectable = true;
             this.ViewExamButton.Click += new System.EventHandler(this.ViewExamButton_Click);
             // 
@@ -117,10 +118,10 @@
             // 
             this.ExamsComboBox.FontSize = MetroFramework.MetroComboBoxSize.Small;
             this.ExamsComboBox.FormattingEnabled = true;
-            this.ExamsComboBox.ItemHeight = 23;
+            this.ExamsComboBox.ItemHeight = 19;
             this.ExamsComboBox.Location = new System.Drawing.Point(909, 111);
             this.ExamsComboBox.Name = "ExamsComboBox";
-            this.ExamsComboBox.Size = new System.Drawing.Size(270, 29);
+            this.ExamsComboBox.Size = new System.Drawing.Size(270, 25);
             this.ExamsComboBox.TabIndex = 7;
             this.ExamsComboBox.UseSelectable = true;
             // 
@@ -148,11 +149,23 @@
             this.goBackButton.UseSelectable = true;
             this.goBackButton.Click += new System.EventHandler(this.goBackButton_Click);
             // 
+            // ViewFinalExamButton
+            // 
+            this.ViewFinalExamButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewFinalExamButton.Location = new System.Drawing.Point(909, 210);
+            this.ViewFinalExamButton.Name = "ViewFinalExamButton";
+            this.ViewFinalExamButton.Size = new System.Drawing.Size(270, 58);
+            this.ViewFinalExamButton.TabIndex = 10039;
+            this.ViewFinalExamButton.Text = "Посмотреть итоговый экзамен";
+            this.ViewFinalExamButton.UseSelectable = true;
+            this.ViewFinalExamButton.Click += new System.EventHandler(this.ViewFinalExamButton_Click);
+            // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 550);
+            this.Controls.Add(this.ViewFinalExamButton);
             this.Controls.Add(this.goBackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ExamsComboBox);
@@ -178,5 +191,6 @@
         private MetroFramework.Controls.MetroComboBox ExamsComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton goBackButton;
+        private MetroFramework.Controls.MetroButton ViewFinalExamButton;
     }
 }

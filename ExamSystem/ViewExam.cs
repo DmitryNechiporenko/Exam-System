@@ -16,7 +16,6 @@ namespace ExamSystem
     public partial class ViewExam : MetroFramework.Forms.MetroForm
     {
         FbConnection fb = new FbConnection(connection.conString());
-
         string[] examinfo = new string[23];
         string[][] questionlist;
         int examid;
@@ -37,9 +36,7 @@ namespace ExamSystem
             FbDataReader reader = SelectSQL.ExecuteReader();
             reader.Read();
             for (int i = 0; i < 23; i++)
-            {
                 examinfo[i] = reader[i].ToString();
-            }
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
@@ -49,28 +46,20 @@ namespace ExamSystem
             FbCommand SelectSQL1 = new FbCommand("SELECT * FROM question WHERE id IN (" + questionlist + ")", fb);
             SelectSQL1.Transaction = fbt1;
             FbDataReader reader1 = SelectSQL1.ExecuteReader();
-
             while (reader1.Read())
-            {
                 bar = bar + reader1[0].ToString() + "|" + reader1[1].ToString() + "|" + reader1[2].ToString() + "|" + reader1[3].ToString() + "|" + reader1[4].ToString() + "|" + reader1[5].ToString() + "|" + reader1[6].ToString() + "|" + reader1[7].ToString() + "|" + reader1[8].ToString() + "\n";
-            }
             reader1.Close();
             SelectSQL1.Dispose();
             fbt1.Commit();
             fb.Close();
 
-
             bar = bar.Substring(0, bar.Length - 1);
             foo = bar.Split('\n');
             string[][] qList = new string[foo.Length][];
-
             for(int i = 0; i < foo.Length; i++)
-            {
                 qList[i] = foo[i].Split('|');
-            }
 
             this.questionlist = qList;
-
 
             int min = 0;
             int sec = 0;
@@ -84,10 +73,8 @@ namespace ExamSystem
                 }
             }
             ExamTimeLabel.Text = ExamTimeLabel.Text + min.ToString() + ":" + sec.ToString();
-
             PartComboBox.SelectedIndex = 0;
-
-            ResultLabel.Text = ResultLabel.Text + " " + calculate.percentage(examid, false)[0] + "%";
+            ResultLabel.Text = ResultLabel.Text + " " + calculate.Percent(examid, false) + "%";
             UserNameLabel.Text = examinfo[18] + " " + examinfo[19] + " " + examinfo[20];
         }
 
@@ -177,24 +164,22 @@ namespace ExamSystem
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            double[] fullExamResult = calculate.percentage(examid, true);
             Word._Application application = new Word.Application();
             Word._Document document;
             Object filename = Path.Combine(Application.StartupPath, "report.dot");
             Object missing = Type.Missing;
             document = application.Documents.Add(ref filename);
             Word.Find find = application.Selection.Find;
-
             Dictionary<string, string> replacements = new Dictionary<string, string>(3);
             replacements.Add("<username>", UserNameLabel.Text);
             replacements.Add("<nowdate>", DateTime.Now.ToString("dd.MM.yyy"));
             replacements.Add("<spec>", examinfo[21] + "/" + examinfo[22]);
-            replacements.Add("<part1>", fullExamResult[0] + "%");
-            replacements.Add("<part2>", fullExamResult[1] + "%");
-            replacements.Add("<part3>", fullExamResult[2] + "%");
-            replacements.Add("<part4>", fullExamResult[3] + "%");
-            replacements.Add("<part5>", fullExamResult[4] + "%");
-            replacements.Add("<result>", ResultLabel.Text + "%");
+            replacements.Add("<part1>", calculate.PartPercent(examid, "part1") + "%");
+            replacements.Add("<part2>", calculate.PartPercent(examid, "part2") + "%");
+            replacements.Add("<part3>", calculate.PartPercent(examid, "part3") + "%");
+            replacements.Add("<part4>", calculate.PartPercent(examid, "part4") + "%");
+            replacements.Add("<part5>", calculate.PartPercent(examid, "part5") + "%");
+            replacements.Add("<result>", ResultLabel.Text);
 
 
             foreach (KeyValuePair<string, string> keyValue in replacements)
@@ -215,6 +200,11 @@ namespace ExamSystem
                     ReplaceWith: missing, Replace: replace);
             }
             application.Visible = true;
+        }
+
+        private void ViewExam_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
