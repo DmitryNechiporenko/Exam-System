@@ -15,7 +15,7 @@ namespace ExamSystem
     {
         FbConnection fb = new FbConnection(connection.conString());
         int examid;
-        int[] answers = Enumerable.Repeat<int>(0, 20).ToArray();
+        int[] answers = Enumerable.Repeat<int>(0, 40).ToArray();
         MetroFramework.Controls.MetroButton[] qButtons = new MetroFramework.Controls.MetroButton[40];
         int rownum = 0;
         DataTable questions = new DataTable();
@@ -136,6 +136,7 @@ namespace ExamSystem
 
             qButtons[rownum].Highlight = true;
             qButtons[rownum].Refresh();
+            NextButton_Click(sender, e);
             metroButton1.Select();
         }
 
@@ -167,7 +168,6 @@ namespace ExamSystem
 
                 if (fb.State == ConnectionState.Closed)
                     fb.Open();
-
                 FbTransaction fbt = fb.BeginTransaction();
                 FbCommand UpdateSQL = new FbCommand("UPDATE final_exams SET answers = '" + out_a + "', exam_time = '" + timeSpend + "' WHERE final_exams.id = " + examid, fb);
                 UpdateSQL.Transaction = fbt;
@@ -176,7 +176,7 @@ namespace ExamSystem
                 {
                     int res = UpdateSQL.ExecuteNonQuery();
                     timer1.Stop();
-                    MessageBox.Show("Вы отетили правильно на " + answers_count + " вопросов из " + questions.Rows.Count + " (" + ((double)answers_count / (double)questions.Rows.Count) * 100 + "%)");
+                    MessageBox.Show("Вы отетили правильно на " + answers_count + " вопросов из " + questions.Rows.Count + " (" + Math.Round(((double)answers_count / (double)questions.Rows.Count) * 100,2) + "%)");
                     fbt.Commit();
                 }
                 catch (Exception ex)

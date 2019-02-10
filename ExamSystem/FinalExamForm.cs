@@ -146,7 +146,16 @@ namespace ExamSystem
             fbt.Commit();
             fb.Close();
 
-            return questions;
+            string[] ques_arr = questions.Split(',');
+            questions = "";
+            for (int i = 0; i < ques_arr.Length; i++)
+            {
+                if (i == 40)
+                    break;
+                questions = questions + ',' + ques_arr[i];
+            }
+
+            return questions.Substring(1);
         }
 
 

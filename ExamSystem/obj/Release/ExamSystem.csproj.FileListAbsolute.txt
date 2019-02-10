@@ -62,3 +62,8 @@ C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.CoreCompileInputs.ca
 C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.CopyComplete
 C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.exe
 C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.pdb
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.ExamSelectForm.resources
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamForm.resources
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamQuiz.resources
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.ViewFinalExam.resources
+D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.ResolveComReference.cache

@@ -75,12 +75,9 @@ namespace ExamSystem
             FbCommand SelectSQL = new FbCommand(query, fb);
             SelectSQL.Transaction = fbt;
             FbDataReader reader = SelectSQL.ExecuteReader();
-
             box.Items.Clear();
             while (reader.Read())
-            {
                 box.Items.Add(reader[0].ToString());
-            }
             reader.Close();
             SelectSQL.Dispose();
             fbt.Commit();
