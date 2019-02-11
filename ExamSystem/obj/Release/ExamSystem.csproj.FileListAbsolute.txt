@@ -67,3 +67,8 @@ D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamForm.resources
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamQuiz.resources
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.ViewFinalExam.resources
 D:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.ResolveComReference.cache
+C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.csproj.ResolveComReference.cache
+C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.ExamSelectForm.resources
+C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamForm.resources
+C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.FinalExamQuiz.resources
+C:\git\Exam-System\ExamSystem\obj\Release\ExamSystem.ViewFinalExam.resources

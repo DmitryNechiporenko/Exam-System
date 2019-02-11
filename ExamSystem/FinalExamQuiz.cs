@@ -176,7 +176,7 @@ namespace ExamSystem
                 {
                     int res = UpdateSQL.ExecuteNonQuery();
                     timer1.Stop();
-                    MessageBox.Show("Вы отетили правильно на " + answers_count + " вопросов из " + questions.Rows.Count + " (" + Math.Round(((double)answers_count / (double)questions.Rows.Count) * 100,2) + "%)");
+                    MessageBox.Show("Вы ответили правильно на " + answers_count + " вопросов из " + questions.Rows.Count + " (" + Math.Round(((double)answers_count / (double)questions.Rows.Count) * 100,2) + "%)");
                     fbt.Commit();
                 }
                 catch (Exception ex)
