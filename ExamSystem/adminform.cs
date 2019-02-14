@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ExamSystem.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -83,6 +85,41 @@ namespace ExamSystem
         {
             metroButton1.Select();
             this.Close();
+        }
+
+        private void SaveDBButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string sourceFile = Path.Combine(Application.StartupPath, Settings.Default.DBNAME);
+                    string destFile = Path.Combine(folderBrowserDialog1.SelectedPath, Settings.Default.DBNAME);
+
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath))
+                        Directory.CreateDirectory(folderBrowserDialog1.SelectedPath);
+
+                    File.Copy(sourceFile, destFile, true);
+                    MessageBox.Show("Файл с базой успешно сохранен!");
+                }
+            }
+            catch { MessageBox.Show("Ошибка"); }
+
+            metroButton1.Select();
+        }
+
+        private void LoadDBButton_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string destFile = Path.Combine(Application.StartupPath, Settings.Default.DBNAME);
+                string sourceFile = openFileDialog1.FileName;
+
+                File.Copy(sourceFile, destFile, true);
+                MessageBox.Show("Файл с базой успешно сохранен!");
+            }
+
+            metroButton1.Select();
         }
     }
 }

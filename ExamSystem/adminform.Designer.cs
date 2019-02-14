@@ -45,14 +45,20 @@
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
+            this.LoadDBButton = new MetroFramework.Controls.MetroButton();
+            this.SaveDBButton = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.goBackButton = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             this.metroTabPage4.SuspendLayout();
+            this.metroTabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +68,12 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Controls.Add(this.metroTabPage4);
+            this.metroTabControl1.Controls.Add(this.metroTabPage5);
             this.metroTabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 58);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 4;
             this.metroTabControl1.Size = new System.Drawing.Size(435, 353);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
@@ -261,6 +268,44 @@
             this.metroLabel1.TabIndex = 2;
             this.metroLabel1.Text = "Пользователи";
             // 
+            // metroTabPage5
+            // 
+            this.metroTabPage5.Controls.Add(this.LoadDBButton);
+            this.metroTabPage5.Controls.Add(this.SaveDBButton);
+            this.metroTabPage5.HorizontalScrollbarBarColor = true;
+            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.HorizontalScrollbarSize = 10;
+            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage5.Name = "metroTabPage5";
+            this.metroTabPage5.Size = new System.Drawing.Size(427, 311);
+            this.metroTabPage5.TabIndex = 4;
+            this.metroTabPage5.Text = "База";
+            this.metroTabPage5.VerticalScrollbarBarColor = true;
+            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage5.VerticalScrollbarSize = 10;
+            // 
+            // LoadDBButton
+            // 
+            this.LoadDBButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoadDBButton.Location = new System.Drawing.Point(113, 195);
+            this.LoadDBButton.Name = "LoadDBButton";
+            this.LoadDBButton.Size = new System.Drawing.Size(181, 75);
+            this.LoadDBButton.TabIndex = 12;
+            this.LoadDBButton.Text = "Загрузить в программу";
+            this.LoadDBButton.UseSelectable = true;
+            this.LoadDBButton.Click += new System.EventHandler(this.LoadDBButton_Click);
+            // 
+            // SaveDBButton
+            // 
+            this.SaveDBButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveDBButton.Location = new System.Drawing.Point(113, 88);
+            this.SaveDBButton.Name = "SaveDBButton";
+            this.SaveDBButton.Size = new System.Drawing.Size(181, 75);
+            this.SaveDBButton.TabIndex = 11;
+            this.SaveDBButton.Text = "Выгрузить из программы";
+            this.SaveDBButton.UseSelectable = true;
+            this.SaveDBButton.Click += new System.EventHandler(this.SaveDBButton_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ExamSystem.Properties.Resources.civssm;
@@ -295,6 +340,16 @@
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Visible = false;
             // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.Description = "Выберите папку для сохранения базы";
+            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "*.FDB|*.fdb";
+            // 
             // adminform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +373,7 @@
             this.metroTabPage3.PerformLayout();
             this.metroTabPage4.ResumeLayout(false);
             this.metroTabPage4.PerformLayout();
+            this.metroTabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -344,5 +400,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton goBackButton;
         private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroTabPage metroTabPage5;
+        private MetroFramework.Controls.MetroButton LoadDBButton;
+        private MetroFramework.Controls.MetroButton SaveDBButton;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

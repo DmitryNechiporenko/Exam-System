@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\quiz1.mdb;Persist Security Info=True</Value>
     </Setting>
+    <Setting Name="DBNAME" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DB.FDB</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
